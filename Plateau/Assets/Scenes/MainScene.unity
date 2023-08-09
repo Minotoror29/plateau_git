@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1142310159}
+  tileData: {fileID: 11400000, guid: e0e84c653200ca54085210afcd3ed43c, type: 2}
 --- !u!1001 &675348580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,6 +1847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497ef198d5a721b498880084e214aca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maximumHealth: 10
+  maximumGold: 20
+  startGold: 5
 --- !u!1001 &1226779048
 PrefabInstance:
   m_ObjectHideFlags: 0

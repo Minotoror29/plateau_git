@@ -2,39 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mino
+public class TableManager : MonoBehaviour
 {
-    public class TableManager : MonoBehaviour
+    [SerializeField] private Player player;
+
+    private List<GameTile> _tiles;
+    [SerializeField] private GameTileData tileData;
+
+    private void Start()
     {
-        [SerializeField] private Player player;
+        Initialize();
+    }
 
-        private List<Tile> _tiles;
+    public void Initialize()
+    {
+        _tiles = new();
 
-        private void Start()
+        for (int i = 0; i < transform.childCount; i++)
         {
-            Initialize();
+            _tiles.Add(transform.GetChild(i).GetComponent<GameTile>());
         }
 
-        public void Initialize()
+        foreach (GameTile tile in _tiles)
         {
-            _tiles = new();
-
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                _tiles.Add(transform.GetChild(i).GetComponent<Tile>());
-            }
-
-            foreach (Tile tile in _tiles)
-            {
-                tile.Initialize(_tiles[(_tiles.IndexOf(tile) + 1) % _tiles.Count]);
-            }
-
-            player.Initialize(_tiles[0]);
+            tile.Initialize(tileData, _tiles[(_tiles.IndexOf(tile) + 1) % _tiles.Count]);
         }
 
-        public void MovePlayer()
-        {
-            player.Move(1);
-        }
+        player.Initialize(_tiles[0]);
+    }
+
+    public int TossDice()
+    {
+        return Random.Range(1, 7);
+    }
+
+    public void MovePlayer()
+    {
+        player.Move(TossDice());
     }
 }
