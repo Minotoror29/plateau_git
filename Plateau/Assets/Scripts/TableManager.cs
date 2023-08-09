@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Mino;
 public class TableManager : MonoBehaviour
 {
     [SerializeField] private Player player;
 
-    private List<GameTile> _tiles;
-    [SerializeField] private GameTileData tileData;
+    private List<Tile> _tiles;
+    [SerializeField] private TileData tileData;
 
     private void Start()
     {
@@ -20,10 +20,10 @@ public class TableManager : MonoBehaviour
 
         for (int i = 0; i < transform.childCount; i++)
         {
-            _tiles.Add(transform.GetChild(i).GetComponent<GameTile>());
+            _tiles.Add(transform.GetChild(i).GetComponent<Tile>());
         }
 
-        foreach (GameTile tile in _tiles)
+        foreach (Tile tile in _tiles)
         {
             tile.Initialize(tileData, _tiles[(_tiles.IndexOf(tile) + 1) % _tiles.Count]);
         }
