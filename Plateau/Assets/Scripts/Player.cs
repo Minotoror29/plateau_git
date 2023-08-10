@@ -6,18 +6,20 @@ using Mino;
 public class Player : MonoBehaviour
 {
     private int _health;
-    [SerializeField] private int maximumHealth = 10;
+    [SerializeField] private int maxHealth = 10;
     private int _gold;
-    [SerializeField] private int maximumGold = 20;
+    [SerializeField] private int maxGold = 20;
     [SerializeField] private int startGold = 5;
 
     private Tile _currentTile;
+
+    public Tile CurrentTile { get { return _currentTile; } }
 
     public void Initialize(Tile startTile)
     {
         _currentTile = startTile;
 
-        _health = maximumHealth;
+        _health = maxHealth;
         _gold = startGold;
     }
 
@@ -29,14 +31,12 @@ public class Player : MonoBehaviour
         }
 
         transform.position = _currentTile.transform.position;
-
-        _currentTile.ActivateEffect(this);
     }
 
     public void EarnGold(int amount)
     {
         _gold += amount;
-        _gold = Mathf.Clamp(_gold, 0, maximumGold);
+        _gold = Mathf.Clamp(_gold, 0, maxGold);
 
         Debug.Log("Player earned " + amount + " gold");
     }
@@ -44,7 +44,14 @@ public class Player : MonoBehaviour
     public void Heal(int amount)
     {
         _health += amount;
+        _health = Mathf.Clamp(_health, 0, maxHealth);
 
         Debug.Log("Player was healed " + amount + " HP");
+    }
+
+    public void TakeDamage(int amount)
+    {
+        _health -= amount;
+        _health = Mathf.Clamp(_health, 0, maxHealth);
     }
 }

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88355381ecc86b24d81151ba95a46a5e, type: 3}
-  m_Name: Heal 2 HP
+  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
+  m_Name: Inn
   m_EditorClassIdentifier: 
-  description: You heal 2 HP.
-  healthAmount: 2
+  frontFace: {fileID: 11400000, guid: 4a50ff2e58c58394eb17ce8f40c0d0a2, type: 2}
+  backFace: {fileID: 11400000, guid: 4a50ff2e58c58394eb17ce8f40c0d0a2, type: 2}

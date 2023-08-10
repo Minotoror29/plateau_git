@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Test Front Face
+  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
+  m_Name: Boss
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.9433962, g: 0.8820258, b: 0.29814878, a: 1}
-  effect: {fileID: 11400000, guid: 7ec902dfd2f455b4090a5175215a4926, type: 2}
+  frontFace: {fileID: 11400000, guid: e12ca41c3d850f044a4f82c2fb32f232, type: 2}
+  backFace: {fileID: 11400000, guid: e12ca41c3d850f044a4f82c2fb32f232, type: 2}

@@ -29,9 +29,8 @@ public class TileState : State
     {
     }
 
-    public void ActivateEffect(Player player)
+    public void ActivateEffect(TableManager tableManager, Player player)
     {
-        _faceData.effect.Activate(player);
-        _tile.ChangeState(_tile.States[(_faceIndex + 1) % _tile.States.Length]);
+        _faceData.effect.Activate(tableManager, player);
     }
 }

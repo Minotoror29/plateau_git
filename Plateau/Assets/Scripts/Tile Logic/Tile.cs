@@ -11,7 +11,6 @@ namespace Mino
         private TileState[] states;
 
         private TileData _tileData;
-        private string _tileName;
         [SerializeField] private SpriteRenderer spriteRenderer;
 
         private Tile _nextTile;
@@ -29,7 +28,6 @@ namespace Mino
             ChangeState(states[0]);
 
             _tileData = tileData;
-            _tileName = tileData.tileName;
 
             _nextTile = nextTile;
         }
@@ -41,9 +39,9 @@ namespace Mino
             _currentState.Enter();
         }
 
-        public void ActivateEffect(Player player)
+        public void ActivateEffect(TableManager tableManager, Player player)
         {
-            _currentState.ActivateEffect(player);
+            _currentState.ActivateEffect(tableManager, player);
         }
     }
 }

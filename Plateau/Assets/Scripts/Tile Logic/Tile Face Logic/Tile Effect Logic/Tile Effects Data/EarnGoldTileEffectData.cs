@@ -7,7 +7,7 @@ public class EarnGoldTileEffectData : TileEffectData
 {
     public int goldAmount;
 
-    public override void Activate(Player player)
+    public override void Activate(TableManager tableManager, Player player)
     {
         player.EarnGold(goldAmount);
     }
