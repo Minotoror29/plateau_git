@@ -43,5 +43,10 @@ namespace Mino
         {
             _currentState.ActivateEffect(tableManager, player);
         }
+
+        public void SwithFace()
+        {
+            _currentState.SwitchFace();
+        }
     }
 }

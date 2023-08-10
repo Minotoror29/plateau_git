@@ -33,4 +33,9 @@ public class TileState : State
     {
         _faceData.effect.Activate(tableManager, player);
     }
+
+    public void SwitchFace()
+    {
+        _tile.ChangeState(_tile.States[(_faceIndex + 1) % _tile.States.Length]);
+    }
 }

@@ -44,6 +44,20 @@ public class TableManager : MonoBehaviour
             tile.Initialize(tileData, _tiles[(_tiles.IndexOf(tile) + 1) % _tiles.Count]);
         }
 
+        for (int i = 0; i < _tiles.Count; i++)
+        {
+            if (i == innTileIndex)
+            {
+                _tiles[i].Initialize(innTileData, _tiles[(i + 1) % _tiles.Count]);
+            } else if (i == bossTileIndex)
+            {
+                _tiles[i].Initialize(bossTileData, _tiles[(i + 1) % _tiles.Count]);
+            } else
+            {
+                _tiles[i].Initialize(tileData, _tiles[(i + 1) % _tiles.Count]);
+            }
+        }
+
         player.Initialize(_tiles[0]);
         boss.Initialize();
 

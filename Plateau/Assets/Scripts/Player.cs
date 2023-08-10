@@ -53,5 +53,7 @@ public class Player : MonoBehaviour
     {
         _health -= amount;
         _health = Mathf.Clamp(_health, 0, maxHealth);
+
+        Debug.Log("Player lost " + amount + " HP");
     }
 }
