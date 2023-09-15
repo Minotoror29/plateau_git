@@ -11,8 +11,6 @@ public class TableTileEffectState : TableState
     public override void Enter()
     {
         TableManager.Player.CurrentTile.ActivateEffect(TableManager.Player);
-
-        //TableManager.ChangeState(new TableTurnStartState(TableManager));
     }
 
     public override void Exit()
