@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4fefb8a7052d454d9db347f01edbcc5, type: 3}
-  m_Name: Necromancer Combat
+  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
+  m_Name: Goblin Village
   m_EditorClassIdentifier: 
-  health: 5
-  attack: 5
-  reward: {fileID: 11400000, guid: 04eaea11d59b08045ba76c9ed8233a75, type: 2}
+  faceColor: {r: 0.31019118, g: 0.5188679, b: 0.070977226, a: 1}
+  effect: {fileID: 11400000, guid: f41b6755f685fde4d8cee615dbb660fa, type: 2}

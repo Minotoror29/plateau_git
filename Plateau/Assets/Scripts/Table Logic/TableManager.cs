@@ -21,9 +21,14 @@ public class TableManager : MonoBehaviour
 
     [SerializeField] private Button moveButton;
 
+    [SerializeField] private List<ArtifactData> artifacts;
+
+    [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
+
     public Player Player { get { return player; } }
     public Boss Boss { get { return boss; } }
     public Button MoveButton { get { return moveButton; } }
+    public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
 
     private void Start()
     {
@@ -41,24 +46,24 @@ public class TableManager : MonoBehaviour
 
         foreach (Tile tile in _tiles)
         {
-            tile.Initialize(tileData, _tiles[(_tiles.IndexOf(tile) + 1) % _tiles.Count]);
+            tile.Initialize(this, tileData, _tiles[(_tiles.IndexOf(tile) + 1) % _tiles.Count]);
         }
 
         for (int i = 0; i < _tiles.Count; i++)
         {
             if (i == innTileIndex)
             {
-                _tiles[i].Initialize(innTileData, _tiles[(i + 1) % _tiles.Count]);
+                _tiles[i].Initialize(this, innTileData, _tiles[(i + 1) % _tiles.Count]);
             } else if (i == bossTileIndex)
             {
-                _tiles[i].Initialize(bossTileData, _tiles[(i + 1) % _tiles.Count]);
+                _tiles[i].Initialize(this, bossTileData, _tiles[(i + 1) % _tiles.Count]);
             } else
             {
-                _tiles[i].Initialize(tileData, _tiles[(i + 1) % _tiles.Count]);
+                _tiles[i].Initialize(this, tileData, _tiles[(i + 1) % _tiles.Count]);
             }
         }
 
-        player.Initialize(_tiles[0]);
+        player.Initialize(this, _tiles[0]);
         boss.Initialize();
 
         ChangeState(new TableTurnStartState(this));
@@ -74,5 +79,10 @@ public class TableManager : MonoBehaviour
     public int TossDice()
     {
         return Random.Range(1, 7);
+    }
+
+    public ArtifactData DrawArtifact()
+    {
+        return artifacts[0];
     }
 }

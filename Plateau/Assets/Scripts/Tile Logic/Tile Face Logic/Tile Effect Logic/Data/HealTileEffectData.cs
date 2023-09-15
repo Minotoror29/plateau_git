@@ -7,8 +7,8 @@ public class HealTileEffectData : TileEffectData
 {
     public int healthAmount;
 
-    public override void Activate(TableManager tableManager, Player player)
+    public override TileEffect Effect(TableManager tableManager)
     {
-        player.Heal(healthAmount);
+        return new HealTileEffect(tableManager, this);
     }
 }

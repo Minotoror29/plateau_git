@@ -5,6 +5,8 @@ using Mino;
 
 public class Player : MonoBehaviour
 {
+    private TableManager _tableManager;
+
     private int _health;
     [SerializeField] private int maxHealth = 10;
     private int _gold;
@@ -13,10 +15,13 @@ public class Player : MonoBehaviour
 
     private Tile _currentTile;
 
+    public TableManager TableManager { get { return _tableManager; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
-    public void Initialize(Tile startTile)
+    public void Initialize(TableManager tableManager, Tile startTile)
     {
+        _tableManager = tableManager;
+
         _currentTile = startTile;
 
         _health = maxHealth;
@@ -55,5 +60,10 @@ public class Player : MonoBehaviour
         _health = Mathf.Clamp(_health, 0, maxHealth);
 
         Debug.Log("Player lost " + amount + " HP");
+    }
+
+    public void DrawArtifact(int amount)
+    {
+        Debug.Log("Player drew " + amount + " artifact(s)");
     }
 }

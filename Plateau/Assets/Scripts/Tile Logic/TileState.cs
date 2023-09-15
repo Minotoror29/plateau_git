@@ -9,11 +9,15 @@ public class TileState : State
     private TileFaceData _faceData;
     private int _faceIndex;
 
-    public TileState(Tile tile, TileFaceData faceData, int faceIndex)
+    private TileEffect _effect;
+
+    public TileState(TableManager tableManager, Tile tile, TileFaceData faceData, int faceIndex)
     {
         _tile = tile;
         _faceData = faceData;
         _faceIndex = faceIndex;
+
+        _effect = _faceData.effect.Effect(tableManager);
     }
 
     public override void Enter()
@@ -29,9 +33,9 @@ public class TileState : State
     {
     }
 
-    public void ActivateEffect(TableManager tableManager, Player player)
+    public void ActivateEffect(Player player)
     {
-        _faceData.effect.Activate(tableManager, player);
+        _effect.Activate(player);
     }
 
     public void SwitchFace()
