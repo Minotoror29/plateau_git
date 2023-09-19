@@ -8,9 +8,10 @@ public class CombatTileEffectData : TileEffectData
     [Range(1, 6)] public int health;
     public int attack;
     public CombatRewardData reward;
+    public List<AdditionalCombatEffectData> additionalCombatEffects;
 
     public override TileEffect Effect(TableManager tableManager)
     {
-        return new CombatTileEffect(tableManager, this);
+        return new CombatTileEffect(tableManager, this, additionalCombatEffects);
     }
 }

@@ -54,6 +54,14 @@ public class Player : MonoBehaviour
         Debug.Log("Player earned " + amount + " gold");
     }
 
+    public void LoseGold(int amount)
+    {
+        _gold -= amount;
+        _gold = Mathf.Clamp(_gold, 0, maxGold);
+
+        Debug.Log("Player lost " + amount + " gold");
+    }
+
     public void Heal(int amount)
     {
         _health += amount;

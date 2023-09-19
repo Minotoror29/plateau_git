@@ -15,3 +15,5 @@ MonoBehaviour:
   health: 4
   attack: 3
   reward: {fileID: 11400000, guid: a0eed08de2c058246930b8ebe90811cc, type: 2}
+  additionalCombatEffects:
+  - {fileID: 11400000, guid: 0405adb2017297a47a87d057efb9ab9d, type: 2}
