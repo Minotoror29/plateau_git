@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bandits - Path
   m_EditorClassIdentifier: 
   frontFace: {fileID: 11400000, guid: 809b9fb5cc12e484896f24e5f1f2f8bc, type: 2}
-  backFace: {fileID: 11400000, guid: 809b9fb5cc12e484896f24e5f1f2f8bc, type: 2}
+  backFace: {fileID: 11400000, guid: 6172abf21da8c95438fc0091e20bdf69, type: 2}

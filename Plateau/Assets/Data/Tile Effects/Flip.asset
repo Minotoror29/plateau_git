@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Castle Ruins
+  m_Script: {fileID: 11500000, guid: 936b178c8b5c6f74982a60e6b1cfc9af, type: 3}
+  m_Name: Flip
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
-  effects:
-  - {fileID: 11400000, guid: 52b19e93fe09a2b43b2a06cf29e44f24, type: 2}

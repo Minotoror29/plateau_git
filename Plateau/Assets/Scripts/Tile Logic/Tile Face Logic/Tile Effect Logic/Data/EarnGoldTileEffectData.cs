@@ -7,8 +7,8 @@ public class EarnGoldTileEffectData : TileEffectData
 {
     public int goldAmount;
 
-    public override TileEffect Effect(TableManager tableManager)
+    public override TileEffect Effect(TableManager tableManager, TileState state)
     {
-        return new EarnGoldTileEffect(tableManager, this);
+        return new EarnGoldTileEffect(tableManager, state, this);
     }
 }

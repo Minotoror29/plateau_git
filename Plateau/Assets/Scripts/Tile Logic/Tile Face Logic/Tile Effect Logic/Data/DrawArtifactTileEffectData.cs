@@ -7,8 +7,8 @@ public class DrawArtifactTileEffectData : TileEffectData
 {
     public int artifactAmount;
 
-    public override TileEffect Effect(TableManager tableManager)
+    public override TileEffect Effect(TableManager tableManager, TileState state)
     {
-        return new DrawArtifactTileEffect(tableManager, this);
+        return new DrawArtifactTileEffect(tableManager, state, this);
     }
 }

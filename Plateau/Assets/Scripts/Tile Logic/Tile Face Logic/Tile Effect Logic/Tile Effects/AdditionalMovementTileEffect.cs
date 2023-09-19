@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdditionalMovementTileEffect : TileEffect
 {
-    public AdditionalMovementTileEffect(TableManager tableManager) : base(tableManager)
+    public AdditionalMovementTileEffect(TableManager tableManager, TileState state) : base(tableManager, state)
     {
     }
 

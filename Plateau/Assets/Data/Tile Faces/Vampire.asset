@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Vampire
   m_EditorClassIdentifier: 
   faceColor: {r: 0.4811321, g: 0.088510156, b: 0.088510156, a: 1}
-  effect: {fileID: 11400000, guid: 04cd9662beae3c14ead3865f31d5f8ee, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 04cd9662beae3c14ead3865f31d5f8ee, type: 2}

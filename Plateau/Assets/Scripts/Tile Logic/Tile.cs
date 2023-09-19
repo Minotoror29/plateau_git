@@ -43,14 +43,14 @@ namespace Mino
             _currentState.Enter();
         }
 
-        public void ActivateEffect(Player player)
+        public void ActivateEffects(Player player)
         {
-            _currentState.ActivateEffect(player);
+            _currentState.ActivateEffects(player);
         }
 
-        public void SwitchFace()
+        public void FlipTile()
         {
-            _currentState.SwitchFace();
+            _currentState.FlipTile();
         }
     }
 }

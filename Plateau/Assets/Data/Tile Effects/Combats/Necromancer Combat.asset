@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   attack: 5
-  reward: {fileID: 11400000, guid: 04eaea11d59b08045ba76c9ed8233a75, type: 2}
+  rewards:
+  - {fileID: 11400000, guid: 04eaea11d59b08045ba76c9ed8233a75, type: 2}
+  additionalCombatEffects: []

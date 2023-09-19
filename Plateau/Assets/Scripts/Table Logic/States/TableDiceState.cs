@@ -12,6 +12,8 @@ public class TableDiceState : TableState
 
     public override void Enter()
     {
+        Debug.Log(this);
+
         _movement = TableManager.TossDice();
         TableManager.ChangeState(new TablePlayerMoveState(TableManager, _movement));
     }

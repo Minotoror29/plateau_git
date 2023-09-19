@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Inn
   m_EditorClassIdentifier: 
   faceColor: {r: 0.754717, g: 0.4850634, b: 0.23139909, a: 1}
-  effect: {fileID: 11400000, guid: 89a52f41c308b2e458a473179ca2691d, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 89a52f41c308b2e458a473179ca2691d, type: 2}

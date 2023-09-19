@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Castle Ruins
+  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
+  m_Name: Spider Web - Giant Spider
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
-  effects:
-  - {fileID: 11400000, guid: 52b19e93fe09a2b43b2a06cf29e44f24, type: 2}
+  frontFace: {fileID: 11400000, guid: f3f73cd0f62f8cc4abf4cbef4af0a900, type: 2}
+  backFace: {fileID: 11400000, guid: dea9e15a09a99e946b08e3ce4dfed143, type: 2}

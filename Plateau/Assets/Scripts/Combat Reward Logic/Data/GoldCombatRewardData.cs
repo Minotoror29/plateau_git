@@ -7,10 +7,10 @@ public class GoldCombatRewardData : CombatRewardData
 {
     public ValueApplicationData amount;
 
-    public override void EarnReward(Player player, TileEffect effect)
+    public override void EarnReward(Player player, CombatTileEffect effect)
     {
         player.EarnGold(amount.Value(player.TableManager));
 
-        effect.Resolve();
+        effect.ResolveReward(player);
     }
 }

@@ -6,7 +6,7 @@ public class FixedMovementEffect : TileEffect
 {
     private int _movementValue;
 
-    public FixedMovementEffect(TableManager tableManager, int movementValue) : base(tableManager)
+    public FixedMovementEffect(TableManager tableManager, TileState state, int movementValue) : base(tableManager, state)
     {
         _movementValue = movementValue;
     }
@@ -20,11 +20,11 @@ public class FixedMovementEffect : TileEffect
 
     private void ApplyFixedMovement(TableTurnStartState state)
     {
+        //A revoir
+        state.TableManager.Player.OnTurnStart -= ApplyFixedMovement;
+
         state.TableManager.MoveButton.onClick.RemoveAllListeners();
         state.FixedmovementValue = _movementValue;
         state.TableManager.MoveButton.onClick.AddListener(state.MovePlayer);
-
-        //A revoir
-        state.TableManager.Player.OnTurnStart -= ApplyFixedMovement;
     }
 }

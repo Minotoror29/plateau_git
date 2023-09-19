@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class TileEffectData : ScriptableObject
 {
-    public abstract TileEffect Effect(TableManager tableManager);
+    public abstract TileEffect Effect(TableManager tableManager, TileState state);
 }

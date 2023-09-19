@@ -6,17 +6,20 @@ public abstract class TileEffect
 {
     private TableManager _tableManager;
 
+    private TileState _state;
+
     public TableManager TableManager { get { return _tableManager; } }
 
-    public TileEffect(TableManager tableManager)
+    public TileEffect(TableManager tableManager, TileState state)
     {
         _tableManager = tableManager;
+        _state = state;
     }
 
     public abstract void Activate(Player player);
 
     public void Resolve()
     {
-        _tableManager.ChangeState(new TableTurnStartState(_tableManager));
+        _state.ResolveEffect();
     }
 }

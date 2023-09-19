@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class CombatRewardData : ScriptableObject
 {
-    public abstract void EarnReward(Player player, TileEffect effect);
+    public abstract void EarnReward(Player player, CombatTileEffect effect);
 }

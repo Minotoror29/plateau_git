@@ -7,10 +7,10 @@ public class ArtifactCombatRewardData : CombatRewardData
 {
     public int amount;
 
-    public override void EarnReward(Player player, TileEffect effect)
+    public override void EarnReward(Player player, CombatTileEffect effect)
     {
         player.DrawArtifact(amount);
 
-        effect.Resolve();
+        effect.ResolveReward(player);
     }
 }

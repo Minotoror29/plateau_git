@@ -6,7 +6,7 @@ public class HealTileEffect : TileEffect
 {
     private int _healthAmount;
 
-    public HealTileEffect(TableManager tableManager, HealTileEffectData data) : base(tableManager)
+    public HealTileEffect(TableManager tableManager, TileState state, HealTileEffectData data) : base(tableManager, state)
     {
         _healthAmount = data.healthAmount;
     }

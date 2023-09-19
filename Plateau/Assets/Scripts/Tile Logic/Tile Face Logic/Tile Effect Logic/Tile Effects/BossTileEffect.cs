@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossTileEffect : TileEffect
 {
-    public BossTileEffect(TableManager tableManager) : base(tableManager)
+    public BossTileEffect(TableManager tableManager, TileState state) : base(tableManager, state)
     {
     }
 

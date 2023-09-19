@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Bandits
   m_EditorClassIdentifier: 
   faceColor: {r: 0.24528301, g: 0.18809883, b: 0.14462441, a: 1}
-  effect: {fileID: 11400000, guid: f4e976123a0788a479d92625b9da14e9, type: 2}
+  effects:
+  - {fileID: 11400000, guid: f4e976123a0788a479d92625b9da14e9, type: 2}

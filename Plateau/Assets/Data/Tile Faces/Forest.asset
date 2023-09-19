@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Forest
   m_EditorClassIdentifier: 
   faceColor: {r: 0.13461196, g: 0.5188679, b: 0.2374955, a: 1}
-  effect: {fileID: 11400000, guid: 8084175c928e67747b5a804a206cf228, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 8084175c928e67747b5a804a206cf228, type: 2}

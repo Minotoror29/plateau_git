@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
   m_Name: Path
   m_EditorClassIdentifier: 
-  faceColor: {r: 0, g: 0, b: 0, a: 0}
-  effect: {fileID: 0}
+  faceColor: {r: 0.745283, g: 0.6482764, b: 0.34100214, a: 1}
+  effects:
+  - {fileID: 11400000, guid: 38f68f22be438bf48b1fdcc4c6bd6970, type: 2}

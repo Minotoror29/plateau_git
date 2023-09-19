@@ -7,8 +7,8 @@ public class FixedMovementEffectData : TileEffectData
 {
     public int movementValue;
 
-    public override TileEffect Effect(TableManager tableManager)
+    public override TileEffect Effect(TableManager tableManager, TileState state)
     {
-        return new FixedMovementEffect(tableManager, movementValue);
+        return new FixedMovementEffect(tableManager, state, movementValue);
     }
 }

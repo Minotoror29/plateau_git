@@ -6,7 +6,7 @@ public class EarnGoldTileEffect : TileEffect
 {
     private int _goldAmount;
 
-    public EarnGoldTileEffect(TableManager tableManager, EarnGoldTileEffectData data) : base(tableManager)
+    public EarnGoldTileEffect(TableManager tableManager, TileState state, EarnGoldTileEffectData data) : base(tableManager, state)
     {
         _goldAmount = data.goldAmount;
     }

@@ -5,19 +5,28 @@ using UnityEngine;
 
 public class TileState : State
 {
+    private TableManager _tableManager;
+
     private Tile _tile;
     private TileFaceData _faceData;
     private int _faceIndex;
 
-    private TileEffect _effect;
+    private List<TileEffect> _effects;
+    private int _resolvedEffects = 0;
 
     public TileState(TableManager tableManager, Tile tile, TileFaceData faceData, int faceIndex)
     {
+        _tableManager = tableManager;
+
         _tile = tile;
         _faceData = faceData;
         _faceIndex = faceIndex;
 
-        _effect = _faceData.effect.Effect(tableManager);
+        _effects = new();
+        foreach (TileEffectData effect in faceData.effects)
+        {
+            _effects.Add(effect.Effect(tableManager, this));
+        }
     }
 
     public override void Enter()
@@ -33,12 +42,27 @@ public class TileState : State
     {
     }
 
-    public void ActivateEffect(Player player)
+    public void ActivateEffects(Player player)
     {
-        _effect.Activate(player);
+        _resolvedEffects = 0;
+
+        foreach (TileEffect effect in _effects)
+        {
+            effect.Activate(player);
+        }
     }
 
-    public void SwitchFace()
+    public void ResolveEffect()
+    {
+        _resolvedEffects++;
+
+        if (_resolvedEffects == _effects.Count)
+        {
+            _tableManager.ChangeState(new TableTurnStartState(_tableManager));
+        }
+    }
+
+    public void FlipTile()
     {
         _tile.ChangeState(_tile.States[(_faceIndex + 1) % _tile.States.Length]);
     }
