@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea5a2b728227e648bf4810505befcc4, type: 3}
   m_Name: 3 Gold
   m_EditorClassIdentifier: 
-  amount: 3
+  amount: {fileID: 11400000, guid: 0a633c67644c81d45a6dd044d4f20167, type: 2}

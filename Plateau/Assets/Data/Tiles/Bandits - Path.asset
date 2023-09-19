@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fea5a2b728227e648bf4810505befcc4, type: 3}
-  m_Name: 2 Gold
+  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
+  m_Name: Bandits - Path
   m_EditorClassIdentifier: 
-  amount: {fileID: 11400000, guid: b3502ce224f4e8e43a0dfa11b50e21f8, type: 2}
+  frontFace: {fileID: 11400000, guid: 809b9fb5cc12e484896f24e5f1f2f8bc, type: 2}
+  backFace: {fileID: 11400000, guid: 809b9fb5cc12e484896f24e5f1f2f8bc, type: 2}

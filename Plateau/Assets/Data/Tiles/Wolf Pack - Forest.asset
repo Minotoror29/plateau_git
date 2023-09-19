@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
   m_Name: Wolf Pack - Forest
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 5f8fb82a9ad9554449dcd5c4c6cad865, type: 2}
+  frontFace: {fileID: 11400000, guid: 583982c94a16ac94faa44d6cfb1992a2, type: 2}
   backFace: {fileID: 11400000, guid: 5f8fb82a9ad9554449dcd5c4c6cad865, type: 2}
