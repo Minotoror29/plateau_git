@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Vampire - Castle Ruins
+  m_Name: Wolf Pack - Forest
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 7fa2e94b3eafd81408910af5e32360f9, type: 2}
-  backFace: {fileID: 11400000, guid: dfe6641d00f52a744866829691724372, type: 2}
+  frontFace: {fileID: 11400000, guid: 5f8fb82a9ad9554449dcd5c4c6cad865, type: 2}
+  backFace: {fileID: 11400000, guid: 5f8fb82a9ad9554449dcd5c4c6cad865, type: 2}

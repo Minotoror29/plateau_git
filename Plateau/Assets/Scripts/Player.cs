@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mino;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
 
     private Tile _currentTile;
 
+    public event Action<TableTurnStartState> OnTurnStart;
+
     public TableManager TableManager { get { return _tableManager; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
@@ -26,6 +29,11 @@ public class Player : MonoBehaviour
 
         _health = maxHealth;
         _gold = startGold;
+    }
+
+    public void StartTurn(TableTurnStartState state)
+    {
+        OnTurnStart?.Invoke(state);
     }
 
     public void Move(int movementValue)

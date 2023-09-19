@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class TablePlayerMoveState : TableState
 {
-    public TablePlayerMoveState(TableManager tableManager) : base(tableManager)
+    private int _movement;
+
+    public TablePlayerMoveState(TableManager tableManager, int movement) : base(tableManager)
     {
+        _movement = movement;
     }
 
     public override void Enter()
     {
-        TableManager.Player.Move(TableManager.TossDice());
+        TableManager.Player.Move(_movement);
 
         TableManager.ChangeState(new TableTileEffectState(TableManager));
     }

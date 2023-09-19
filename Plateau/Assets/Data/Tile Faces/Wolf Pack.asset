@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Vampire - Castle Ruins
+  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
+  m_Name: Wolf Pack
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 7fa2e94b3eafd81408910af5e32360f9, type: 2}
-  backFace: {fileID: 11400000, guid: dfe6641d00f52a744866829691724372, type: 2}
+  faceColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
+  effect: {fileID: 11400000, guid: c7e58d9c25e956c42aa273d20cc5e5f5, type: 2}

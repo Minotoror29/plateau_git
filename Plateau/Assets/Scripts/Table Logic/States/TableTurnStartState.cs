@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TableTurnStartState : TableState
 {
+    private int _fixedMovementValue;
+
+    public int FixedmovementValue { set { _fixedMovementValue = value; } }
+
     public TableTurnStartState(TableManager tableManager) : base(tableManager)
     {
     }
@@ -11,7 +15,9 @@ public class TableTurnStartState : TableState
     public override void Enter()
     {
         TableManager.MoveButton.gameObject.SetActive(true);
-        TableManager.MoveButton.onClick.AddListener(MovePlayer);
+        TableManager.MoveButton.onClick.AddListener(TossDice);
+
+        TableManager.Player.StartTurn(this);
     }
 
     public override void Exit()
@@ -24,8 +30,13 @@ public class TableTurnStartState : TableState
     {
     }
 
-    private void MovePlayer()
+    private void TossDice()
     {
-        TableManager.ChangeState(new TablePlayerMoveState(TableManager));
+        TableManager.ChangeState(new TableDiceState(TableManager));
+    }
+
+    public void MovePlayer()
+    {
+        TableManager.ChangeState(new TablePlayerMoveState(TableManager, _fixedMovementValue));
     }
 }

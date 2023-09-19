@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Castle Ruins
   m_EditorClassIdentifier: 
   faceColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
-  effect: {fileID: 0}
+  effect: {fileID: 11400000, guid: 52b19e93fe09a2b43b2a06cf29e44f24, type: 2}
