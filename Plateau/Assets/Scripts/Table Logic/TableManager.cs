@@ -24,11 +24,13 @@ public class TableManager : MonoBehaviour
     [SerializeField] private List<ArtifactData> artifacts;
 
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
+    [SerializeField] private PayToFlipDisplay payToFlipDisplay;
 
     public Player Player { get { return player; } }
     public Boss Boss { get { return boss; } }
     public Button MoveButton { get { return moveButton; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
+    public PayToFlipDisplay PayToFlipDisplay { get { return payToFlipDisplay; } }
 
     private void Start()
     {

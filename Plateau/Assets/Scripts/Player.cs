@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public event Action<TableTurnStartState> OnTurnStart;
 
     public TableManager TableManager { get { return _tableManager; } }
+    public int Gold { get { return _gold; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
     public void Initialize(TableManager tableManager, Tile startTile)

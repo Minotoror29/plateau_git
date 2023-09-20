@@ -14,7 +14,7 @@ public class ModalCombatRewardDisplay : MonoBehaviour
     private int _goldAmount;
     private int _artifactAmount;
 
-    public void SetRewards(Player player, CombatTileEffect effect, int goldAmount, int artifactAmount)
+    public void Initialize(Player player, CombatTileEffect effect, int goldAmount, int artifactAmount)
     {
         _player = player;
         _effect = effect;

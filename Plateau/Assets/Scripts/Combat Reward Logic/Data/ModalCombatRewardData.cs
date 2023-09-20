@@ -11,6 +11,6 @@ public class ModalCombatRewardData : CombatRewardData
     public override void EarnReward(Player player, CombatTileEffect effect)
     {
         player.TableManager.ModalCombatRewardDisplay.gameObject.SetActive(true);
-        player.TableManager.ModalCombatRewardDisplay.SetRewards(player, effect, goldAmount, artifactAmount);
+        player.TableManager.ModalCombatRewardDisplay.Initialize(player, effect, goldAmount, artifactAmount);
     }
 }

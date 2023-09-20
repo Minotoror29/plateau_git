@@ -14,8 +14,6 @@ public class TableTurnStartState : TableState
 
     public override void Enter()
     {
-        Debug.Log(this);
-
         TableManager.MoveButton.gameObject.SetActive(true);
         TableManager.MoveButton.onClick.AddListener(TossDice);
 

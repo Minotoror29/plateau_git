@@ -15,4 +15,4 @@ MonoBehaviour:
   faceColor: {r: 0.9528302, g: 0.8423141, b: 0.26517445, a: 1}
   effects:
   - {fileID: 11400000, guid: d1aadb8925e7bf943be3acde00a58c9c, type: 2}
-  - {fileID: 11400000, guid: d1aadb8925e7bf943be3acde00a58c9c, type: 2}
+  - {fileID: 11400000, guid: a01c04f963df4a543bd258f436f52a9b, type: 2}
