@@ -8,9 +8,8 @@ public class ModalCombatRewardData : CombatRewardData
     public int goldAmount;
     public int artifactAmount;
 
-    public override void EarnReward(Player player, CombatTileEffect effect)
+    public override CombatReward Reward(TableManager tableManager, CombatTileEffect combat)
     {
-        player.TableManager.ModalCombatRewardDisplay.gameObject.SetActive(true);
-        player.TableManager.ModalCombatRewardDisplay.Initialize(player, effect, goldAmount, artifactAmount);
+        return new ModalCombatReward(tableManager, combat, this);
     }
 }

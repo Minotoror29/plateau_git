@@ -8,19 +8,11 @@ public class ModalCombatRewardDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldAmountText;
     [SerializeField] private TextMeshProUGUI artifactAmountText;
 
-    private Player _player;
-    private CombatTileEffect _effect;
+    private ModalCombatReward _reward;
 
-    private int _goldAmount;
-    private int _artifactAmount;
-
-    public void Initialize(Player player, CombatTileEffect effect, int goldAmount, int artifactAmount)
+    public void Initialize(ModalCombatReward reward, int goldAmount, int artifactAmount)
     {
-        _player = player;
-        _effect = effect;
-
-        _goldAmount = goldAmount;
-        _artifactAmount = artifactAmount;
+        _reward = reward;
 
         goldAmountText.text = goldAmount.ToString();
         artifactAmountText.text = artifactAmount.ToString();
@@ -28,15 +20,15 @@ public class ModalCombatRewardDisplay : MonoBehaviour
 
     public void EarnGold()
     {
-        _player.EarnGold(_goldAmount);
-        _effect.ResolveReward(_player);
+        _reward.HasChosenGold = true;
+        _reward.Resolve();
         gameObject.SetActive(false);
     }
 
     public void EarnArtifact()
     {
-        _player.DrawArtifact(_artifactAmount);
-        _effect.ResolveReward(_player);
+        _reward.HasChosenGold = false;
+        _reward.Resolve();
         gameObject.SetActive(false);
     }
 }

@@ -25,12 +25,14 @@ public class TableManager : MonoBehaviour
 
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
     [SerializeField] private PayToFlipDisplay payToFlipDisplay;
+    [SerializeField] private PayCustomGoldDisplay payCustomGoldDisplay;
 
     public Player Player { get { return player; } }
     public Boss Boss { get { return boss; } }
     public Button MoveButton { get { return moveButton; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayToFlipDisplay PayToFlipDisplay { get { return payToFlipDisplay; } }
+    public PayCustomGoldDisplay PayCustomGoldDisplay { get { return payCustomGoldDisplay; } }
 
     private void Start()
     {

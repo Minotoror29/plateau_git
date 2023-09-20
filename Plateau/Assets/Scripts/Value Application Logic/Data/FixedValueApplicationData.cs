@@ -7,8 +7,8 @@ public class FixedValueApplicationData : ValueApplicationData
 {
     public int value;
 
-    public override int Value(TableManager tableManager)
+    public override ValueApplication Value(TableManager tableManager)
     {
-        return value;
+        return new FixedValueApplication(tableManager, this);
     }
 }

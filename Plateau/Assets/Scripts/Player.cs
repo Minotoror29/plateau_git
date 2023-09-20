@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     private int _health;
     [SerializeField] private int maxHealth = 10;
+    [SerializeField] private int startHealth = 10;
     [SerializeField] private TextMeshProUGUI healthDisplay;
     private int _gold;
     [SerializeField] private int maxGold = 20;
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
 
         _currentTile = startTile;
 
-        _health = maxHealth;
+        _health = startHealth;
         SetHealthDisplay();
         _gold = startGold;
         SetGoldDisplay();
@@ -90,7 +91,7 @@ public class Player : MonoBehaviour
         healthDisplay.text = "HP : " + _health;
     }
 
-    public void DrawArtifact(int amount)
+    public void DrawArtifacts(int amount)
     {
         Debug.Log("Player drew " + amount + " artifact(s)");
     }

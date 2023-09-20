@@ -9,6 +9,7 @@ public abstract class TileEffect
     private TileState _state;
 
     public TableManager TableManager { get { return _tableManager; } }
+    public TileState State { get { return _state; } }
 
     public TileEffect(TableManager tableManager, TileState state)
     {

@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Value Application/Dice")]
 public class DiceValueApplicationData : ValueApplicationData
 {
-    public override int Value(TableManager tableManager)
+    public override ValueApplication Value(TableManager tableManager)
     {
-        return tableManager.TossDice();
+        return new DiceValueApplication(tableManager);
     }
 }

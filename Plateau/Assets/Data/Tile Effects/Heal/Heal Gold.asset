@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88355381ecc86b24d81151ba95a46a5e, type: 3}
-  m_Name: Heal 3 HP
+  m_Name: Heal Gold
   m_EditorClassIdentifier: 
-  healthAmount: 3
+  healthAmount: {fileID: 11400000, guid: 66bf0d4ff15de334a9bbc372d52da12d, type: 2}

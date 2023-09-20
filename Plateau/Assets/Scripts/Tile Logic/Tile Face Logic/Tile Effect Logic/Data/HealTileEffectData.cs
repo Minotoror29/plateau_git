@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Tile Effect/Heal")]
 public class HealTileEffectData : TileEffectData
 {
-    public int healthAmount;
+    public ValueApplicationData healthAmount;
 
     public override TileEffect Effect(TableManager tableManager, TileState state)
     {

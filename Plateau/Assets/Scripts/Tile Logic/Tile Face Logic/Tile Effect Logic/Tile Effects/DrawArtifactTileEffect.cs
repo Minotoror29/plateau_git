@@ -13,6 +13,6 @@ public class DrawArtifactTileEffect : TileEffect
 
     public override void Activate(Player player)
     {
-        player.DrawArtifact(_artifactAmount);
+        player.DrawArtifacts(_artifactAmount);
     }
 }

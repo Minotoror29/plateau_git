@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Fields - Farm
+  m_Script: {fileID: 11500000, guid: 88355381ecc86b24d81151ba95a46a5e, type: 3}
+  m_Name: Heal 3
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: f12d717117e27de408b4b7f7b52cb2bb, type: 2}
-  backFace: {fileID: 11400000, guid: fb64a05d7c018554da9e04b179f51686, type: 2}
+  healthAmount: {fileID: 11400000, guid: 0a633c67644c81d45a6dd044d4f20167, type: 2}

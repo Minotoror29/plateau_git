@@ -10,7 +10,6 @@ public class SkipNextTurnTileEffect : TileEffect
 
     public override void Activate(Player player)
     {
-        Debug.Log("Activate Skip Turn Effect");
         player.OnTurnStart += SkipTurn;
 
         Resolve();
@@ -18,8 +17,6 @@ public class SkipNextTurnTileEffect : TileEffect
 
     private void SkipTurn(TableTurnStartState state)
     {
-        Debug.Log("SKip turn");
-
         state.TableManager.Player.OnTurnStart -= SkipTurn;
 
         state.TableManager.ChangeState(new TablePlayerMoveState(state.TableManager, 0));

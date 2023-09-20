@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class ValueApplicationData : ScriptableObject
 {
-    public abstract int Value(TableManager tableManager);
+    public abstract ValueApplication Value(TableManager tableManager);
 }

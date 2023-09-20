@@ -6,7 +6,7 @@ public class CombatTileEffect : TileEffect
 {
     private int _health;
     private int _attack;
-    private List<CombatRewardData> _rewards;
+    private List<CombatReward> _rewards;
     private int _resolvedRewards;
     private List<AdditionalCombatEffect> _additionalCombatEffects;
 
@@ -17,7 +17,7 @@ public class CombatTileEffect : TileEffect
         _rewards = new();
         foreach (CombatRewardData reward in data.rewards)
         {
-            _rewards.Add(reward);
+            _rewards.Add(reward.Reward(tableManager, this));
         }
         _additionalCombatEffects = new();
         foreach (AdditionalCombatEffectData additionalEffect in additionalCombatEffectsData)
@@ -34,10 +34,7 @@ public class CombatTileEffect : TileEffect
 
         if (playerDamage >= _health)
         {
-            foreach (CombatRewardData reward in _rewards)
-            {
-                reward.EarnReward(player, this);
-            }
+            _rewards[0].DetermineReward();
         }
         else
         {
@@ -50,14 +47,21 @@ public class CombatTileEffect : TileEffect
         }
     }
 
-    public void ResolveReward(Player player)
+    public void ResolveReward()
     {
         _resolvedRewards++;
 
         if (_resolvedRewards == _rewards.Count)
         {
-            player.CurrentTile.FlipTile();
+            foreach (CombatReward reward in _rewards)
+            {
+                reward.EarnReward(TableManager.Player);
+            }
+            State.FlipTile();
             Resolve();
+        } else
+        {
+            _rewards[_resolvedRewards].DetermineReward();
         }
     }
 }
