@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mino;
 using System;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class Player : MonoBehaviour
 
     private int _health;
     [SerializeField] private int maxHealth = 10;
+    [SerializeField] private TextMeshProUGUI healthDisplay;
     private int _gold;
     [SerializeField] private int maxGold = 20;
     [SerializeField] private int startGold = 5;
+    [SerializeField] private TextMeshProUGUI goldDisplay;
 
     private Tile _currentTile;
 
@@ -28,7 +31,9 @@ public class Player : MonoBehaviour
         _currentTile = startTile;
 
         _health = maxHealth;
+        SetHealthDisplay();
         _gold = startGold;
+        SetGoldDisplay();
     }
 
     public void StartTurn(TableTurnStartState state)
@@ -50,32 +55,38 @@ public class Player : MonoBehaviour
     {
         _gold += amount;
         _gold = Mathf.Clamp(_gold, 0, maxGold);
-
-        Debug.Log("Player earned " + amount + " gold");
+        SetGoldDisplay();
     }
 
     public void LoseGold(int amount)
     {
         _gold -= amount;
         _gold = Mathf.Clamp(_gold, 0, maxGold);
+        SetGoldDisplay();
+    }
 
-        Debug.Log("Player lost " + amount + " gold");
+    private void SetGoldDisplay()
+    {
+        goldDisplay.text = "Gold : " + _gold.ToString();
     }
 
     public void Heal(int amount)
     {
         _health += amount;
         _health = Mathf.Clamp(_health, 0, maxHealth);
-
-        Debug.Log("Player was healed " + amount + " HP");
+        SetHealthDisplay();
     }
 
     public void TakeDamage(int amount)
     {
         _health -= amount;
         _health = Mathf.Clamp(_health, 0, maxHealth);
+        SetHealthDisplay();
+    }
 
-        Debug.Log("Player lost " + amount + " HP");
+    private void SetHealthDisplay()
+    {
+        healthDisplay.text = "HP : " + _health;
     }
 
     public void DrawArtifact(int amount)
