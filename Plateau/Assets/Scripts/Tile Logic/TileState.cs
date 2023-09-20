@@ -58,7 +58,7 @@ public class TileState : State
 
         if (_resolvedEffects == _effects.Count)
         {
-            _tableManager.ChangeState(new TableTurnStartState(_tableManager));
+            _tableManager.ChangeState(new TableCheckState(_tableManager));
         }
     }
 

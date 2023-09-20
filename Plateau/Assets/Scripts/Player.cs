@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public event Action<TableTurnStartState> OnTurnStart;
 
     public TableManager TableManager { get { return _tableManager; } }
+    public int Health { get { return _health; } }
     public int Gold { get { return _gold; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
@@ -32,15 +33,20 @@ public class Player : MonoBehaviour
 
         _currentTile = startTile;
 
-        _health = startHealth;
-        SetHealthDisplay();
-        _gold = startGold;
-        SetGoldDisplay();
+        ResetStats();
     }
 
     public void StartTurn(TableTurnStartState state)
     {
         OnTurnStart?.Invoke(state);
+    }
+
+    public void ResetStats()
+    {
+        _health = startHealth;
+        SetHealthDisplay();
+        _gold = startGold;
+        SetGoldDisplay();
     }
 
     public void Move(int movementValue)
@@ -50,6 +56,12 @@ public class Player : MonoBehaviour
             _currentTile = _currentTile.NextTile;
         }
 
+        transform.position = _currentTile.transform.position;
+    }
+
+    public void MoveTo(Tile tile)
+    {
+        _currentTile = tile;
         transform.position = _currentTile.transform.position;
     }
 

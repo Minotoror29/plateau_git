@@ -29,6 +29,8 @@ public class TableManager : MonoBehaviour
 
     public Player Player { get { return player; } }
     public Boss Boss { get { return boss; } }
+    public List<Tile> Tiles { get { return _tiles; } }
+    public int InnTileIndex { get { return innTileIndex; } }
     public Button MoveButton { get { return moveButton; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayToFlipDisplay PayToFlipDisplay { get { return payToFlipDisplay; } }
