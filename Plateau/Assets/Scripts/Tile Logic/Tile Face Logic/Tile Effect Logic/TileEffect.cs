@@ -21,6 +21,6 @@ public abstract class TileEffect
 
     public void Resolve()
     {
-        _state.ResolveEffect();
+        _state.ResolveAbility();
     }
 }

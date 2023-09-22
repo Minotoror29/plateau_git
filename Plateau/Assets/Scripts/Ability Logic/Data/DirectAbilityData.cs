@@ -9,6 +9,6 @@ public class DirectAbilityData : AbilityData
 
     public override Ability Ability(TableManager tableManager, TileState state)
     {
-        return new DirectAbility();
+        return new DirectAbility(tableManager, state);
     }
 }

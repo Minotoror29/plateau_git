@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatTileEffect : TileEffect
+public class CombatAbility : Ability
 {
     private int _health;
     private int _attack;
@@ -10,7 +10,7 @@ public class CombatTileEffect : TileEffect
     private int _resolvedRewards;
     private List<AdditionalCombatEffect> _additionalCombatEffects;
 
-    public CombatTileEffect(TableManager tableManager, TileState state, CombatTileEffectData data, List<AdditionalCombatEffectData> additionalCombatEffectsData) : base(tableManager, state)
+    public CombatAbility(TableManager tableManager, TileState state, CombatAbilityData data, List<AdditionalCombatEffectData> additionalCombatEffectsData) : base(tableManager, state)
     {
         _health = data.health;
         _attack = data.attack;

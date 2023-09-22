@@ -43,9 +43,9 @@ namespace Mino
             _currentState.Enter();
         }
 
-        public void ActivateEffects(Player player)
+        public void ActivateAbilities()
         {
-            _currentState.ActivateEffects(player);
+            _currentState.ActivateAbility(0);
         }
 
         public void FlipTile()

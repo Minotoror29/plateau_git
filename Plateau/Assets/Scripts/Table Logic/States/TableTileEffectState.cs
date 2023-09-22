@@ -10,7 +10,7 @@ public class TableTileEffectState : TableState
 
     public override void Enter()
     {
-        TableManager.Player.CurrentTile.ActivateEffects(TableManager.Player);
+        TableManager.Player.CurrentTile.ActivateAbilities();
     }
 
     public override void Exit()

@@ -12,7 +12,7 @@ public class TileState : State
     private int _faceIndex;
 
     private List<Ability> _abilities;
-    private int _resolvedEffects = 0;
+    private int _resolvedAbilities = 0;
 
     public TileState(TableManager tableManager, Tile tile, TileFaceData faceData, int faceIndex)
     {
@@ -42,23 +42,21 @@ public class TileState : State
     {
     }
 
-    public void ActivateEffects(Player player)
+    public void ActivateAbility(int abilityIndex)
     {
-        _resolvedEffects = 0;
-
-        foreach (Ability ability in _abilities)
-        {
-            ability.Activate(player);
-        }
+        _abilities[abilityIndex].Activate(_tableManager.Player);
     }
 
-    public void ResolveEffect()
+    public void ResolveAbility()
     {
-        _resolvedEffects++;
+        _resolvedAbilities++;
 
-        if (_resolvedEffects == _abilities.Count)
+        if (_resolvedAbilities == _abilities.Count)
         {
             _tableManager.ChangeState(new TableCheckState(_tableManager));
+        } else
+        {
+            ActivateAbility(_resolvedAbilities);
         }
     }
 

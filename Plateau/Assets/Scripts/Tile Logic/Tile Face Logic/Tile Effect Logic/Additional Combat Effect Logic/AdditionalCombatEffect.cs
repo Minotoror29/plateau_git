@@ -4,11 +4,11 @@ using UnityEngine;
 
 public abstract class AdditionalCombatEffect
 {
-    private CombatTileEffectData _combat;
+    private CombatAbilityData _combat;
 
-    public CombatTileEffectData Combat { get { return _combat; } }
+    public CombatAbilityData Combat { get { return _combat; } }
 
-    public AdditionalCombatEffect(CombatTileEffectData combat)
+    public AdditionalCombatEffect(CombatAbilityData combat)
     {
         _combat = combat;
     }

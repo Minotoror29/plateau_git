@@ -6,7 +6,7 @@ public class GoldCombatReward : CombatReward
 {
     private ValueApplication _amount;
 
-    public GoldCombatReward(TableManager tableManager, CombatTileEffect combat, ValueApplicationData valueApplicationData) : base (tableManager, combat)
+    public GoldCombatReward(TableManager tableManager, CombatAbility combat, ValueApplicationData valueApplicationData) : base (tableManager, combat)
     {
         _amount = valueApplicationData.Value(tableManager);
     }

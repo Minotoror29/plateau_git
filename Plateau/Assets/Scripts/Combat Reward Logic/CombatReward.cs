@@ -5,12 +5,12 @@ using UnityEngine;
 public abstract class CombatReward
 {
     private TableManager _tableManager;
-    private CombatTileEffect _combat;
+    private CombatAbility _combat;
 
     public TableManager TableManager { get { return _tableManager; } }
-    public CombatTileEffect Combat { get { return _combat; } }
+    public CombatAbility Combat { get { return _combat; } }
 
-    public CombatReward(TableManager tableManager, CombatTileEffect combat)
+    public CombatReward(TableManager tableManager, CombatAbility combat)
     {
         _tableManager = tableManager;
         _combat = combat;

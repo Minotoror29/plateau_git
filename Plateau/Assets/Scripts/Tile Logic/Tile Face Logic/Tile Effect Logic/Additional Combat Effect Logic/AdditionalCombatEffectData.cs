@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class AdditionalCombatEffectData : ScriptableObject
 {
-    public abstract AdditionalCombatEffect Effect(CombatTileEffectData combat);
+    public abstract AdditionalCombatEffect Effect(CombatAbilityData combat);
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   faceColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
-  effects:
-  - {fileID: 11400000, guid: 8380a796188e5fd42a671099022e318e, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 5aa6be5c8eb9e154998aa14d1607c762, type: 2}
