@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Spider Web
   m_EditorClassIdentifier: 
   faceColor: {r: 1, g: 1, b: 1, a: 1}
-  effects:
-  - {fileID: 11400000, guid: 45b555b59f43ea342abcf6bbd44ea0a8, type: 2}
-  - {fileID: 11400000, guid: a71762c9992d1be4e958fa7e5081e088, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: ad83da090f69db947a841fc95479b399, type: 2}

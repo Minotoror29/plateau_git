@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkipNextTurnTileEffect : TileEffect
+public class SkipNextTurnEffect : Effect
 {
-    public SkipNextTurnTileEffect(TableManager tableManager, TileState state) : base(tableManager, state)
+    public SkipNextTurnEffect(TableManager tableManager) : base(tableManager)
     {
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
-        player.OnTurnStart += SkipTurn;
+        TableManager.Player.OnTurnStart += SkipTurn;
 
-        Resolve();
+        ResolveEffect();
     }
 
     private void SkipTurn(TableTurnStartState state)
