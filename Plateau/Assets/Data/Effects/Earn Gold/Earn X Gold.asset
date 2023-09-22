@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Cave - Mine
+  m_Script: {fileID: 11500000, guid: cfb0a80491feeeb40a28c265a8bf636e, type: 3}
+  m_Name: Earn X Gold
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 5724464a877963a49a8b03a4a1bc30d6, type: 2}
-  backFace: {fileID: 11400000, guid: 5724464a877963a49a8b03a4a1bc30d6, type: 2}
+  description: Earn
+  unit: Gold

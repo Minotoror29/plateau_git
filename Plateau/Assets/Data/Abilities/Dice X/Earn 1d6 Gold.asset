@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bc00bf8dfef2f40b62ce1fd123affa, type: 3}
-  m_Name: Pay X To Heal
+  m_Script: {fileID: 11500000, guid: 3b44bbb94887b3b47857871192e5d8bc, type: 3}
+  m_Name: Earn 1d6 Gold
   m_EditorClassIdentifier: 
   effects:
-  - {fileID: 11400000, guid: 73490e24cec75b14e9d2ed18dd1b755a, type: 2}
+  - {fileID: 11400000, guid: 7b092c384fe06c9438aebe378c89e502, type: 2}

@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1142310159}
   boss: {fileID: 1047524408}
-  tileData: {fileID: 11400000, guid: 80b8478d90bc12f47a3112d9aad70c7e, type: 2}
+  tileData: {fileID: 11400000, guid: b7589651887f24a4bb206e38573079bc, type: 2}
   innTileData: {fileID: 11400000, guid: 6a7104ca27329b14bb90af8f33887aba, type: 2}
   innTileIndex: 0
   bossTileData: {fileID: 11400000, guid: 93eefe3c961dba5439ebe394cc2d4334, type: 2}
@@ -4161,10 +4161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  startHealth: 1
+  startHealth: 10
   healthDisplay: {fileID: 1558540851}
   maxGold: 20
-  startGold: 20
+  startGold: 5
   goldDisplay: {fileID: 909224656}
 --- !u!1 &1165493736
 GameObject:
