@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Forest
+  m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
+  m_Name: 1 Fixed Movement
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.13461196, g: 0.5188679, b: 0.2374955, a: 1}
-  abilities:
-  - {fileID: 11400000, guid: 449925b275712aa48ae890a812695031, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 8084175c928e67747b5a804a206cf228, type: 2}

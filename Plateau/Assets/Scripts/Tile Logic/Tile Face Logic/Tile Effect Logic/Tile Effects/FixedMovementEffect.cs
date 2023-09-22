@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FixedMovementEffect : TileEffect
+public class FixedMovementEffect : Effect
 {
     private int _movementValue;
 
-    public FixedMovementEffect(TableManager tableManager, TileState state, int movementValue) : base(tableManager, state)
+    public FixedMovementEffect(TableManager tableManager, int movementValue) : base(tableManager)
     {
         _movementValue = movementValue;
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
-        player.OnTurnStart += ApplyFixedMovement;
+        TableManager.Player.OnTurnStart += ApplyFixedMovement;
 
-        Resolve();
+        ResolveEffect();
     }
 
     private void ApplyFixedMovement(TableTurnStartState state)

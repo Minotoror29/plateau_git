@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Forest
+  m_Script: {fileID: 11500000, guid: 18bec77a88fdf95488eabcecb4643356, type: 3}
+  m_Name: Wolf Pack Combat
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.13461196, g: 0.5188679, b: 0.2374955, a: 1}
-  abilities:
-  - {fileID: 11400000, guid: 449925b275712aa48ae890a812695031, type: 2}
+  health: 3
+  attack: 2
+  rewards:
+  - {fileID: 11400000, guid: f1cb5a1eaf518ac4f82f048db561efb5, type: 2}
+  additionalCombatEffects: []

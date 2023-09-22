@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wolf Pack
   m_EditorClassIdentifier: 
   faceColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-  effects:
-  - {fileID: 11400000, guid: c7e58d9c25e956c42aa273d20cc5e5f5, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 60a035fb7206d4c4ebcaa41dde402a6a, type: 2}
