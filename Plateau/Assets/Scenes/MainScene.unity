@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1142310159}
   boss: {fileID: 1047524408}
-  tileData: {fileID: 11400000, guid: 28a6686b8e91d12439fa7b42696a386e, type: 2}
+  tileData: {fileID: 11400000, guid: 5e4efb5a34fea2b41b74d8ab157b7046, type: 2}
   innTileData: {fileID: 11400000, guid: 6a7104ca27329b14bb90af8f33887aba, type: 2}
   innTileIndex: 0
   bossTileData: {fileID: 11400000, guid: 93eefe3c961dba5439ebe394cc2d4334, type: 2}
