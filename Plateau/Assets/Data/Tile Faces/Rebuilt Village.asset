@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Rebuilt Village
   m_EditorClassIdentifier: 
   faceColor: {r: 0.8396226, g: 0.46293178, b: 0.13861692, a: 1}
-  effects:
-  - {fileID: 11400000, guid: c6aedcbb1c0eed4489b949ac2dffefa6, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: de98af5f222eb5348a97d99eb1e3baf3, type: 2}

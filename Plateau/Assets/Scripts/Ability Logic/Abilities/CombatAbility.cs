@@ -43,7 +43,7 @@ public class CombatAbility : Ability
             {
                 additionalEffect.Activate(player);
             }
-            Resolve();
+            ResolveAbility();
         }
     }
 
@@ -58,7 +58,7 @@ public class CombatAbility : Ability
                 reward.EarnReward(TableManager.Player);
             }
             State.FlipTile();
-            Resolve();
+            ResolveAbility();
         } else
         {
             _rewards[_resolvedRewards].DetermineReward();

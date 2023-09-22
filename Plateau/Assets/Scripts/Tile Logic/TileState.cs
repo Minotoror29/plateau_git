@@ -42,9 +42,15 @@ public class TileState : State
     {
     }
 
-    public void ActivateAbility(int abilityIndex)
+    public void ActivateAbilities()
     {
-        _abilities[abilityIndex].Activate(_tableManager.Player);
+        _resolvedAbilities = 0;
+        ActivateNextAbility();
+    }
+
+    private void ActivateNextAbility()
+    {
+        _abilities[_resolvedAbilities].Activate(_tableManager.Player);
     }
 
     public void ResolveAbility()
@@ -56,7 +62,7 @@ public class TileState : State
             _tableManager.ChangeState(new TableCheckState(_tableManager));
         } else
         {
-            ActivateAbility(_resolvedAbilities);
+            ActivateNextAbility();
         }
     }
 

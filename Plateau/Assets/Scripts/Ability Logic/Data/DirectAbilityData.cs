@@ -5,10 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ability/Direct Ability")]
 public class DirectAbilityData : AbilityData
 {
-    public List<TileEffectData> effects;
+    public List<EffectData> effects;
 
     public override Ability Ability(TableManager tableManager, TileState state)
     {
-        return new DirectAbility(tableManager, state);
+        return new DirectAbility(tableManager, state, effects);
     }
 }

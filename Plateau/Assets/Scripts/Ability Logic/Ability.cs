@@ -18,7 +18,7 @@ public abstract class Ability
 
     public abstract void Activate(Player player);
 
-    public void Resolve()
+    public void ResolveAbility()
     {
         _state.ResolveAbility();
     }
