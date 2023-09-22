@@ -6,5 +6,5 @@ using UnityEngine;
 public class TileFaceData : ScriptableObject
 {
     public Color faceColor;
-    public List<TileEffectData> effects;
+    public List<AbilityData> abilities;
 }

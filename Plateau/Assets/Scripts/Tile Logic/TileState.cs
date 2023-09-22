@@ -11,7 +11,7 @@ public class TileState : State
     private TileFaceData _faceData;
     private int _faceIndex;
 
-    private List<TileEffect> _effects;
+    private List<Ability> _abilities;
     private int _resolvedEffects = 0;
 
     public TileState(TableManager tableManager, Tile tile, TileFaceData faceData, int faceIndex)
@@ -22,10 +22,10 @@ public class TileState : State
         _faceData = faceData;
         _faceIndex = faceIndex;
 
-        _effects = new();
-        foreach (TileEffectData effect in faceData.effects)
+        _abilities = new();
+        foreach (AbilityData ability in faceData.abilities)
         {
-            _effects.Add(effect.Effect(tableManager, this));
+            _abilities.Add(ability.Ability(tableManager, this));
         }
     }
 
@@ -46,9 +46,9 @@ public class TileState : State
     {
         _resolvedEffects = 0;
 
-        foreach (TileEffect effect in _effects)
+        foreach (Ability ability in _abilities)
         {
-            effect.Activate(player);
+            ability.Activate(player);
         }
     }
 
@@ -56,7 +56,7 @@ public class TileState : State
     {
         _resolvedEffects++;
 
-        if (_resolvedEffects == _effects.Count)
+        if (_resolvedEffects == _abilities.Count)
         {
             _tableManager.ChangeState(new TableCheckState(_tableManager));
         }

@@ -84,7 +84,9 @@ public class TableManager : MonoBehaviour
 
     public int TossDice()
     {
-        return Random.Range(1, 7);
+        int value = Random.Range(1, 7);
+        Debug.Log("Dice Roll : " + value);
+        return value;
     }
 
     public ArtifactData DrawArtifact()
