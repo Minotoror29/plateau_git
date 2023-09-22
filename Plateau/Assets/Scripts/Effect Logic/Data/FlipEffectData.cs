@@ -7,6 +7,6 @@ public class FlipEffectData : EffectData
 {
     public override Effect Effect(TableManager tableManager)
     {
-        return new FlipEffect(tableManager, this);
+        return new FlipEffect(tableManager, description);
     }
 }

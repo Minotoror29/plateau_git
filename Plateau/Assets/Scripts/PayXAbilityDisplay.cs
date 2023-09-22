@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PayCustomGoldDisplay : MonoBehaviour
+public class PayXAbilityDisplay : MonoBehaviour
 {
     private Player _player;
-    private GoldValueApplication _valueApplication;
+    private PayXAbility _ability;
     private int _goldAmount;
 
     [SerializeField] private List<TextMeshProUGUI> amountDisplays;
 
-    public void Initialize(Player player, GoldValueApplication valueApplication)
+    public void Initialize(Player player, PayXAbility ability)
     {
         _player = player;
-        _valueApplication = valueApplication;
+        _ability = ability;
 
         _goldAmount = 0;
         SetAmounts();
@@ -45,15 +45,12 @@ public class PayCustomGoldDisplay : MonoBehaviour
     public void Accept()
     {
         gameObject.SetActive(false);
-        _player.LoseGold(_goldAmount);
-        _valueApplication.Value = _goldAmount;
-        _valueApplication.Resolve();
+        _ability.ActivateEffects(_goldAmount);
     }
 
     public void Decline()
     {
         gameObject.SetActive(false);
-        _valueApplication.Value = 0;
-        _valueApplication.Resolve();
+        _ability.ResolveAbility();
     }
 }

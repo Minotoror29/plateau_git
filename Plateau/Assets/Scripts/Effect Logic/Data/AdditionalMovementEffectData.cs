@@ -7,6 +7,6 @@ public class AdditionalMovementEffectData : EffectData
 {
     public override Effect Effect(TableManager tableManager)
     {
-        return new AdditionalMovementEffect(tableManager, this);
+        return new AdditionalMovementEffect(tableManager, description);
     }
 }

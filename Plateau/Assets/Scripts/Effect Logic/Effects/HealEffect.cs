@@ -6,7 +6,7 @@ public class HealEffect : Effect
 {
     private int _healthAmount;
 
-    public HealEffect(TableManager tableManager, HealEffectData data) : base(tableManager, data)
+    public HealEffect(TableManager tableManager, HealEffectData data, string description) : base(tableManager, description)
     {
         _healthAmount = data.healthAmount;
     }

@@ -9,6 +9,6 @@ public class DrawArtifactEffectData : EffectData
 
     public override Effect Effect(TableManager tableManager)
     {
-        return new DrawArtifactEffect(tableManager, this);
+        return new DrawArtifactEffect(tableManager, this, description);
     }
 }

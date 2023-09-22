@@ -9,6 +9,6 @@ public class HealEffectData : EffectData
 
     public override Effect Effect(TableManager tableManager)
     {
-        return new HealEffect(tableManager, this);
+        return new HealEffect(tableManager, this, description);
     }
 }

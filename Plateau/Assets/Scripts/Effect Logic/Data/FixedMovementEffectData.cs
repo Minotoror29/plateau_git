@@ -9,6 +9,6 @@ public class FixedMovementEffectData : EffectData
 
     public override Effect Effect(TableManager tableManager)
     {
-        return new FixedMovementEffect(tableManager, this, movementValue);
+        return new FixedMovementEffect(tableManager, description, movementValue);
     }
 }

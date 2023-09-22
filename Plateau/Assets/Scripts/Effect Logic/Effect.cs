@@ -14,10 +14,10 @@ public abstract class Effect
     public TableManager TableManager { get { return _tableManager; } }
     public string Description { get { return _description; } }
 
-    public Effect(TableManager tableManager, EffectData data)
+    public Effect(TableManager tableManager, string description)
     {
         _tableManager = tableManager;
-        _description = data.description;
+        _description = description;
     }
 
     public abstract void Activate();

@@ -10,7 +10,6 @@ public class GoldValueApplication : ValueApplication
 
     public override void DetermineValue()
     {
-        TableManager.PayCustomGoldDisplay.gameObject.SetActive(true);
-        TableManager.PayCustomGoldDisplay.Initialize(TableManager.Player, this);
+        TableManager.PayXAbilityDisplay.gameObject.SetActive(true);
     }
 }

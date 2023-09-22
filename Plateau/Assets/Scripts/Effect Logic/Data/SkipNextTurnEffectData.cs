@@ -7,6 +7,6 @@ public class SkipNextTurnEffectData : EffectData
 {
     public override Effect Effect(TableManager tableManager)
     {
-        return new SkipNextTurnEffect(tableManager, this);
+        return new SkipNextTurnEffect(tableManager, description);
     }
 }

@@ -2645,7 +2645,7 @@ MonoBehaviour:
   artifacts: []
   modalCombatRewardDisplay: {fileID: 597329061}
   payAbilityDisplay: {fileID: 348233993}
-  payCustomGoldDisplay: {fileID: 1580252201}
+  payXAbilityDisplay: {fileID: 1580252201}
 --- !u!1 &672684915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4161,10 +4161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  startHealth: 10
+  startHealth: 1
   healthDisplay: {fileID: 1558540851}
   maxGold: 20
-  startGold: 5
+  startGold: 20
   goldDisplay: {fileID: 909224656}
 --- !u!1 &1165493736
 GameObject:
@@ -5559,7 +5559,7 @@ GameObject:
   - component: {fileID: 1580252197}
   - component: {fileID: 1580252201}
   m_Layer: 5
-  m_Name: Pay Custom Gold Canvas
+  m_Name: Pay X Ability Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
