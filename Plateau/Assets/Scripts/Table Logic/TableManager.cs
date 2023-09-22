@@ -24,7 +24,7 @@ public class TableManager : MonoBehaviour
     [SerializeField] private List<ArtifactData> artifacts;
 
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
-    [SerializeField] private PayToFlipDisplay payToFlipDisplay;
+    [SerializeField] private PayAbilityDisplay payAbilityDisplay;
     [SerializeField] private PayCustomGoldDisplay payCustomGoldDisplay;
 
     public Player Player { get { return player; } }
@@ -33,7 +33,7 @@ public class TableManager : MonoBehaviour
     public int InnTileIndex { get { return innTileIndex; } }
     public Button MoveButton { get { return moveButton; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
-    public PayToFlipDisplay PayToFlipDisplay { get { return payToFlipDisplay; } }
+    public PayAbilityDisplay PayAbilityDisplay { get { return payAbilityDisplay; } }
     public PayCustomGoldDisplay PayCustomGoldDisplay { get { return payCustomGoldDisplay; } }
 
     private void Start()

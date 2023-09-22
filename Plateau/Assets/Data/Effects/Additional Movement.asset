@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7365f57f33fbd498e23472dfea2baa, type: 3}
   m_Name: Additional Movement
   m_EditorClassIdentifier: 
+  description: Get an Additional Movement

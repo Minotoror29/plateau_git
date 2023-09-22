@@ -13,7 +13,7 @@ public class PayToFlipTileEffect : TileEffect
 
     public override void Activate(Player player)
     {
-        TableManager.PayToFlipDisplay.gameObject.SetActive(true);
-        TableManager.PayToFlipDisplay.Initialize(player, this, _goldAmount);
+        TableManager.PayAbilityDisplay.gameObject.SetActive(true);
+        //TableManager.PayToFlipDisplay.Initialize(player, this, _goldAmount);
     }
 }

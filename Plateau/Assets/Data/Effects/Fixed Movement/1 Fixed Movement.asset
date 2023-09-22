@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d1dbef2bed02b47aa2945a53631119, type: 3}
   m_Name: 1 Fixed Movement
   m_EditorClassIdentifier: 
+  description: Skip Next Movement Dice and Move for 1
   movementValue: 1

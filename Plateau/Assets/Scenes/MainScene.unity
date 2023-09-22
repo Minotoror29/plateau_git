@@ -1452,7 +1452,7 @@ GameObject:
   - component: {fileID: 348233989}
   - component: {fileID: 348233993}
   m_Layer: 5
-  m_Name: Pay to Flip Canvas
+  m_Name: Pay Ability Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2636,7 +2636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1142310159}
   boss: {fileID: 1047524408}
-  tileData: {fileID: 11400000, guid: c047c00da50ae564da30f6b0d7d596b3, type: 2}
+  tileData: {fileID: 11400000, guid: 80b8478d90bc12f47a3112d9aad70c7e, type: 2}
   innTileData: {fileID: 11400000, guid: 6a7104ca27329b14bb90af8f33887aba, type: 2}
   innTileIndex: 0
   bossTileData: {fileID: 11400000, guid: 93eefe3c961dba5439ebe394cc2d4334, type: 2}
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   moveButton: {fileID: 905952953}
   artifacts: []
   modalCombatRewardDisplay: {fileID: 597329061}
-  payToFlipDisplay: {fileID: 348233993}
+  payAbilityDisplay: {fileID: 348233993}
   payCustomGoldDisplay: {fileID: 1580252201}
 --- !u!1 &672684915
 GameObject:

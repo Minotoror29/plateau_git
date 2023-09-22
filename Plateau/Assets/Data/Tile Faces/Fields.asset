@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Fields
   m_EditorClassIdentifier: 
   faceColor: {r: 0.9528302, g: 0.8423141, b: 0.26517445, a: 1}
-  effects:
-  - {fileID: 11400000, guid: d1aadb8925e7bf943be3acde00a58c9c, type: 2}
-  - {fileID: 11400000, guid: a01c04f963df4a543bd258f436f52a9b, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 8ae299643b56fda4481fca6357b8aa19, type: 2}
+  - {fileID: 11400000, guid: c5754f7388e006342af38702379f5b6d, type: 2}

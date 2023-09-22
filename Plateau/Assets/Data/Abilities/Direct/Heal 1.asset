@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Giant Spider
+  m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
+  m_Name: Heal 1
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.21568628, g: 0.3019608, b: 0.2477486, a: 1}
-  abilities:
-  - {fileID: 11400000, guid: c4f298f203a960549af142370c1412cd, type: 2}
+  effects:
+  - {fileID: 11400000, guid: d1aadb8925e7bf943be3acde00a58c9c, type: 2}

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88355381ecc86b24d81151ba95a46a5e, type: 3}
   m_Name: Heal All
   m_EditorClassIdentifier: 
+  description: Heal All Your HP
   healthAmount: 10

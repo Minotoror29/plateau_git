@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfac89f3ccb3b441abfd15c42e5497f, type: 3}
   m_Name: Skip Next Turn
   m_EditorClassIdentifier: 
+  description: Skip Next Turn

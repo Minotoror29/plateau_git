@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkipNextTurnEffect : Effect
 {
-    public SkipNextTurnEffect(TableManager tableManager) : base(tableManager)
+    public SkipNextTurnEffect(TableManager tableManager, SkipNextTurnEffectData data) : base(tableManager, data)
     {
     }
 

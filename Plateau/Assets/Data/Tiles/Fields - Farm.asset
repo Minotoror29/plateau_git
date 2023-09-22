@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
   m_Name: Fields - Farm
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: f12d717117e27de408b4b7f7b52cb2bb, type: 2}
-  backFace: {fileID: 11400000, guid: fb64a05d7c018554da9e04b179f51686, type: 2}
+  frontFace: {fileID: 11400000, guid: fb64a05d7c018554da9e04b179f51686, type: 2}
+  backFace: {fileID: 11400000, guid: 4a50ff2e58c58394eb17ce8f40c0d0a2, type: 2}

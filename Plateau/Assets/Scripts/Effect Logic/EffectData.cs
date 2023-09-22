@@ -4,5 +4,7 @@ using UnityEngine;
 
 public abstract class EffectData : ScriptableObject
 {
+    public string description;
+
     public abstract Effect Effect(TableManager tableManager);
 }
