@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DirectAbility : Ability
+public class DiceAbility : Ability
 {
+    private int _diceResult;
+
     private List<Effect> _effects;
     private int _resolvedEffects;
 
-    public DirectAbility(TableManager tableManager, TileState state, List<EffectData> effects) : base(tableManager, state)
+    public DiceAbility(TableManager tableManager, TileState state, int diceResult, List<EffectData> effects) : base(tableManager, state)
     {
+        _diceResult = diceResult;
+
         _effects = new();
         foreach (EffectData effect in effects)
         {
@@ -20,7 +24,13 @@ public class DirectAbility : Ability
 
     public override void Activate(Player player)
     {
-        ActivateEffects();
+        if (TableManager.TossDice() == _diceResult)
+        {
+            ActivateEffects();
+        } else
+        {
+            ResolveAbility();
+        }
     }
 
     private void ActivateEffects()
@@ -40,10 +50,11 @@ public class DirectAbility : Ability
 
         _resolvedEffects++;
 
-        if (_resolvedEffects == _effects.Count )
+        if (_resolvedEffects == _effects.Count)
         {
             ResolveAbility();
-        } else
+        }
+        else
         {
             ActivateNextEffect();
         }

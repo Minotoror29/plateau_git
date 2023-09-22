@@ -59,7 +59,6 @@ public class TileState : State
 
         if (_resolvedAbilities == _abilities.Count)
         {
-            Debug.Log("Check");
             _tableManager.ChangeState(new TableCheckState(_tableManager));
         } else
         {
