@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ac039f8218674d4685ecd86b861f8fd, type: 3}
-  m_Name: Boss Effect
+  m_Name: Boss
   m_EditorClassIdentifier: 

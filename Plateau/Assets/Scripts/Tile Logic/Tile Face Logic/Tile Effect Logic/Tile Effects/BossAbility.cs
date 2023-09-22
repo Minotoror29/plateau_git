@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossTileEffect : TileEffect
+public class BossAbility : Ability
 {
-    public BossTileEffect(TableManager tableManager, TileState state) : base(tableManager, state)
+    public BossAbility(TableManager tableManager, TileState state) : base(tableManager, state)
     {
     }
 
@@ -17,6 +17,6 @@ public class BossTileEffect : TileEffect
             player.TakeDamage(TableManager.TossDice());
         }
 
-        Resolve();
+        ResolveAbility();
     }
 }
