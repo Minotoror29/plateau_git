@@ -51,6 +51,7 @@ public class PayXAbility : Ability
 
         if (_resolvedEffects == _effects.Count)
         {
+            _effects.Clear();
             ResolveAbility();
         }
         else

@@ -18,9 +18,7 @@ public class PayAbility : Ability
         _effects = new();
         foreach (EffectData effect in effects)
         {
-            Effect newEffect = effect.Effect(TableManager);
-            _effects.Add(newEffect);
-            newEffect.OnResolution += ResolveEffect;
+            _effects.Add(effect.Effect(TableManager));
         }
     }
 
@@ -32,6 +30,11 @@ public class PayAbility : Ability
 
     public void ActivateEffects()
     {
+        foreach (Effect effect in _effects)
+        {
+            effect.OnResolution += ResolveEffect;
+        }
+
         TableManager.Player.LoseGold(_goldAmount);
         _resolvedEffects = 0;
         ActivateNextEffect();

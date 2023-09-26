@@ -15,7 +15,7 @@ public class TablePlayerMoveState : TableState
     {
         TableManager.Player.Move(_movement);
 
-        TableManager.ChangeState(new TableTileEffectState(TableManager));
+        TableManager.ChangeState(new TableTileAbilityState(TableManager));
     }
 
     public override void Exit()

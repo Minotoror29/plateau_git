@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableTileEffectState : TableState
+public class TableTileAbilityState : TableState
 {
-    public TableTileEffectState(TableManager tableManager) : base(tableManager)
+    public TableTileAbilityState(TableManager tableManager) : base(tableManager)
     {
     }
 

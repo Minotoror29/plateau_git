@@ -12,9 +12,7 @@ public class DirectAbility : Ability
         _effects = new();
         foreach (EffectData effect in effects)
         {
-            Effect newEffect = effect.Effect(TableManager);
-            _effects.Add(newEffect);
-            newEffect.OnResolution += ResolveEffect;
+            _effects.Add(effect.Effect(TableManager));
         }
     }
 
@@ -25,6 +23,12 @@ public class DirectAbility : Ability
 
     private void ActivateEffects()
     {
+        foreach (Effect effect in _effects)
+        {
+            effect.OnResolution += ResolveEffect;
+        }
+
+
         _resolvedEffects = 0;
         ActivateNextEffect();
     }
