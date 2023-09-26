@@ -12,4 +12,9 @@ public abstract class TableState : State
     {
         _tableManager = tableManager;
     }
+
+    public virtual void SelectArtifact(ArtifactDisplay artifact)
+    {
+
+    }
 }

@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
     [SerializeField] private int startGold = 5;
     [SerializeField] private TextMeshProUGUI goldDisplay;
 
+    [SerializeField] private Transform artifactsParent;
+    [SerializeField] private ArtifactDisplay artifactDisplayPrefab;
+    private List<ArtifactDisplay> _artifacts;
+    [SerializeField] private int maximumArtifacts = 3;
+
     private Tile _currentTile;
 
     public event Action<TableTurnStartState> OnTurnStart;
@@ -25,12 +30,15 @@ public class Player : MonoBehaviour
     public TableManager TableManager { get { return _tableManager; } }
     public int Health { get { return _health; } }
     public int Gold { get { return _gold; } }
+    public List<ArtifactDisplay> Artifacts { get { return _artifacts; } }
+    public int MaximumArtifacts { get { return maximumArtifacts; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
     public void Initialize(TableManager tableManager, Tile startTile)
     {
         _tableManager = tableManager;
 
+        _artifacts = new();
         _currentTile = startTile;
 
         ResetStats();
@@ -105,6 +113,18 @@ public class Player : MonoBehaviour
 
     public void DrawArtifacts(int amount)
     {
-        Debug.Log("Player drew " + amount + " artifact(s)");
+        for (int i = 0; i < amount; i++)
+        {
+            ArtifactDisplay newArtifact = Instantiate(artifactDisplayPrefab, artifactsParent);
+            newArtifact.Initialize(_tableManager, _tableManager.DrawArtifact());
+            _artifacts.Add(newArtifact);
+        }
+    }
+
+    public void DiscardArtifact(ArtifactDisplay artifact)
+    {
+        _tableManager.PutArtifactInGraveyard(artifact.ArtifactData);
+        _artifacts.Remove(artifact);
+        Destroy(artifact.gameObject);
     }
 }
