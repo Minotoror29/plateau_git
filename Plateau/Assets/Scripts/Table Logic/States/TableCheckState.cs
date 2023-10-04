@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TableCheckState : TableState
 {
-    public TableCheckState(TableManager tableManager) : base(tableManager)
+    public TableCheckState(TableManager tableManager, TableSubstate subState) : base(tableManager, subState)
     {
     }
 
@@ -18,10 +18,10 @@ public class TableCheckState : TableState
 
         if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
         {
-            TableManager.ChangeState(new TableDiscardArtifactState(TableManager, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts));
+            TableManager.ChangeState(new TableDiscardArtifactState(TableManager, CurrentSubstate, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts));
         } else
         {
-            TableManager.ChangeState(new TableTurnStartState(TableManager));
+            TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
         }
 
     }

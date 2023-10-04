@@ -59,7 +59,7 @@ public class TileState : State
 
         if (_resolvedAbilities == _abilities.Count)
         {
-            _tableManager.ChangeState(new TableCheckState(_tableManager));
+            _tableManager.ChangeState(new TableCheckState(_tableManager, new TableDefaultSubstate(_tableManager)));
         } else
         {
             ActivateNextAbility();

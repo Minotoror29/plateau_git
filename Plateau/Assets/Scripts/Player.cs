@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private TextMeshProUGUI goldDisplay;
 
     [SerializeField] private Transform artifactsParent;
-    [SerializeField] private ArtifactDisplay artifactDisplayPrefab;
+    [SerializeField] private HandArtifactDisplay handArtifactDisplayPrefab;
     private List<ArtifactDisplay> _artifacts;
     [SerializeField] private int maximumArtifacts = 3;
 
@@ -115,10 +115,16 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            ArtifactDisplay newArtifact = Instantiate(artifactDisplayPrefab, artifactsParent);
-            newArtifact.Initialize(_tableManager, _tableManager.DrawArtifact());
-            _artifacts.Add(newArtifact);
+            PutArtifactInHand(_tableManager.DrawArtifact());
         }
+    }
+
+    public void PutArtifactInHand(ArtifactData artifact)
+    {
+        HandArtifactDisplay newArtifact = Instantiate(handArtifactDisplayPrefab, artifactsParent);
+        newArtifact.Initialize(_tableManager);
+        newArtifact.SetData(artifact);
+        _artifacts.Add(newArtifact);
     }
 
     public void DiscardArtifact(ArtifactDisplay artifact)

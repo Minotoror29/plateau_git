@@ -6,7 +6,7 @@ public class TableDiscardArtifactState : TableState
 {
     private int _artifactsToDiscard;
 
-    public TableDiscardArtifactState(TableManager tableManager, int artifactsToDiscard) : base(tableManager)
+    public TableDiscardArtifactState(TableManager tableManager, TableSubstate subState, int artifactsToDiscard) : base(tableManager, subState)
     {
         _artifactsToDiscard = artifactsToDiscard;
     }
@@ -26,7 +26,7 @@ public class TableDiscardArtifactState : TableState
 
         if (_artifactsToDiscard == 0)
         {
-            TableManager.ChangeState(new TableTurnStartState(TableManager));
+            TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
         }
     }
 

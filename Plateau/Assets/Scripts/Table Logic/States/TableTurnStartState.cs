@@ -8,7 +8,7 @@ public class TableTurnStartState : TableState
 
     public int FixedmovementValue { set { _fixedMovementValue = value; } }
 
-    public TableTurnStartState(TableManager tableManager) : base(tableManager)
+    public TableTurnStartState(TableManager tableManager, TableSubstate subState) : base(tableManager, subState)
     {
     }
 
@@ -32,11 +32,11 @@ public class TableTurnStartState : TableState
 
     private void TossDice()
     {
-        TableManager.ChangeState(new TableDiceState(TableManager));
+        TableManager.ChangeState(new TableDiceState(TableManager, CurrentSubstate));
     }
 
     public void MovePlayer()
     {
-        TableManager.ChangeState(new TablePlayerMoveState(TableManager, _fixedMovementValue));
+        TableManager.ChangeState(new TablePlayerMoveState(TableManager, CurrentSubstate, _fixedMovementValue));
     }
 }

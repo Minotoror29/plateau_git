@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableTileAbilityState : TableState
+public class TableDefaultSubstate : TableSubstate
 {
-    public TableTileAbilityState(TableManager tableManager, TableSubstate subState) : base(tableManager, subState)
+    public TableDefaultSubstate(TableManager tableManager) : base(tableManager)
     {
     }
 
     public override void Enter()
     {
-        TableManager.Player.CurrentTile.ActivateAbilities();
     }
 
     public override void Exit()

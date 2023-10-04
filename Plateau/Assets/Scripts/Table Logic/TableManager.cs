@@ -28,6 +28,7 @@ public class TableManager : MonoBehaviour
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
     [SerializeField] private PayAbilityDisplay payAbilityDisplay;
     [SerializeField] private PayXAbilityDisplay payXAbilityDisplay;
+    [SerializeField] private BuyMerchandiseDisplay buyMerchandiseDisplay;
 
     public TableState CurrentState { get { return _currentState; } }
     public Player Player { get { return player; } }
@@ -39,6 +40,7 @@ public class TableManager : MonoBehaviour
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayAbilityDisplay PayAbilityDisplay { get { return payAbilityDisplay; } }
     public PayXAbilityDisplay PayXAbilityDisplay { get { return payXAbilityDisplay; } }
+    public BuyMerchandiseDisplay BuyMerchandiseDisplay { get { return buyMerchandiseDisplay; } }
 
     private void Start()
     {
@@ -83,7 +85,9 @@ public class TableManager : MonoBehaviour
             _artifactsDeck.Add(artifact);
         }
 
-        ChangeState(new TableTurnStartState(this));
+        buyMerchandiseDisplay.Initialize(this);
+
+        ChangeState(new TableTurnStartState(this, new TableDefaultSubstate(this)));
     }
 
     public void ChangeState(TableState nextState)
@@ -102,15 +106,21 @@ public class TableManager : MonoBehaviour
 
     public ArtifactData DrawArtifact()
     {
-        ArtifactData artifact = _artifactsDeck[0];
-        _artifactsDeck.Remove(artifact);
-
         if (_artifactsDeck.Count == 0 && _artifactsGraveyard.Count > 0)
         {
             ShuffleArtifactsGraveyardIntoDeck();
         }
 
-        return artifact;
+        if (_artifactsDeck.Count > 0)
+        {
+            ArtifactData artifact = _artifactsDeck[0];
+            _artifactsDeck.Remove(artifact);
+
+            return artifact;
+        } else
+        {
+            return null;
+        }
     }
 
     public void PutArtifactInGraveyard(ArtifactData artifact)

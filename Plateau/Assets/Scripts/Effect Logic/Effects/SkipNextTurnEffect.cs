@@ -19,6 +19,6 @@ public class SkipNextTurnEffect : Effect
     {
         state.TableManager.Player.OnTurnStart -= SkipTurn;
 
-        state.TableManager.ChangeState(new TablePlayerMoveState(state.TableManager, 0));
+        state.TableManager.ChangeState(new TablePlayerMoveState(state.TableManager, new TableDefaultSubstate(state.TableManager), 0));
     }
 }
