@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableDiscardArtifactState : TableState
+public class TableDiscardArtifactSubstate : TableSubstate
 {
     private int _artifactsToDiscard;
+    private Effect _effect;
 
-    public TableDiscardArtifactState(TableManager tableManager, TableSubstate subState, int artifactsToDiscard) : base(tableManager, subState)
+    public TableDiscardArtifactSubstate(TableManager tableManager, int artifactsToDiscard, Effect effect) : base(tableManager)
     {
         _artifactsToDiscard = artifactsToDiscard;
+        _effect = effect;
     }
 
     public override void Enter()
@@ -26,7 +28,8 @@ public class TableDiscardArtifactState : TableState
 
         if (_artifactsToDiscard == 0)
         {
-            TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
+            _effect.ResolveEffect();
+            CurrentSuperstate.ChangeSubstate(new TableDefaultSubstate(TableManager));
         }
     }
 

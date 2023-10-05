@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Merchant - Lost Coins
   m_EditorClassIdentifier: 
   frontFace: {fileID: 11400000, guid: 650343cc044ed2c4699d7654c39426bd, type: 2}
-  backFace: {fileID: 11400000, guid: 4a50ff2e58c58394eb17ce8f40c0d0a2, type: 2}
+  backFace: {fileID: 11400000, guid: 49b94d9e91dfba748b03a8a8759df589, type: 2}

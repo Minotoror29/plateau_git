@@ -16,14 +16,15 @@ public class TableCheckState : TableState
             TableManager.Player.MoveTo(TableManager.Tiles[TableManager.InnTileIndex]);
         }
 
-        if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
-        {
-            TableManager.ChangeState(new TableDiscardArtifactState(TableManager, CurrentSubstate, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts));
-        } else
-        {
-            TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
-        }
+        TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
 
+        //if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
+        //{
+        //    TableManager.ChangeState(new TableDiscardArtifactState(TableManager, CurrentSubstate, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts));
+        //} else
+        //{
+        //    TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
+        //}
     }
 
     public override void Exit()

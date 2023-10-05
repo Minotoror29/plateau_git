@@ -28,6 +28,6 @@ public abstract class TableState : State
 
     public virtual void SelectArtifact(ArtifactDisplay artifact)
     {
-        //_currentSubstate?.SelectArtifact(artifact);
+        _currentSubstate?.SelectArtifact(artifact);
     }
 }

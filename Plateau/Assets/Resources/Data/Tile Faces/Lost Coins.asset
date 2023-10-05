@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faceColor: {r: 0.7608987, g: 1, b: 0, a: 1}
   abilities:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7ef383a9f435db740b7bdebd834bb2ca, type: 2}
+  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}
