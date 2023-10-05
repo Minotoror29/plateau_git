@@ -7,7 +7,7 @@ public class GoldCombatRewardData : CombatRewardData
 {
     public ValueApplicationData amount;
 
-    public override CombatReward Reward(TableManager tableManager, CombatAbility combat)
+    public override CombatReward Reward(TableManager tableManager, CombatEffect combat)
     {
         return new GoldCombatReward(tableManager, combat, amount);
     }

@@ -7,7 +7,7 @@ public class ArtifactCombatRewardData : CombatRewardData
 {
     public int amount;
 
-    public override CombatReward Reward(TableManager tableManager, CombatAbility combat)
+    public override CombatReward Reward(TableManager tableManager, CombatEffect combat)
     {
         return new ArtifactCombatReward(tableManager, combat, amount);
     }

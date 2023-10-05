@@ -11,7 +11,7 @@ public class ModalCombatReward : CombatReward
 
     public bool HasChosenGold { set { _hasChosenGold = value; } }
 
-    public ModalCombatReward(TableManager tableManager, CombatAbility combat, ModalCombatRewardData data) : base(tableManager, combat)
+    public ModalCombatReward(TableManager tableManager, CombatEffect combat, ModalCombatRewardData data) : base(tableManager, combat)
     {
         _goldAmount = data.goldAmount;
         _artifactAmount = data.artifactAmount;

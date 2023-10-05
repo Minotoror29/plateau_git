@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LoseGoldRelativeToDamageAdditionalCombatEffect : AdditionalCombatEffect
 {
-    public LoseGoldRelativeToDamageAdditionalCombatEffect(CombatAbilityData combat) : base(combat)
+    public LoseGoldRelativeToDamageAdditionalCombatEffect(CombatEffectData combat) : base(combat)
     {
     }
 

@@ -6,7 +6,7 @@ public class ArtifactCombatReward : CombatReward
 {
     private int _amount;
 
-    public ArtifactCombatReward(TableManager tableManager, CombatAbility combat, int amount) : base(tableManager, combat)
+    public ArtifactCombatReward(TableManager tableManager, CombatEffect combat, int amount) : base(tableManager, combat)
     {
         _amount = amount;
     }

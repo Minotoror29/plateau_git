@@ -8,7 +8,7 @@ public class ModalCombatRewardData : CombatRewardData
     public int goldAmount;
     public int artifactAmount;
 
-    public override CombatReward Reward(TableManager tableManager, CombatAbility combat)
+    public override CombatReward Reward(TableManager tableManager, CombatEffect combat)
     {
         return new ModalCombatReward(tableManager, combat, this);
     }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class CombatRewardData : ScriptableObject
 {
-    public abstract CombatReward Reward(TableManager tableManager, CombatAbility combat);
+    public abstract CombatReward Reward(TableManager tableManager, CombatEffect combat);
 }

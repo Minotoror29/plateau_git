@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatAbility : Ability
+public class CombatEffect : Effect
 {
     private int _health;
     private int _attack;
@@ -10,7 +10,7 @@ public class CombatAbility : Ability
     private int _resolvedRewards;
     private List<AdditionalCombatEffect> _additionalCombatEffects;
 
-    public CombatAbility(TableManager tableManager, TileState state, CombatAbilityData data, List<AdditionalCombatEffectData> additionalCombatEffectsData) : base(tableManager, state)
+    public CombatEffect(TableManager tableManager, TileState state, string description, CombatEffectData data) : base(tableManager, state, description)
     {
         _health = data.health;
         _attack = data.attack;
@@ -20,13 +20,13 @@ public class CombatAbility : Ability
             _rewards.Add(reward.Reward(tableManager, this));
         }
         _additionalCombatEffects = new();
-        foreach (AdditionalCombatEffectData additionalEffect in additionalCombatEffectsData)
+        foreach (AdditionalCombatEffectData additionalEffect in data.additionalCombatEffects)
         {
             _additionalCombatEffects.Add(additionalEffect.Effect(data));
         }
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         _resolvedRewards = 0;
 
@@ -38,12 +38,12 @@ public class CombatAbility : Ability
         }
         else
         {
-            player.TakeDamage(_attack);
+            TableManager.Player.TakeDamage(_attack);
             foreach (AdditionalCombatEffect additionalEffect in _additionalCombatEffects)
             {
-                additionalEffect.Activate(player);
+                additionalEffect.Activate(TableManager.Player);
             }
-            ResolveAbility();
+            ResolveEffect();
         }
     }
 
@@ -58,7 +58,15 @@ public class CombatAbility : Ability
                 reward.EarnReward(TableManager.Player);
             }
             State.FlipTile();
-            ResolveAbility();
+
+            if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
+            {
+                TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts, this));
+            }
+            else
+            {
+                ResolveEffect();
+            }
         } else
         {
             _rewards[_resolvedRewards].DetermineReward();
