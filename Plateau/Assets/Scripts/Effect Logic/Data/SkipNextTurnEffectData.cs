@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Effect/Skip Next Turn")]
 public class SkipNextTurnEffectData : EffectData
 {
-    public override Effect Effect(TableManager tableManager)
+    public override Effect Effect(TableManager tableManager, TileState state)
     {
-        return new SkipNextTurnEffect(tableManager, description);
+        return new SkipNextTurnEffect(tableManager, state, description);
     }
 }

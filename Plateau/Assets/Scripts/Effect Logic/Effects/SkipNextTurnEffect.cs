@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkipNextTurnEffect : Effect
 {
-    public SkipNextTurnEffect(TableManager tableManager, string description) : base(tableManager, description)
+    public SkipNextTurnEffect(TableManager tableManager, TileState state, string description) : base(tableManager, state, description)
     {
     }
 

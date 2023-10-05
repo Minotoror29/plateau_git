@@ -6,5 +6,5 @@ public abstract class EffectData : ScriptableObject
 {
     public string description;
 
-    public abstract Effect Effect(TableManager tableManager);
+    public abstract Effect Effect(TableManager tableManager, TileState state);
 }

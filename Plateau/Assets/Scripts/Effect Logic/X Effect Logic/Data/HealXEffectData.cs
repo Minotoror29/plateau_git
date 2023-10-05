@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Effect/Heal X")]
 public class HealXEffectData : XEffectData
 {
-    public override XEffect Effect(TableManager tableManager, int amount)
+    public override XEffect Effect(TableManager tableManager, TileState state, int amount)
     {
-        return new HealXEffect(tableManager, description, unit, amount);
+        return new HealXEffect(tableManager, state, description, unit, amount);
     }
 }

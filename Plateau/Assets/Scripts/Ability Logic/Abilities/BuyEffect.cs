@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuyAbility : Ability
+public class BuyEffect : Effect
 {
     private int _merchandiseToReveal;
     private int _merchandiseToBuy;
 
-    public BuyAbility(TableManager tableManager, TileState state, int merchandiseToReveal, int merchandiseToBuy) : base(tableManager, state)
+    public BuyEffect(TableManager tableManager, TileState state, string description, int merchandiseToReveal, int merchandiseToBuy) : base(tableManager, state, description)
     {
         _merchandiseToReveal = merchandiseToReveal;
         _merchandiseToBuy = merchandiseToBuy;
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         TableManager.BuyMerchandiseDisplay.gameObject.SetActive(true);
         TableManager.BuyMerchandiseDisplay.SetAbility(this);
@@ -29,6 +29,13 @@ public class BuyAbility : Ability
             State.FlipTile();
         }
 
-        ResolveAbility();
+        if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
+        {
+            TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts, this));
+        }
+        else
+        {
+            ResolveEffect();
+        }
     }
 }

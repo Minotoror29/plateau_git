@@ -7,5 +7,5 @@ public abstract class XEffectData : ScriptableObject
     public string description;
     public string unit;
 
-    public abstract XEffect Effect(TableManager tableManager, int amount);
+    public abstract XEffect Effect(TableManager tableManager, TileState state, int amount);
 }

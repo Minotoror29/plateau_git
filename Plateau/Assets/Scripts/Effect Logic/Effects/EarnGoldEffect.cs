@@ -6,7 +6,7 @@ public class EarnGoldEffect : Effect
 {
     private int _goldAmount;
 
-    public EarnGoldEffect(TableManager tableManager, string description, int goldAmount) : base(tableManager, description)
+    public EarnGoldEffect(TableManager tableManager, TileState state, string description, int goldAmount) : base(tableManager, state, description)
     {
         _goldAmount = goldAmount;
     }

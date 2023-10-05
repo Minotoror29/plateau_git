@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EarnXGold : XEffect
 {
-    public EarnXGold(TableManager tableManager, string description, string unit, int amount) : base(tableManager, description, unit, amount)
+    public EarnXGold(TableManager tableManager, TileState state, string description, string unit, int amount) : base(tableManager, state, description, unit, amount)
     {
     }
 

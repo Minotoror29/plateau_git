@@ -7,8 +7,8 @@ public class HealEffectData : EffectData
 {
     public int healthAmount;
 
-    public override Effect Effect(TableManager tableManager)
+    public override Effect Effect(TableManager tableManager, TileState state)
     {
-        return new HealEffect(tableManager, this, description);
+        return new HealEffect(tableManager, state, this, description);
     }
 }

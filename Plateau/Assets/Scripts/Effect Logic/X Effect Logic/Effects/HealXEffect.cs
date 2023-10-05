@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealXEffect : XEffect
 {
-    public HealXEffect(TableManager tableManager, string description, string unit, int amount) : base(tableManager, description, unit, amount)
+    public HealXEffect(TableManager tableManager, TileState state, string description, string unit, int amount) : base(tableManager, state, description, unit, amount)
     {
     }
 

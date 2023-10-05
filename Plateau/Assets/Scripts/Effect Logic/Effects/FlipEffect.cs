@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlipEffect : Effect
 {
-    public FlipEffect(TableManager tableManager, string description) : base(tableManager, description)
+    public FlipEffect(TableManager tableManager, TileState state, string description) : base(tableManager, state, description)
     {
     }
 

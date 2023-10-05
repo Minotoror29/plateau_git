@@ -11,7 +11,7 @@ public abstract class XEffect : Effect
     public int Amount { get { return _amount; } }
     public string Unit { get { return _unit; } }
 
-    protected XEffect(TableManager tableManager, string description, string unit, int amount) : base(tableManager, description)
+    protected XEffect(TableManager tableManager, TileState state, string description, string unit, int amount) : base(tableManager, state, description)
     {
         _amount = amount;
         _unit = unit;

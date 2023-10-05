@@ -18,7 +18,7 @@ public class PayAbility : Ability
         _effects = new();
         foreach (EffectData effect in effects)
         {
-            _effects.Add(effect.Effect(TableManager));
+            _effects.Add(effect.Effect(TableManager, state));
         }
     }
 

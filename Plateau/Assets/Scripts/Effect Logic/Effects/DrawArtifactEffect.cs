@@ -6,7 +6,7 @@ public class DrawArtifactEffect : Effect
 {
     private int _artifactAmount;
 
-    public DrawArtifactEffect(TableManager tableManager, DrawArtifactEffectData data, string description) : base(tableManager, description)
+    public DrawArtifactEffect(TableManager tableManager, TileState state, DrawArtifactEffectData data, string description) : base(tableManager, state, description)
     {
         _artifactAmount = data.artifactAmount;
     }

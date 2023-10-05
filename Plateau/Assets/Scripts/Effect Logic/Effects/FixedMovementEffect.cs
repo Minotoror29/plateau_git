@@ -6,7 +6,7 @@ public class FixedMovementEffect : Effect
 {
     private int _movementValue;
 
-    public FixedMovementEffect(TableManager tableManager, string description, int movementValue) : base(tableManager, description)
+    public FixedMovementEffect(TableManager tableManager, TileState state, string description, int movementValue) : base(tableManager, state, description)
     {
         _movementValue = movementValue;
     }

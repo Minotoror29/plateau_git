@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf8204bf00155e4a9794a93a5a3fd7c, type: 3}
   m_Name: Buy 3 3 Artifacts
   m_EditorClassIdentifier: 
+  description: Reveal 3 artifacts. If you buy 3, flip the tile.
   merchandiseToReveal: 3
   merchandiseToBuy: 3

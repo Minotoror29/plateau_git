@@ -27,7 +27,7 @@ public class DiceXAbility : Ability
         _effects = new();
         foreach (XEffectData effect in _effectsData)
         {
-            XEffect newEffect = effect.Effect(TableManager, diceResult);
+            XEffect newEffect = effect.Effect(TableManager, State, diceResult);
             _effects.Add(newEffect);
             newEffect.OnResolution += ResolveEffect;
         }

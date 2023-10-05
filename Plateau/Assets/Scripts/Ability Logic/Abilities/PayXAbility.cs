@@ -28,7 +28,7 @@ public class PayXAbility : Ability
         _effects = new();
         foreach (XEffectData effect in _effectsData)
         {
-            XEffect newEffect = effect.Effect(TableManager, goldAmount);
+            XEffect newEffect = effect.Effect(TableManager, State, goldAmount);
             _effects.Add(newEffect);
             newEffect.OnResolution += ResolveEffect;
         }
