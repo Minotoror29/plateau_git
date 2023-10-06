@@ -21,7 +21,7 @@ public abstract class TableSubstate : State
         _currentSuperState = newSuperstate;
     }
 
-    public virtual void SelectArtifact(ArtifactDisplay artifact)
+    public virtual void SelectArtifact(HandArtifactDisplay artifact)
     {
 
     }

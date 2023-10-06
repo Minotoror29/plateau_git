@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Transform artifactsParent;
     [SerializeField] private HandArtifactDisplay handArtifactDisplayPrefab;
-    private List<ArtifactDisplay> _artifacts;
+    private List<HandArtifactDisplay> _artifacts;
     [SerializeField] private int maximumArtifacts = 3;
 
     private Tile _currentTile;
@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     public TableManager TableManager { get { return _tableManager; } }
     public int Health { get { return _health; } }
     public int Gold { get { return _gold; } }
-    public List<ArtifactDisplay> Artifacts { get { return _artifacts; } }
+    public List<HandArtifactDisplay> Artifacts { get { return _artifacts; } }
     public int MaximumArtifacts { get { return maximumArtifacts; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
@@ -127,7 +127,7 @@ public class Player : MonoBehaviour
         _artifacts.Add(newArtifact);
     }
 
-    public void DiscardArtifact(ArtifactDisplay artifact)
+    public void DiscardArtifact(HandArtifactDisplay artifact)
     {
         _tableManager.PutArtifactInGraveyard(artifact.ArtifactData);
         _artifacts.Remove(artifact);

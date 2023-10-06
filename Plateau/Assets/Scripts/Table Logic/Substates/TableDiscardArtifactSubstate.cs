@@ -19,7 +19,7 @@ public class TableDiscardArtifactSubstate : TableSubstate
         TableManager.DiscardMerchandiseDisplay.Initialize("artifact");
     }
 
-    public override void SelectArtifact(ArtifactDisplay artifact)
+    public override void SelectArtifact(HandArtifactDisplay artifact)
     {
         base.SelectArtifact(artifact);
 

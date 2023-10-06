@@ -26,7 +26,7 @@ public abstract class TableState : State
         _currentSubstate.Enter();
     }
 
-    public virtual void SelectArtifact(ArtifactDisplay artifact)
+    public virtual void SelectArtifact(HandArtifactDisplay artifact)
     {
         _currentSubstate?.SelectArtifact(artifact);
     }
