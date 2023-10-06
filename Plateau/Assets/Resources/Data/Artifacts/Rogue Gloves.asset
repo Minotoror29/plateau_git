@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Rogue Gloves
   m_EditorClassIdentifier: 
   artifactName: Rogue Gloves
+  goldValue: 5

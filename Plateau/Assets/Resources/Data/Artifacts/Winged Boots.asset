@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Winged Boots
   m_EditorClassIdentifier: 
   artifactName: Winged Boots
+  goldValue: 6

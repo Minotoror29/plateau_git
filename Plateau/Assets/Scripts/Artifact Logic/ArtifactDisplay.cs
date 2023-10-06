@@ -8,6 +8,7 @@ public abstract class ArtifactDisplay : MonoBehaviour
 {
     private ArtifactData _artifactData;
     [SerializeField] private TextMeshProUGUI artifactNameText;
+    [SerializeField] private TextMeshProUGUI artifactGoldValueText;
 
     public ArtifactData ArtifactData { get { return _artifactData; } }
 
@@ -15,5 +16,6 @@ public abstract class ArtifactDisplay : MonoBehaviour
     {
         _artifactData = artifactData;
         artifactNameText.text = artifactData.artifactName;
+        artifactGoldValueText.text = artifactData.goldValue.ToString();
     }
 }

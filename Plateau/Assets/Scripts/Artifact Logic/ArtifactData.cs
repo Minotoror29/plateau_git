@@ -6,4 +6,5 @@ using UnityEngine;
 public class ArtifactData : ScriptableObject
 {
     public string artifactName;
+    public int goldValue;
 }

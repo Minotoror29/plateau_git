@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Haste Boots
   m_EditorClassIdentifier: 
   artifactName: Haste Boots
+  goldValue: 3

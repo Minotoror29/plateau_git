@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Midas Gloves
   m_EditorClassIdentifier: 
   artifactName: Midas Gloves
+  goldValue: 9
