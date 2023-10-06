@@ -16,7 +16,6 @@ public class SellEffect : Effect
     public void Confirm()
     {
         TableManager.CurrentState.ChangeSubstate(new TableDefaultSubstate(TableManager));
-        State.FlipTile();
         ResolveEffect();
     }
 }

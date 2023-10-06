@@ -31,7 +31,7 @@ public class BuyMerchandiseDisplay : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            ArtifactData artifact = _tableManager.DrawArtifact();
+            ArtifactData artifact = _tableManager.ArtifactDeck.Draw();
 
             if (artifact != null)
             {
@@ -59,7 +59,7 @@ public class BuyMerchandiseDisplay : MonoBehaviour
     {
         foreach (ShopArtifactDisplay artifact in _artifacts)
         {
-            _tableManager.PutArtifactInGraveyard(artifact.ArtifactData);
+            _tableManager.ArtifactDeck.PutInGraveyard(artifact.ArtifactData);
             Destroy(artifact.gameObject);
         }
         _artifacts.Clear();

@@ -115,12 +115,14 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            PutArtifactInHand(_tableManager.DrawArtifact());
+            PutArtifactInHand(_tableManager.ArtifactDeck.Draw());
         }
     }
 
     public void PutArtifactInHand(ArtifactData artifact)
     {
+        if (artifact == null) return;
+
         HandArtifactDisplay newArtifact = Instantiate(handArtifactDisplayPrefab, artifactsParent);
         newArtifact.Initialize(_tableManager);
         newArtifact.SetData(artifact);
@@ -129,7 +131,7 @@ public class Player : MonoBehaviour
 
     public void DiscardArtifact(HandArtifactDisplay artifact)
     {
-        _tableManager.PutArtifactInGraveyard(artifact.ArtifactData);
+        _tableManager.ArtifactDeck.PutInGraveyard(artifact.ArtifactData);
         _artifacts.Remove(artifact);
         Destroy(artifact.gameObject);
     }

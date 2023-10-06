@@ -21,8 +21,9 @@ public class TableManager : MonoBehaviour
 
     [SerializeField] private Button moveButton;
 
-    private List<ArtifactData> _artifactsDeck;
-    private List<ArtifactData> _artifactsGraveyard;
+    //private List<ArtifactData> _artifactsDeck;
+    //private List<ArtifactData> _artifactsGraveyard;
+    private Deck<ArtifactData> _artifactDeck;
     [SerializeField] private DiscardMerchandiseDisplay discardMerchandiseDisplay;
 
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
@@ -37,6 +38,7 @@ public class TableManager : MonoBehaviour
     public List<Tile> Tiles { get { return _tiles; } }
     public int InnTileIndex { get { return innTileIndex; } }
     public Button MoveButton { get { return moveButton; } }
+    public Deck<ArtifactData> ArtifactDeck { get { return _artifactDeck; } }
     public DiscardMerchandiseDisplay DiscardMerchandiseDisplay { get { return discardMerchandiseDisplay; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayAbilityDisplay PayAbilityDisplay { get { return payAbilityDisplay; } }
@@ -80,12 +82,14 @@ public class TableManager : MonoBehaviour
         player.Initialize(this, _tiles[0]);
         boss.Initialize();
 
-        _artifactsDeck = new();
-        _artifactsGraveyard = new();
-        foreach(ArtifactData artifact in Resources.LoadAll<ArtifactData>("Data/Artifacts"))
-        {
-            _artifactsDeck.Add(artifact);
-        }
+        //_artifactsDeck = new();
+        //_artifactsGraveyard = new();
+        //foreach(ArtifactData artifact in Resources.LoadAll<ArtifactData>("Data/Artifacts"))
+        //{
+        //    _artifactsDeck.Add(artifact);
+        //}
+        _artifactDeck = new Deck<ArtifactData>();
+        _artifactDeck.FillDeck(Resources.LoadAll<ArtifactData>("Data/Artifacts"));
 
         buyMerchandiseDisplay.Initialize(this);
 
@@ -106,37 +110,37 @@ public class TableManager : MonoBehaviour
         return value;
     }
 
-    public ArtifactData DrawArtifact()
-    {
-        if (_artifactsDeck.Count == 0 && _artifactsGraveyard.Count > 0)
-        {
-            ShuffleArtifactsGraveyardIntoDeck();
-        }
+    //public ArtifactData DrawArtifact()
+    //{
+    //    if (_artifactsDeck.Count == 0 && _artifactsGraveyard.Count > 0)
+    //    {
+    //        ShuffleArtifactsGraveyardIntoDeck();
+    //    }
 
-        if (_artifactsDeck.Count > 0)
-        {
-            ArtifactData artifact = _artifactsDeck[0];
-            _artifactsDeck.Remove(artifact);
+    //    if (_artifactsDeck.Count > 0)
+    //    {
+    //        ArtifactData artifact = _artifactsDeck[0];
+    //        _artifactsDeck.Remove(artifact);
 
-            return artifact;
-        } else
-        {
-            return null;
-        }
-    }
+    //        return artifact;
+    //    } else
+    //    {
+    //        return null;
+    //    }
+    //}
 
-    public void PutArtifactInGraveyard(ArtifactData artifact)
-    {
-        _artifactsGraveyard.Add(artifact);
-    }
+    //public void PutArtifactInGraveyard(ArtifactData artifact)
+    //{
+    //    _artifactsGraveyard.Add(artifact);
+    //}
 
-    private void ShuffleArtifactsGraveyardIntoDeck()
-    {
-        foreach (ArtifactData artifact in _artifactsGraveyard)
-        {
-            _artifactsDeck.Add(artifact);
-        }
+    //private void ShuffleArtifactsGraveyardIntoDeck()
+    //{
+    //    foreach (ArtifactData artifact in _artifactsGraveyard)
+    //    {
+    //        _artifactsDeck.Add(artifact);
+    //    }
 
-        _artifactsGraveyard.Clear();
-    }
+    //    _artifactsGraveyard.Clear();
+    //}
 }
