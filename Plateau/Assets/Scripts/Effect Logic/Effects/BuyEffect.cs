@@ -16,7 +16,7 @@ public class BuyEffect : Effect
     public override void Activate()
     {
         TableManager.BuyMerchandiseDisplay.gameObject.SetActive(true);
-        TableManager.BuyMerchandiseDisplay.SetAbility(this);
+        TableManager.BuyMerchandiseDisplay.SetEffect(this);
         TableManager.BuyMerchandiseDisplay.SetArtifacts(_merchandiseToReveal);
     }
 

@@ -6,7 +6,7 @@ public class BuyMerchandiseDisplay : MonoBehaviour
 {
     private TableManager _tableManager;
 
-    private BuyEffect _ability;
+    private BuyEffect _effect;
 
     [SerializeField] private ShopArtifactDisplay shopArtifactPrefab;
     [SerializeField] private Transform merchandisesParent;
@@ -19,9 +19,9 @@ public class BuyMerchandiseDisplay : MonoBehaviour
         _tableManager = tableManager;
     }
 
-    public void SetAbility(BuyEffect ability)
+    public void SetEffect(BuyEffect effect)
     {
-        _ability = ability;
+        _effect = effect;
     }
 
     public void SetArtifacts(int amount)
@@ -64,6 +64,6 @@ public class BuyMerchandiseDisplay : MonoBehaviour
         }
         _artifacts.Clear();
 
-        _ability.Confirm(_boughtArtifacts);
+        _effect.Confirm(_boughtArtifacts);
     }
 }

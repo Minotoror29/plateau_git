@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrawArtifactEffect : Effect
+public class DrawArtifactsEffect : Effect
 {
-    private int _artifactAmount;
+    private int _amount;
 
-    public DrawArtifactEffect(TableManager tableManager, TileState state, DrawArtifactEffectData data, string description) : base(tableManager, state, description)
+    public DrawArtifactsEffect(TableManager tableManager, TileState state, DrawArtifactsEffectData data, string description) : base(tableManager, state, description)
     {
-        _artifactAmount = data.artifactAmount;
+        _amount = data.amount;
     }
 
     public override void Activate()
     {
-        TableManager.Player.DrawArtifacts(_artifactAmount);
+        TableManager.Player.DrawArtifacts(_amount);
         if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
         {
             TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts, this));

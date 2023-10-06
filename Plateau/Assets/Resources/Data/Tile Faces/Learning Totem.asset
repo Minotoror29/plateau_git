@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53fa786ce16cd224ca46da1229d9a1ae, type: 3}
-  m_Name: Draw 1 Artifact
+  m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
+  m_Name: Learning Totem
   m_EditorClassIdentifier: 
-  description: Draw 1 Artifact
-  amount: 1
+  faceColor: {r: 0, g: 0.43244553, b: 1, a: 1}
+  abilities:
+  - {fileID: 11400000, guid: 5c48ab3784eeea2489bd622db3412743, type: 2}

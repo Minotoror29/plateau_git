@@ -26,8 +26,13 @@ public abstract class TableState : State
         _currentSubstate.Enter();
     }
 
-    public virtual void SelectArtifact(HandArtifactDisplay artifact)
+    public void SelectArtifact(HandArtifactDisplay artifact)
     {
         _currentSubstate?.SelectArtifact(artifact);
+    }
+
+    public void SelectSpell(HandSpellDisplay spell)
+    {
+        _currentSubstate?.SelectSpell(spell);
     }
 }

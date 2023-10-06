@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8e722eb16501c47a3e10e14a73171a, type: 3}
   m_Name: On d6 Draw 1 Artifact
   m_EditorClassIdentifier: 
-  diceResult: 0
-  effects: []
+  diceResult: 6
+  effects:
+  - {fileID: 11400000, guid: 52b19e93fe09a2b43b2a06cf29e44f24, type: 2}

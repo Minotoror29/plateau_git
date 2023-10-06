@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Effect/Draw Artifacts")]
-public class DrawArtifactEffectData : EffectData
+public class DrawArtifactsEffectData : EffectData
 {
-    public int artifactAmount;
+    public int amount;
 
     public override Effect Effect(TableManager tableManager, TileState state)
     {
-        return new DrawArtifactEffect(tableManager, state, this, description);
+        return new DrawArtifactsEffect(tableManager, state, this, description);
     }
 }

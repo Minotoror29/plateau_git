@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
     private List<HandArtifactDisplay> _artifacts;
     [SerializeField] private int maximumArtifacts = 3;
 
+    [SerializeField] private Transform spellsParent;
+    [SerializeField] private HandSpellDisplay handSpellDisplayPrefab;
+    private List<HandSpellDisplay> _spells;
+    [SerializeField] private int maximumSpells = 3;
+
     private Tile _currentTile;
 
     public event Action<TableTurnStartState> OnTurnStart;
@@ -32,6 +37,8 @@ public class Player : MonoBehaviour
     public int Gold { get { return _gold; } }
     public List<HandArtifactDisplay> Artifacts { get { return _artifacts; } }
     public int MaximumArtifacts { get { return maximumArtifacts; } }
+    public List<HandSpellDisplay> Spells { get { return _spells; } }
+    public int MaximumSpells { get { return maximumSpells; } }
     public Tile CurrentTile { get { return _currentTile; } }
 
     public void Initialize(TableManager tableManager, Tile startTile)
@@ -39,6 +46,7 @@ public class Player : MonoBehaviour
         _tableManager = tableManager;
 
         _artifacts = new();
+        _spells = new();
         _currentTile = startTile;
 
         ResetStats();
@@ -134,5 +142,30 @@ public class Player : MonoBehaviour
         _tableManager.ArtifactDeck.PutInGraveyard(artifact.ArtifactData);
         _artifacts.Remove(artifact);
         Destroy(artifact.gameObject);
+    }
+
+    public void DrawSpells(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            PutSpellInHand(_tableManager.SpellDeck.Draw());
+        }
+    }
+
+    public void PutSpellInHand(SpellData spell)
+    {
+        if (spell == null) return;
+
+        HandSpellDisplay newSpell = Instantiate(handSpellDisplayPrefab, spellsParent);
+        newSpell.Initialize(_tableManager);
+        newSpell.SetData(spell);
+        _spells.Add(newSpell);
+    }
+
+    public void DiscardSpell(HandSpellDisplay spell)
+    {
+        _tableManager.SpellDeck.PutInGraveyard(spell.SpellData);
+        _spells.Remove(spell);
+        Destroy(spell.gameObject);
     }
 }

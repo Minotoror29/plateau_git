@@ -25,4 +25,9 @@ public abstract class TableSubstate : State
     {
 
     }
+
+    public virtual void SelectSpell(HandSpellDisplay spell)
+    {
+
+    }
 }
