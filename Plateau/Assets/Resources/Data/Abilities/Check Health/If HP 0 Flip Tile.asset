@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
-  m_Name: Mimic Combat
+  m_Script: {fileID: 11500000, guid: c6e9903e0b14aeb43961fa3b0f5200d9, type: 3}
+  m_Name: If HP 0 Flip Tile
   m_EditorClassIdentifier: 
-  description: 'Combat : 6 HP / 3 ATT. Reward : 1 artifact.'
-  effects:
-  - {fileID: 11400000, guid: 163db5952f548044daa4ddae44c7d7f3, type: 2}
+  description: If you die, flip the tile.
+  healthAmount: 0
+  effect: {fileID: 11400000, guid: a71762c9992d1be4e958fa7e5081e088, type: 2}

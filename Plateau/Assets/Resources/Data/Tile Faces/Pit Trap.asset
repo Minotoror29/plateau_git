@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Mimic
+  m_Name: Pit Trap
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.5377358, g: 0.19978172, b: 0.16487184, a: 1}
+  faceColor: {r: 0.6037736, g: 0.2595141, b: 0.08259169, a: 1}
   abilities:
-  - {fileID: 11400000, guid: 472c951cfdc595b48ac8d10475961b7a, type: 2}
+  - {fileID: 11400000, guid: de1f6df799ac58042a348c9b98975aa1, type: 2}
+  - {fileID: 11400000, guid: df8a41b0050519f4dbe8cb5719fd0cfc, type: 2}

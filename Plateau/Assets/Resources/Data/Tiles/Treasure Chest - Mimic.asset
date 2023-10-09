@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
   m_Name: Treasure Chest - Mimic
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 0}
-  backFace: {fileID: 0}
+  frontFace: {fileID: 11400000, guid: 5ea06328b5a85a940be23227e07ba423, type: 2}
+  backFace: {fileID: 11400000, guid: 09ca13858898eb444adad7f074f7ac58, type: 2}

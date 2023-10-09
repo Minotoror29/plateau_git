@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Wizard - Wizard's Tower
   m_EditorClassIdentifier: 
   frontFace: {fileID: 11400000, guid: a81be0c30b1649d42a9acf6cec1acac1, type: 2}
-  backFace: {fileID: 11400000, guid: a81be0c30b1649d42a9acf6cec1acac1, type: 2}
+  backFace: {fileID: 11400000, guid: e66682dfb336cdd40983962a01bc3dca, type: 2}

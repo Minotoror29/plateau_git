@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0dcab6d75106584dae2300bd28b6b83, type: 3}
   m_Name: On 6 Draw 1 Spell - Else 5 Damage
   m_EditorClassIdentifier: 
-  description: 
-  aimedResult: 0
-  resultEffect: {fileID: 0}
-  elseEffect: {fileID: 0}
+  description: Toss a dice. If the result is 6, draw 1 spell. Else, take 5 damage.
+  aimedResult: 6
+  resultEffect: {fileID: 11400000, guid: 5b43a28403213194a9afd25b4a469975, type: 2}
+  elseEffect: {fileID: 11400000, guid: 8676522be1629704487a1c06ea486ad5, type: 2}
