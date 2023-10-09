@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
   m_Name: Magic Pawn Shop
   m_EditorClassIdentifier: 
-  faceColor: {r: 0, g: 0, b: 0, a: 0}
-  abilities: []
+  faceColor: {r: 0.39133587, g: 0.24870951, b: 0.6509434, a: 1}
+  abilities:
+  - {fileID: 11400000, guid: 2af46d47e8602ad438bf975e09656483, type: 2}
+  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}

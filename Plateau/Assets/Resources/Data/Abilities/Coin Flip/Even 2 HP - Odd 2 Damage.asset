@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Learning Totem - Ritual Totem
+  m_Script: {fileID: 11500000, guid: e0aacb42f9fffce4c98a7014c44e29a5, type: 3}
+  m_Name: Even 2 HP - Odd 2 Damage
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: dd76b92a7d778a544af673d3f23566a0, type: 2}
-  backFace: {fileID: 11400000, guid: 21aed30b279dbbf47928a82c2d7edbdb, type: 2}
+  evenEffect: {fileID: 11400000, guid: f930ea0b7f9632345b55bd0b97a8e998, type: 2}
+  oddEffect: {fileID: 11400000, guid: afd0a84530f36ea44876a2b7f70d7f3c, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2be0a50430928d4d9406d9645dd7a10, type: 3}
   m_Name: Sell up to 1 Spell
   m_EditorClassIdentifier: 
-  description: Sell 1 Spell
+  description: Sell up to 1 spell
   amount: 1

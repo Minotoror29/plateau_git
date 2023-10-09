@@ -28,7 +28,6 @@ public class DirectAbility : Ability
             effect.OnResolution += ResolveEffect;
         }
 
-
         _resolvedEffects = 0;
         ActivateNextEffect();
     }

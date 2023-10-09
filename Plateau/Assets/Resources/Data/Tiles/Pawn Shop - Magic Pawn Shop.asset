@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pawn Shop - Magic Pawn Shop
   m_EditorClassIdentifier: 
   frontFace: {fileID: 11400000, guid: 3d165f6e20cfb384d96e863bab91ea72, type: 2}
-  backFace: {fileID: 11400000, guid: 3d165f6e20cfb384d96e863bab91ea72, type: 2}
+  backFace: {fileID: 11400000, guid: aa91935c0511558439980c00d5e5b555, type: 2}

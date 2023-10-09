@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Learning Totem - Ritual Totem
+  m_Name: Witch - Mushroom Glade
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: dd76b92a7d778a544af673d3f23566a0, type: 2}
-  backFace: {fileID: 11400000, guid: 21aed30b279dbbf47928a82c2d7edbdb, type: 2}
+  frontFace: {fileID: 11400000, guid: e071c3864017ad24c9639eeeb275638c, type: 2}
+  backFace: {fileID: 11400000, guid: e071c3864017ad24c9639eeeb275638c, type: 2}

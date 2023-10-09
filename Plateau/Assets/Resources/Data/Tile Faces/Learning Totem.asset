@@ -15,3 +15,4 @@ MonoBehaviour:
   faceColor: {r: 0, g: 0.43244553, b: 1, a: 1}
   abilities:
   - {fileID: 11400000, guid: 5c48ab3784eeea2489bd622db3412743, type: 2}
+  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}
