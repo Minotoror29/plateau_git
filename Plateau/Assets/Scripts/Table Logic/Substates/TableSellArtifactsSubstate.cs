@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TableSellMerchandiseSubstate : TableSubstate
+public class TableSellArtifactsSubstate : TableSubstate
 {
     private SellMerchandiseDisplay _display;
-    private SellEffect _effect;
+    private SellArtifactsEffect _effect;
 
-    public TableSellMerchandiseSubstate(TableManager tableManager, SellEffect effect) : base(tableManager)
+    public TableSellArtifactsSubstate(TableManager tableManager, SellArtifactsEffect effect) : base(tableManager)
     {
         _display = TableManager.SellMerchandiseDisplay;
         _effect = effect;
@@ -16,7 +16,7 @@ public class TableSellMerchandiseSubstate : TableSubstate
     public override void Enter()
     {
         _display.gameObject.SetActive(true);
-        _display.Initialize(_effect);
+        _display.Initialize(_effect, "artifact", 3);
     }
 
     public override void Exit()
