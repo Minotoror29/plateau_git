@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Mushroom Glade
+  m_Name: Wizard
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.509434, g: 0.10332859, b: 0.43053713, a: 1}
+  faceColor: {r: 0.29803926, g: 0.3513404, b: 0.8, a: 1}
   abilities:
-  - {fileID: 11400000, guid: 476a5dc9ba2ee6940aee38cc739324e3, type: 2}
-  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}
+  - {fileID: 11400000, guid: a0f1a6d4dc4315049a823324485519ab, type: 2}

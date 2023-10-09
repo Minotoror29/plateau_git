@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class BuyMerchandiseDisplay : MonoBehaviour
+public class BuyArtifactsDisplay : MonoBehaviour
 {
     private TableManager _tableManager;
 
-    private BuyEffect _effect;
+    private BuyArtifactsEffect _effect;
 
+    [SerializeField] private TextMeshProUGUI title;
     [SerializeField] private ShopArtifactDisplay shopArtifactPrefab;
-    [SerializeField] private Transform merchandisesParent;
+    [SerializeField] private Transform artifactsParent;
 
     private List<ShopArtifactDisplay> _artifacts;
     private int _boughtArtifacts;
@@ -19,23 +21,25 @@ public class BuyMerchandiseDisplay : MonoBehaviour
         _tableManager = tableManager;
     }
 
-    public void SetEffect(BuyEffect effect)
+    public void SetEffect(BuyArtifactsEffect effect)
     {
         _effect = effect;
     }
 
-    public void SetArtifacts(int amount)
+    public void SetArtifacts(int artifactsToReveal, int artifactsToBuy)
     {
+        title.text = "Buy up to " + artifactsToReveal + " artifacts. <br> If you buy " + artifactsToBuy + " of them, flip the tile.";
+
         _artifacts = new();
         _boughtArtifacts = 0;
 
-        for (int i = 0; i < amount; i++)
+        for (int i = 0; i < artifactsToReveal; i++)
         {
             ArtifactData artifact = _tableManager.ArtifactDeck.Draw();
 
             if (artifact != null)
             {
-                ShopArtifactDisplay newArtifact = Instantiate(shopArtifactPrefab, merchandisesParent);
+                ShopArtifactDisplay newArtifact = Instantiate(shopArtifactPrefab, artifactsParent);
                 newArtifact.Initialize(this);
                 newArtifact.SetData(artifact);
                 _artifacts.Add(newArtifact);

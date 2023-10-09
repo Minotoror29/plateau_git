@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Witch - Mushroom Glade
+  m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
+  m_Name: Buy 3 3 Spells
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: e071c3864017ad24c9639eeeb275638c, type: 2}
-  backFace: {fileID: 11400000, guid: 56cf3a6fcd11f3c48bdb968f0378bded, type: 2}
+  description: Reveal 3 spells. You can buy any number you want. If you buy 3 of
+    them, flip the tile.
+  effects:
+  - {fileID: 11400000, guid: 9dd92bb9bd2f8824fb87d2633885e3b2, type: 2}

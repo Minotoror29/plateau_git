@@ -28,7 +28,8 @@ public class TableManager : MonoBehaviour
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
     [SerializeField] private PayAbilityDisplay payAbilityDisplay;
     [SerializeField] private PayXAbilityDisplay payXAbilityDisplay;
-    [SerializeField] private BuyMerchandiseDisplay buyMerchandiseDisplay;
+    [SerializeField] private BuyArtifactsDisplay buyArtifactsDisplay;
+    [SerializeField] private BuySpellsDisplay buySpellsDisplay;
     [SerializeField] private SellMerchandiseDisplay sellMerchandiseDisplay;
     [SerializeField] private ModalAbilityDisplay modalAbilityDisplay;
 
@@ -44,7 +45,8 @@ public class TableManager : MonoBehaviour
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayAbilityDisplay PayAbilityDisplay { get { return payAbilityDisplay; } }
     public PayXAbilityDisplay PayXAbilityDisplay { get { return payXAbilityDisplay; } }
-    public BuyMerchandiseDisplay BuyMerchandiseDisplay { get { return buyMerchandiseDisplay; } }
+    public BuyArtifactsDisplay BuyArtifactsDisplay { get { return buyArtifactsDisplay; } }
+    public BuySpellsDisplay BuySpellsDisplay { get { return buySpellsDisplay; } }
     public SellMerchandiseDisplay SellMerchandiseDisplay { get { return sellMerchandiseDisplay; } }
     public ModalAbilityDisplay ModalAbilityDisplay { get { return modalAbilityDisplay; } }
 
@@ -90,7 +92,8 @@ public class TableManager : MonoBehaviour
         _spellDeck = new Deck<SpellData>();
         _spellDeck.FillDeck(Resources.LoadAll<SpellData>("Data/Spells"));
 
-        buyMerchandiseDisplay.Initialize(this);
+        buyArtifactsDisplay.Initialize(this);
+        buySpellsDisplay.Initialize(this);
 
         ChangeState(new TableTurnStartState(this, new TableDefaultSubstate(this)));
     }

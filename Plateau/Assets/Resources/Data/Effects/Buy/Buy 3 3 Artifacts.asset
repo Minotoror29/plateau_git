@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Buy 3 3 Artifacts
   m_EditorClassIdentifier: 
   description: Reveal 3 artifacts. If you buy 3, flip the tile.
-  merchandiseToReveal: 3
-  merchandiseToBuy: 3
+  artifactsToReveal: 3
+  artifactsToBuy: 3

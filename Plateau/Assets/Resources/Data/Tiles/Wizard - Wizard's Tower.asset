@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Witch - Mushroom Glade
+  m_Name: Wizard - Wizard's Tower
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: e071c3864017ad24c9639eeeb275638c, type: 2}
-  backFace: {fileID: 11400000, guid: 56cf3a6fcd11f3c48bdb968f0378bded, type: 2}
+  frontFace: {fileID: 11400000, guid: a81be0c30b1649d42a9acf6cec1acac1, type: 2}
+  backFace: {fileID: 11400000, guid: a81be0c30b1649d42a9acf6cec1acac1, type: 2}

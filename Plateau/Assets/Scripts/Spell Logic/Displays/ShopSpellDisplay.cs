@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ShopArtifactDisplay : ArtifactDisplay, IPointerDownHandler
+public class ShopSpellDisplay : SpellDisplay, IPointerDownHandler
 {
-    private BuyArtifactsDisplay _buyMerchandiseDisplay;
+    private BuySpellsDisplay _buyMerchandiseDisplay;
 
-    public void Initialize(BuyArtifactsDisplay buyMerchandiseDisplay)
+    public void Initialize(BuySpellsDisplay buyMerchandiseDisplay)
     {
         _buyMerchandiseDisplay = buyMerchandiseDisplay;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _buyMerchandiseDisplay.BuyArtifact(this);
+        _buyMerchandiseDisplay.BuySpell(this);
     }
 }
