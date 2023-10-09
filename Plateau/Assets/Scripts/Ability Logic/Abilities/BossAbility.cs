@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BossAbility : Ability
 {
-    public BossAbility(TableManager tableManager, TileState state) : base(tableManager, state)
+    public BossAbility(TableManager tableManager, TileState state, string description) : base(tableManager, state, description)
     {
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         TableManager.Boss.TakeDamage(TableManager.TossDice());
 
         if (TableManager.Boss.Health > 0)
         {
-            player.TakeDamage(TableManager.TossDice());
+            TableManager.Player.TakeDamage(TableManager.TossDice());
         }
 
         ResolveAbility();

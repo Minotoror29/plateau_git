@@ -10,6 +10,6 @@ public class PayAbilityData : AbilityData
 
     public override Ability Ability(TableManager tableManager, TileState state)
     {
-        return new PayAbility(tableManager, state, goldAmount, effects);
+        return new PayAbility(tableManager, state, description, goldAmount, effects);
     }
 }

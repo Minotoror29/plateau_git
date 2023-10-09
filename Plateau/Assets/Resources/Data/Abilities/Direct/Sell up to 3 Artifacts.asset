@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Sell up to 3 Artifacts
   m_EditorClassIdentifier: 
+  description: You can sell up to 3 artifacts you own.
   effects:
   - {fileID: 11400000, guid: 904310f13b797834b86542177738aa67, type: 2}

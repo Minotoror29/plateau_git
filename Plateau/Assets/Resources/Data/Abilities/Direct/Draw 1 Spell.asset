@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Draw 1 Spell
   m_EditorClassIdentifier: 
+  description: Draw 1 spell.
   effects:
   - {fileID: 11400000, guid: 5b43a28403213194a9afd25b4a469975, type: 2}

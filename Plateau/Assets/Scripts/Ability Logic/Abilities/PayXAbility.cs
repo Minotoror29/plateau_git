@@ -8,7 +8,7 @@ public class PayXAbility : Ability
     private List<XEffect> _effects;
     private int _resolvedEffects;
 
-    public PayXAbility(TableManager tableManager, TileState state, List<XEffectData> effects) : base(tableManager, state)
+    public PayXAbility(TableManager tableManager, TileState state, string description, List<XEffectData> effects) : base(tableManager, state, description)
     {
         _effectsData = new();
         foreach (XEffectData effect in effects)
@@ -17,7 +17,7 @@ public class PayXAbility : Ability
         }
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         TableManager.PayXAbilityDisplay.gameObject.SetActive(true);
         TableManager.PayXAbilityDisplay.Initialize(TableManager.Player, this);

@@ -8,7 +8,7 @@ public class DiceXAbility : Ability
     private List<XEffect> _effects;
     private int _resolvedEffects;
 
-    public DiceXAbility(TableManager tableManager, TileState state, List<XEffectData> effects) : base(tableManager, state)
+    public DiceXAbility(TableManager tableManager, TileState state, string description, List<XEffectData> effects) : base(tableManager, state, description)
     {
         _effectsData = new();
         foreach (XEffectData effect in effects)
@@ -17,7 +17,7 @@ public class DiceXAbility : Ability
         }
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         ActivateEffects(TableManager.TossDice());
     }

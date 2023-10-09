@@ -9,13 +9,13 @@ public class CoinFlipAbility : Ability
 
     private int _result;
 
-    public CoinFlipAbility(TableManager tableManager, TileState state, CoinFlipAbilityData data) : base(tableManager, state)
+    public CoinFlipAbility(TableManager tableManager, TileState state, string description, CoinFlipAbilityData data) : base(tableManager, state, description)
     {
         _evenEffect = data.evenEffect.Effect(tableManager, state);
         _oddEffect = data.oddEffect.Effect(tableManager, state);
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         _result = TableManager.TossDice();
 

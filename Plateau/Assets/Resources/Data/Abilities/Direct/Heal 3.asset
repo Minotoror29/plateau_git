@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Heal 3
   m_EditorClassIdentifier: 
+  description: You gain 3 HP.
   effects:
   - {fileID: 11400000, guid: c6aedcbb1c0eed4489b949ac2dffefa6, type: 2}

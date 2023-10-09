@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Additional Movement
   m_EditorClassIdentifier: 
+  description: You toss an additionnal movement dice.
   effects:
   - {fileID: 11400000, guid: 38f68f22be438bf48b1fdcc4c6bd6970, type: 2}

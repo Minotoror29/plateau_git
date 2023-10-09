@@ -7,7 +7,7 @@ public class DirectAbility : Ability
     private List<Effect> _effects;
     private int _resolvedEffects;
 
-    public DirectAbility(TableManager tableManager, TileState state, List<EffectData> effects) : base(tableManager, state)
+    public DirectAbility(TableManager tableManager, TileState state, string description, List<EffectData> effects) : base(tableManager, state, description)
     {
         _effects = new();
         foreach (EffectData effect in effects)
@@ -16,7 +16,7 @@ public class DirectAbility : Ability
         }
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         ActivateEffects();
     }

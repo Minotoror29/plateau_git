@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Sell up to 1 Spell
   m_EditorClassIdentifier: 
+  description: You can sell up to 1 spell you own.
   effects:
   - {fileID: 11400000, guid: 43d1e3c98bfdbd640ac2bad364db3bf1, type: 2}

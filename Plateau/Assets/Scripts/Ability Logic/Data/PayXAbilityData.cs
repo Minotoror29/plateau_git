@@ -9,6 +9,6 @@ public class PayXAbilityData : AbilityData
 
     public override Ability Ability(TableManager tableManager, TileState state)
     {
-        return new PayXAbility(tableManager, state, effects);
+        return new PayXAbility(tableManager, state, description, effects);
     }
 }

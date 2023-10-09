@@ -9,7 +9,7 @@ public class DiceAbility : Ability
     private List<Effect> _effects;
     private int _resolvedEffects;
 
-    public DiceAbility(TableManager tableManager, TileState state, int diceResult, List<EffectData> effects) : base(tableManager, state)
+    public DiceAbility(TableManager tableManager, TileState state, string description, int diceResult, List<EffectData> effects) : base(tableManager, state, description)
     {
         _diceResult = diceResult;
 
@@ -20,7 +20,7 @@ public class DiceAbility : Ability
         }
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         if (TableManager.TossDice() == _diceResult)
         {

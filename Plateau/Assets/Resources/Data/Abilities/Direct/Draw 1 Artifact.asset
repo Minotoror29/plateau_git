@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Draw 1 Artifact
   m_EditorClassIdentifier: 
+  description: Draw 1 artifact.
   effects:
   - {fileID: 11400000, guid: 52b19e93fe09a2b43b2a06cf29e44f24, type: 2}

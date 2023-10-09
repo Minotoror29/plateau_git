@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3a8745f4a4cc147a87bdf4c3b9d6fc, type: 3}
   m_Name: Pay 6 to Flip
   m_EditorClassIdentifier: 
+  description: You can pay 6 gold to flip the tile.
   goldAmount: 6
   effects:
   - {fileID: 11400000, guid: a71762c9992d1be4e958fa7e5081e088, type: 2}

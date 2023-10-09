@@ -14,5 +14,6 @@ public class TakeDamageEffect : Effect
     public override void Activate()
     {
         TableManager.Player.TakeDamage(_damageAmount);
+        ResolveEffect();
     }
 }

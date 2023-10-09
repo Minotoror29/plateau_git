@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
-  m_Name: Giant Spider Combat
+  m_Name: Heal 2
   m_EditorClassIdentifier: 
-  description: 'Combat : 4 HP / 4 ATT. Reward : 3 gold and  1 artifact.'
+  description: You gain 2 HP.
   effects:
-  - {fileID: 11400000, guid: 6749b32858540d649a97616ce31f661b, type: 2}
+  - {fileID: 11400000, guid: f930ea0b7f9632345b55bd0b97a8e998, type: 2}

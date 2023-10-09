@@ -11,7 +11,7 @@ public class PayAbility : Ability
 
     public List<Effect> Effects { get { return _effects; } }
 
-    public PayAbility(TableManager tableManager, TileState state, int goldAmount, List<EffectData> effects) : base(tableManager, state)
+    public PayAbility(TableManager tableManager, TileState state, string description, int goldAmount, List<EffectData> effects) : base(tableManager, state, description)
     {
         _goldAmount = goldAmount;
 
@@ -22,10 +22,10 @@ public class PayAbility : Ability
         }
     }
 
-    public override void Activate(Player player)
+    public override void Activate()
     {
         TableManager.PayAbilityDisplay.gameObject.SetActive(true);
-        TableManager.PayAbilityDisplay.Initialize(player, this, _goldAmount);
+        TableManager.PayAbilityDisplay.Initialize(TableManager.Player, this, _goldAmount);
     }
 
     public void ActivateEffects()

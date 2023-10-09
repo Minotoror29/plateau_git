@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Wolf Pack Combat
   m_EditorClassIdentifier: 
+  description: 'Combat : 3 HP / 2 ATT. Reward : 2 gold.'
   effects:
   - {fileID: 11400000, guid: 560ae1b4048e3a04f9c078466c6a0729, type: 2}

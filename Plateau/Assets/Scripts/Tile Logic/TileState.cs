@@ -50,7 +50,7 @@ public class TileState : State
 
     private void ActivateNextAbility()
     {
-        _abilities[_resolvedAbilities].Activate(_tableManager.Player);
+        _abilities[_resolvedAbilities].Activate();
     }
 
     public void ResolveAbility()

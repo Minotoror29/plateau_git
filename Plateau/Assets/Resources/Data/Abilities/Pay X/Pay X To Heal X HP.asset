@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bc00bf8dfef2f40b62ce1fd123affa, type: 3}
   m_Name: Pay X To Heal X HP
   m_EditorClassIdentifier: 
+  description: You can pay any amount of gold. You gain as much HP.
   effects:
   - {fileID: 11400000, guid: 73490e24cec75b14e9d2ed18dd1b755a, type: 2}

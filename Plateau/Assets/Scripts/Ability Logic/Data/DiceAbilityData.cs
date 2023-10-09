@@ -10,6 +10,6 @@ public class DiceAbilityData : AbilityData
 
     public override Ability Ability(TableManager tableManager, TileState state)
     {
-        return new DiceAbility(tableManager, state, diceResult, effects);
+        return new DiceAbility(tableManager, state, description, diceResult, effects);
     }
 }

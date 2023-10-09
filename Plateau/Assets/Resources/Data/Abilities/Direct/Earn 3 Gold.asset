@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Earn 3 Gold
   m_EditorClassIdentifier: 
+  description: You earn 3 gold.
   effects:
   - {fileID: 11400000, guid: 604c00e51df6e824b8e0d4841ef3366f, type: 2}

@@ -30,6 +30,7 @@ public class TableManager : MonoBehaviour
     [SerializeField] private PayXAbilityDisplay payXAbilityDisplay;
     [SerializeField] private BuyMerchandiseDisplay buyMerchandiseDisplay;
     [SerializeField] private SellMerchandiseDisplay sellMerchandiseDisplay;
+    [SerializeField] private ModalAbilityDisplay modalAbilityDisplay;
 
     public TableState CurrentState { get { return _currentState; } }
     public Player Player { get { return player; } }
@@ -45,6 +46,7 @@ public class TableManager : MonoBehaviour
     public PayXAbilityDisplay PayXAbilityDisplay { get { return payXAbilityDisplay; } }
     public BuyMerchandiseDisplay BuyMerchandiseDisplay { get { return buyMerchandiseDisplay; } }
     public SellMerchandiseDisplay SellMerchandiseDisplay { get { return sellMerchandiseDisplay; } }
+    public ModalAbilityDisplay ModalAbilityDisplay { get { return modalAbilityDisplay; } }
 
     private void Start()
     {
