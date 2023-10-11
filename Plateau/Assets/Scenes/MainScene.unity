@@ -1385,6 +1385,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195915457}
   m_CullTransparentMesh: 1
+--- !u!1 &203483665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 203483666}
+  - component: {fileID: 203483667}
+  m_Layer: 5
+  m_Name: Quests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &203483666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203483665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 694633898}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -175}
+  m_SizeDelta: {x: 607.016, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &203483667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203483665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &230762734
 GameObject:
   m_ObjectHideFlags: 0
@@ -4405,13 +4467,16 @@ MonoBehaviour:
   - {fileID: 375833335}
   playerTurnDisplay: {fileID: 1086929211}
   boss: {fileID: 1047524408}
-  tileData: {fileID: 11400000, guid: f8f8e48c8b468834dbe6063e8fabda57, type: 2}
+  tileData: {fileID: 11400000, guid: 7d6eb495c68013141b70cc825d6e5832, type: 2}
   innTileData: {fileID: 11400000, guid: 6a7104ca27329b14bb90af8f33887aba, type: 2}
   innTileIndex: 0
   bossTileData: {fileID: 11400000, guid: 93eefe3c961dba5439ebe394cc2d4334, type: 2}
   bossTileIndex: 14
   moveButton: {fileID: 905952953}
   discardMerchandiseDisplay: {fileID: 1193679244}
+  questsParent: {fileID: 203483666}
+  questDisplayPrefab: {fileID: 3492853261032938469, guid: f6cf1d447bd42b84a8d7d1b796b68c72, type: 3}
+  maximumQuests: 3
   modalCombatRewardDisplay: {fileID: 597329061}
   payAbilityDisplay: {fileID: 348233993}
   payXAbilityDisplay: {fileID: 1580252201}
@@ -5090,6 +5155,7 @@ RectTransform:
   - {fileID: 905952952}
   - {fileID: 1691125377}
   - {fileID: 1086929210}
+  - {fileID: 203483666}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -29,6 +29,12 @@ public class TableManager : MonoBehaviour
     private Deck<SpellData> _spellDeck;
     [SerializeField] private DiscardMerchandiseDisplay discardMerchandiseDisplay;
 
+    private Deck<QuestData> _questDeck;
+    [SerializeField] private Transform questsParent;
+    [SerializeField] private QuestDisplay questDisplayPrefab;
+    private List<QuestDisplay> _activeQuests;
+    [SerializeField] private int maximumQuests;
+
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
     [SerializeField] private PayAbilityDisplay payAbilityDisplay;
     [SerializeField] private PayXAbilityDisplay payXAbilityDisplay;
@@ -95,11 +101,15 @@ public class TableManager : MonoBehaviour
         }
         boss.Initialize();
 
-        _artifactDeck = new Deck<ArtifactData>();
+        _artifactDeck = new ();
         _artifactDeck.FillDeck(Resources.LoadAll<ArtifactData>("Data/Artifacts"));
 
-        _spellDeck = new Deck<SpellData>();
+        _spellDeck = new ();
         _spellDeck.FillDeck(Resources.LoadAll<SpellData>("Data/Spells"));
+
+        _questDeck = new();
+        _questDeck.FillDeck(Resources.LoadAll<QuestData>("Data/Quests"));
+        _activeQuests = new();
 
         buyArtifactsDisplay.Initialize(this);
         buySpellsDisplay.Initialize(this);
@@ -119,5 +129,22 @@ public class TableManager : MonoBehaviour
         int value = Random.Range(1, 7);
         Debug.Log("Dice Roll : " + value);
         return value;
+    }
+
+    public void DrawQuests(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            QuestData newQuest = _questDeck.Draw();
+
+            if (newQuest == null)
+            {
+                return;
+            }
+
+            QuestDisplay newQuestDisplay = Instantiate(questDisplayPrefab, questsParent);
+            newQuestDisplay.Initialize(newQuest);
+            _activeQuests.Add(newQuestDisplay);
+        }
     }
 }

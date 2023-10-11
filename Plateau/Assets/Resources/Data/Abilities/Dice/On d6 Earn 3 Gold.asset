@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8e722eb16501c47a3e10e14a73171a, type: 3}
   m_Name: On d6 Earn 3 Gold
   m_EditorClassIdentifier: 
-  description: 
-  diceResult: 0
-  effects: []
+  description: Toss a dice. If the result is 6, you earn 3 Gold
+  diceResult: 6
+  effects:
+  - {fileID: 11400000, guid: 604c00e51df6e824b8e0d4841ef3366f, type: 2}

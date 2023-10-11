@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
   m_Name: River
   m_EditorClassIdentifier: 
-  faceColor: {r: 0, g: 0, b: 0, a: 0}
-  abilities: []
+  faceColor: {r: 0.25743148, g: 0.5750774, b: 0.8396226, a: 1}
+  abilities:
+  - {fileID: 11400000, guid: 5cc59a30776d3ca46b518462671723bf, type: 2}
+  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}
