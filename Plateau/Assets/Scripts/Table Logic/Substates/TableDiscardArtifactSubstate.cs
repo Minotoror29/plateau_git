@@ -30,8 +30,8 @@ public class TableDiscardArtifactSubstate : TableSubstate
 
         if (_artifactsToDiscard == 0)
         {
-            _effect.ResolveEffect();
             CurrentSuperstate.ChangeSubstate(new TableDefaultSubstate(TableManager));
+            _effect.ResolveEffect();
         }
     }
 

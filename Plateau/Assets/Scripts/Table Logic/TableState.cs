@@ -35,4 +35,9 @@ public abstract class TableState : State
     {
         _currentSubstate?.SelectSpell(spell, player);
     }
+
+    public void SelectQuest(QuestDisplay quest)
+    {
+        _currentSubstate?.SelectQuest(quest);
+    }
 }

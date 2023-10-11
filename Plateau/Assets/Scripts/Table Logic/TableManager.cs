@@ -27,14 +27,17 @@ public class TableManager : MonoBehaviour
 
     private Deck<ArtifactData> _artifactDeck;
     private Deck<SpellData> _spellDeck;
-    [SerializeField] private DiscardMerchandiseDisplay discardMerchandiseDisplay;
 
-    private Deck<QuestData> _questDeck;
+    [Header("Quests")]
     [SerializeField] private Transform questsParent;
     [SerializeField] private QuestDisplay questDisplayPrefab;
-    private List<QuestDisplay> _activeQuests;
     [SerializeField] private int maximumQuests;
+    private Deck<QuestData> _questDeck;
+    private List<QuestDisplay> _activeQuests;
 
+    [Header("Canvases")]
+    [SerializeField] private DiscardMerchandiseDisplay discardMerchandiseDisplay;
+    [SerializeField] private Canvas discardQuestsDisplay;
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
     [SerializeField] private PayAbilityDisplay payAbilityDisplay;
     [SerializeField] private PayXAbilityDisplay payXAbilityDisplay;
@@ -53,7 +56,10 @@ public class TableManager : MonoBehaviour
     public Button MoveButton { get { return moveButton; } }
     public Deck<ArtifactData> ArtifactDeck { get { return _artifactDeck; } }
     public Deck<SpellData> SpellDeck { get { return _spellDeck; } }
+    public int MaximumQuests { get { return maximumQuests; } }
+    public List<QuestDisplay> ActiveQuests { get { return _activeQuests; } }
     public DiscardMerchandiseDisplay DiscardMerchandiseDisplay { get { return discardMerchandiseDisplay; } }
+    public Canvas DiscardQuestsDisplay { get { return discardQuestsDisplay; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayAbilityDisplay PayAbilityDisplay { get { return payAbilityDisplay; } }
     public PayXAbilityDisplay PayXAbilityDisplay { get { return payXAbilityDisplay; } }
@@ -143,8 +149,15 @@ public class TableManager : MonoBehaviour
             }
 
             QuestDisplay newQuestDisplay = Instantiate(questDisplayPrefab, questsParent);
-            newQuestDisplay.Initialize(newQuest);
+            newQuestDisplay.Initialize(this, newQuest);
             _activeQuests.Add(newQuestDisplay);
         }
+    }
+
+    public void DiscardQuest(QuestDisplay quest)
+    {
+        _questDeck.PutInGraveyard(quest.QuestData);
+        _activeQuests.Remove(quest);
+        Destroy(quest.gameObject);
     }
 }

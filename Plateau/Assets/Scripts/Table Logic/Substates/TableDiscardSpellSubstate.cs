@@ -30,8 +30,8 @@ public class TableDiscardSpellSubstate : TableSubstate
 
         if (_spellsToDiscard == 0)
         {
-            _effect.ResolveEffect();
             CurrentSuperstate.ChangeSubstate(new TableDefaultSubstate(TableManager));
+            _effect.ResolveEffect();
         }
     }
 

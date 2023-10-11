@@ -30,4 +30,9 @@ public abstract class TableSubstate : State
     {
 
     }
+
+    public virtual void SelectQuest(QuestDisplay quest)
+    {
+
+    }
 }

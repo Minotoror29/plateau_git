@@ -14,6 +14,13 @@ public class DrawQuestEffect : Effect
     public override void Activate()
     {
         TableManager.DrawQuests(_questAmount);
-        ResolveEffect();
+        
+        if (TableManager.ActiveQuests.Count > TableManager.MaximumQuests)
+        {
+            TableManager.CurrentState.ChangeSubstate(new TableDiscardQuestSubstate(TableManager, TableManager.ActiveQuests.Count - TableManager.MaximumQuests, this));
+        } else
+        {
+            ResolveEffect();
+        }
     }
 }
