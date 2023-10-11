@@ -16,6 +16,7 @@ public class TableDiscardQuestSubstate : TableSubstate
     public override void Enter()
     {
         TableManager.DiscardQuestsDisplay.gameObject.SetActive(true);
+        TableManager.DiscardQuestsDisplay.Initialize(TableManager.CurrentPlayer.PlayerName);
     }
 
     public override void Exit()

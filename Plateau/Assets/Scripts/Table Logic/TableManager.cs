@@ -37,7 +37,7 @@ public class TableManager : MonoBehaviour
 
     [Header("Canvases")]
     [SerializeField] private DiscardMerchandiseDisplay discardMerchandiseDisplay;
-    [SerializeField] private Canvas discardQuestsDisplay;
+    [SerializeField] private DiscardQuestDisplay discardQuestsDisplay;
     [SerializeField] private ModalCombatRewardDisplay modalCombatRewardDisplay;
     [SerializeField] private PayAbilityDisplay payAbilityDisplay;
     [SerializeField] private PayXAbilityDisplay payXAbilityDisplay;
@@ -59,7 +59,7 @@ public class TableManager : MonoBehaviour
     public int MaximumQuests { get { return maximumQuests; } }
     public List<QuestDisplay> ActiveQuests { get { return _activeQuests; } }
     public DiscardMerchandiseDisplay DiscardMerchandiseDisplay { get { return discardMerchandiseDisplay; } }
-    public Canvas DiscardQuestsDisplay { get { return discardQuestsDisplay; } }
+    public DiscardQuestDisplay DiscardQuestsDisplay { get { return discardQuestsDisplay; } }
     public ModalCombatRewardDisplay ModalCombatRewardDisplay { get { return modalCombatRewardDisplay; } }
     public PayAbilityDisplay PayAbilityDisplay { get { return payAbilityDisplay; } }
     public PayXAbilityDisplay PayXAbilityDisplay { get { return payXAbilityDisplay; } }
