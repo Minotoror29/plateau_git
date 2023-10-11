@@ -14,7 +14,7 @@ public class BossAbility : Ability
 
         if (TableManager.Boss.Health > 0)
         {
-            TableManager.Player.TakeDamage(TableManager.TossDice());
+            TableManager.CurrentPlayer.TakeDamage(TableManager.TossDice());
         }
 
         ResolveAbility();

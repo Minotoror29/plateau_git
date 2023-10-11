@@ -10,7 +10,7 @@ public class EarnXGold : XEffect
 
     public override void Activate()
     {
-        TableManager.Player.EarnGold(Amount);
+        TableManager.CurrentPlayer.EarnGold(Amount);
         ResolveEffect();
     }
 }

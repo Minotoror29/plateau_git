@@ -15,7 +15,7 @@ public class CheckHealthAbility : Ability
 
     public override void Activate()
     {
-        if (TableManager.Player.Health == _healthAmount)
+        if (TableManager.CurrentPlayer.Health == _healthAmount)
         {
             _effect.OnResolution += ResolveEffect;
             _effect.Activate();

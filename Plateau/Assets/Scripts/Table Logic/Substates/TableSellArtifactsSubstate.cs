@@ -28,11 +28,11 @@ public class TableSellArtifactsSubstate : TableSubstate
     {
     }
 
-    public override void SelectArtifact(HandArtifactDisplay artifact)
+    public override void SelectArtifact(HandArtifactDisplay artifact, Player player)
     {
-        base.SelectArtifact(artifact);
+        base.SelectArtifact(artifact, player);
 
-        TableManager.Player.EarnGold(artifact.ArtifactData.goldValue);
-        TableManager.Player.DiscardArtifact(artifact);
+        TableManager.CurrentPlayer.EarnGold(artifact.ArtifactData.goldValue);
+        TableManager.CurrentPlayer.DiscardArtifact(artifact);
     }
 }

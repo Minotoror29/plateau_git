@@ -21,12 +21,12 @@ public abstract class TableSubstate : State
         _currentSuperState = newSuperstate;
     }
 
-    public virtual void SelectArtifact(HandArtifactDisplay artifact)
+    public virtual void SelectArtifact(HandArtifactDisplay artifact, Player player)
     {
 
     }
 
-    public virtual void SelectSpell(HandSpellDisplay spell)
+    public virtual void SelectSpell(HandSpellDisplay spell, Player player)
     {
 
     }

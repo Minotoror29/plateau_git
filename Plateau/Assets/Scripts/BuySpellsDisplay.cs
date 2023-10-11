@@ -49,12 +49,12 @@ public class BuySpellsDisplay : MonoBehaviour
 
     public void BuySpell(ShopSpellDisplay spell)
     {
-        if (_tableManager.Player.Gold >= spell.SpellData.goldValue)
+        if (_tableManager.CurrentPlayer.Gold >= spell.SpellData.goldValue)
         {
-            _tableManager.Player.PutSpellInHand(spell.SpellData);
+            _tableManager.CurrentPlayer.PutSpellInHand(spell.SpellData);
             _spells.Remove(spell);
             Destroy(spell.gameObject);
-            _tableManager.Player.LoseGold(spell.SpellData.goldValue);
+            _tableManager.CurrentPlayer.LoseGold(spell.SpellData.goldValue);
             _boughtSpells++;
         }
     }

@@ -13,10 +13,10 @@ public class DrawSpellsEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.DrawSpells(_amount);
-        if (TableManager.Player.Spells.Count > TableManager.Player.MaximumSpells)
+        TableManager.CurrentPlayer.DrawSpells(_amount);
+        if (TableManager.CurrentPlayer.Spells.Count > TableManager.CurrentPlayer.MaximumSpells)
         {
-            TableManager.CurrentState.ChangeSubstate(new TableDiscardSpellSubstate(TableManager, TableManager.Player.Spells.Count - TableManager.Player.MaximumSpells, this));
+            TableManager.CurrentState.ChangeSubstate(new TableDiscardSpellSubstate(TableManager, TableManager.CurrentPlayer.Spells.Count - TableManager.CurrentPlayer.MaximumSpells, this));
         }
         else
         {

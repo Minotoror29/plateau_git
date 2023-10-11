@@ -13,10 +13,10 @@ public class DrawArtifactsEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.DrawArtifacts(_amount);
-        if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
+        TableManager.CurrentPlayer.DrawArtifacts(_amount);
+        if (TableManager.CurrentPlayer.Artifacts.Count > TableManager.CurrentPlayer.MaximumArtifacts)
         {
-            TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts, this));
+            TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.CurrentPlayer.Artifacts.Count - TableManager.CurrentPlayer.MaximumArtifacts, this));
         } else
         {
             ResolveEffect();

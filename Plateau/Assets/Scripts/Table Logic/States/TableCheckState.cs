@@ -10,13 +10,13 @@ public class TableCheckState : TableState
 
     public override void Enter()
     {
-        if (TableManager.Player.Health == 0)
+        if (TableManager.CurrentPlayer.Health == 0)
         {
-            TableManager.Player.ResetStats();
-            TableManager.Player.MoveTo(TableManager.Tiles[TableManager.InnTileIndex]);
+            TableManager.CurrentPlayer.ResetStats();
+            TableManager.CurrentPlayer.MoveTo(TableManager.Tiles[TableManager.InnTileIndex]);
         }
 
-        TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate));
+        TableManager.ChangeState(new TableTurnStartState(TableManager, CurrentSubstate, TableManager.Players[(TableManager.Players.IndexOf(TableManager.CurrentPlayer) + 1) % TableManager.Players.Count]));
     }
 
     public override void Exit()

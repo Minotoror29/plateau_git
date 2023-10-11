@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
   m_Name: Move 1
   m_EditorClassIdentifier: 
-  description: 
-  effects: []
+  description: Move 1 tile forward.
+  effects:
+  - {fileID: 11400000, guid: 345099bd5d509994488c2a7d9f404a80, type: 2}

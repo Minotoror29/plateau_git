@@ -10,14 +10,14 @@ public class SkipNextTurnEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.OnTurnStart += SkipTurn;
+        TableManager.CurrentPlayer.OnTurnStart += SkipTurn;
 
         ResolveEffect();
     }
 
     private void SkipTurn(TableTurnStartState state)
     {
-        state.TableManager.Player.OnTurnStart -= SkipTurn;
+        state.TableManager.CurrentPlayer.OnTurnStart -= SkipTurn;
 
         state.TableManager.ChangeState(new TablePlayerMoveState(state.TableManager, new TableDefaultSubstate(state.TableManager), 0));
     }

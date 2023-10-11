@@ -10,7 +10,7 @@ public class FlipEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.CurrentTile.FlipTile();
+        TableManager.CurrentPlayer.CurrentTile.FlipTile();
 
         ResolveEffect();
     }

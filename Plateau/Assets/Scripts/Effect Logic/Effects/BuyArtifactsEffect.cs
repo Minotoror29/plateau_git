@@ -29,9 +29,9 @@ public class BuyArtifactsEffect : Effect
             State.FlipTile();
         }
 
-        if (TableManager.Player.Artifacts.Count > TableManager.Player.MaximumArtifacts)
+        if (TableManager.CurrentPlayer.Artifacts.Count > TableManager.CurrentPlayer.MaximumArtifacts)
         {
-            TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.Player.Artifacts.Count - TableManager.Player.MaximumArtifacts, this));
+            TableManager.CurrentState.ChangeSubstate(new TableDiscardArtifactSubstate(TableManager, TableManager.CurrentPlayer.Artifacts.Count - TableManager.CurrentPlayer.MaximumArtifacts, this));
         }
         else
         {

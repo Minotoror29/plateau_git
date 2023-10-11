@@ -10,7 +10,7 @@ public class HealXEffect : XEffect
 
     public override void Activate()
     {
-        TableManager.Player.Heal(Amount);
+        TableManager.CurrentPlayer.Heal(Amount);
         ResolveEffect();
     }
 }

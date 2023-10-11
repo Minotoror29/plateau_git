@@ -32,12 +32,12 @@ public class TableSellSpellsSubstate : TableSubstate
     {
     }
 
-    public override void SelectSpell(HandSpellDisplay spell)
+    public override void SelectSpell(HandSpellDisplay spell, Player player)
     {
-        base.SelectSpell(spell);
+        base.SelectSpell(spell, player);
 
-        TableManager.Player.EarnGold(spell.SpellData.goldValue);
-        TableManager.Player.DiscardSpell(spell);
+        TableManager.CurrentPlayer.EarnGold(spell.SpellData.goldValue);
+        TableManager.CurrentPlayer.DiscardSpell(spell);
 
         _soldSpells++;
 

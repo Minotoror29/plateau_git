@@ -16,14 +16,16 @@ public class TableDiscardArtifactSubstate : TableSubstate
     public override void Enter()
     {
         TableManager.DiscardMerchandiseDisplay.gameObject.SetActive(true);
-        TableManager.DiscardMerchandiseDisplay.Initialize("artifact");
+        TableManager.DiscardMerchandiseDisplay.Initialize(TableManager.CurrentPlayer.PlayerName, "artifact");
     }
 
-    public override void SelectArtifact(HandArtifactDisplay artifact)
+    public override void SelectArtifact(HandArtifactDisplay artifact, Player player)
     {
-        base.SelectArtifact(artifact);
+        base.SelectArtifact(artifact, player);
 
-        TableManager.Player.DiscardArtifact(artifact);
+        if (player != TableManager.CurrentPlayer) return;
+
+        TableManager.CurrentPlayer.DiscardArtifact(artifact);
         _artifactsToDiscard--;
 
         if (_artifactsToDiscard == 0)

@@ -9,30 +9,31 @@ public class Player : MonoBehaviour
 {
     private TableManager _tableManager;
 
+    [SerializeField] private string playerName;
+
     private int _health;
     [SerializeField] private int maxHealth = 10;
     [SerializeField] private int startHealth = 10;
-    [SerializeField] private TextMeshProUGUI healthDisplay;
     private int _gold;
     [SerializeField] private int maxGold = 20;
     [SerializeField] private int startGold = 5;
-    [SerializeField] private TextMeshProUGUI goldDisplay;
 
-    [SerializeField] private Transform artifactsParent;
     [SerializeField] private HandArtifactDisplay handArtifactDisplayPrefab;
     private List<HandArtifactDisplay> _artifacts;
     [SerializeField] private int maximumArtifacts = 3;
 
-    [SerializeField] private Transform spellsParent;
     [SerializeField] private HandSpellDisplay handSpellDisplayPrefab;
     private List<HandSpellDisplay> _spells;
     [SerializeField] private int maximumSpells = 3;
+
+    [SerializeField] private PlayerOverlay playerOverlay;
 
     private Tile _currentTile;
 
     public event Action<TableTurnStartState> OnTurnStart;
 
     public TableManager TableManager { get { return _tableManager; } }
+    public string PlayerName { get { return playerName; } }
     public int Health { get { return _health; } }
     public int Gold { get { return _gold; } }
     public List<HandArtifactDisplay> Artifacts { get { return _artifacts; } }
@@ -44,6 +45,8 @@ public class Player : MonoBehaviour
     public void Initialize(TableManager tableManager, Tile startTile)
     {
         _tableManager = tableManager;
+
+        playerOverlay.SetPlayerName(playerName);
 
         _artifacts = new();
         _spells = new();
@@ -60,9 +63,9 @@ public class Player : MonoBehaviour
     public void ResetStats()
     {
         _health = startHealth;
-        SetHealthDisplay();
+        playerOverlay.SetHealthDisplay(_health);
         _gold = startGold;
-        SetGoldDisplay();
+        playerOverlay.SetgoldDisplay(_gold);
     }
 
     public void Move(int movementValue)
@@ -85,38 +88,28 @@ public class Player : MonoBehaviour
     {
         _gold += amount;
         _gold = Mathf.Clamp(_gold, 0, maxGold);
-        SetGoldDisplay();
+        playerOverlay.SetgoldDisplay(_gold);
     }
 
     public void LoseGold(int amount)
     {
         _gold -= amount;
         _gold = Mathf.Clamp(_gold, 0, maxGold);
-        SetGoldDisplay();
-    }
-
-    private void SetGoldDisplay()
-    {
-        goldDisplay.text = "Gold : " + _gold.ToString();
+        playerOverlay.SetgoldDisplay(_gold);
     }
 
     public void Heal(int amount)
     {
         _health += amount;
         _health = Mathf.Clamp(_health, 0, maxHealth);
-        SetHealthDisplay();
+        playerOverlay.SetHealthDisplay(_health);
     }
 
     public void TakeDamage(int amount)
     {
         _health -= amount;
         _health = Mathf.Clamp(_health, 0, maxHealth);
-        SetHealthDisplay();
-    }
-
-    private void SetHealthDisplay()
-    {
-        healthDisplay.text = "HP : " + _health;
+        playerOverlay.SetHealthDisplay(_health);
     }
 
     public void DrawArtifacts(int amount)
@@ -131,8 +124,8 @@ public class Player : MonoBehaviour
     {
         if (artifact == null) return;
 
-        HandArtifactDisplay newArtifact = Instantiate(handArtifactDisplayPrefab, artifactsParent);
-        newArtifact.Initialize(_tableManager);
+        HandArtifactDisplay newArtifact = Instantiate(handArtifactDisplayPrefab, playerOverlay.ArtifactsHand);
+        newArtifact.Initialize(_tableManager, this);
         newArtifact.SetData(artifact);
         _artifacts.Add(newArtifact);
     }
@@ -156,8 +149,8 @@ public class Player : MonoBehaviour
     {
         if (spell == null) return;
 
-        HandSpellDisplay newSpell = Instantiate(handSpellDisplayPrefab, spellsParent);
-        newSpell.Initialize(_tableManager);
+        HandSpellDisplay newSpell = Instantiate(handSpellDisplayPrefab, playerOverlay.SpellsHand);
+        newSpell.Initialize(_tableManager, this);
         newSpell.SetData(spell);
         _spells.Add(newSpell);
     }

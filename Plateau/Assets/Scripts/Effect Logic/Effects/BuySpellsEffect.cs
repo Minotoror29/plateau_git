@@ -29,9 +29,9 @@ public class BuySpellsEffect : Effect
             State.FlipTile();
         }
 
-        if (TableManager.Player.Spells.Count > TableManager.Player.MaximumSpells)
+        if (TableManager.CurrentPlayer.Spells.Count > TableManager.CurrentPlayer.MaximumSpells)
         {
-            TableManager.CurrentState.ChangeSubstate(new TableDiscardSpellSubstate(TableManager, TableManager.Player.Spells.Count - TableManager.Player.MaximumSpells, this));
+            TableManager.CurrentState.ChangeSubstate(new TableDiscardSpellSubstate(TableManager, TableManager.CurrentPlayer.Spells.Count - TableManager.CurrentPlayer.MaximumSpells, this));
         }
         else
         {

@@ -26,13 +26,13 @@ public abstract class TableState : State
         _currentSubstate.Enter();
     }
 
-    public void SelectArtifact(HandArtifactDisplay artifact)
+    public void SelectArtifact(HandArtifactDisplay artifact, Player player)
     {
-        _currentSubstate?.SelectArtifact(artifact);
+        _currentSubstate?.SelectArtifact(artifact, player);
     }
 
-    public void SelectSpell(HandSpellDisplay spell)
+    public void SelectSpell(HandSpellDisplay spell, Player player)
     {
-        _currentSubstate?.SelectSpell(spell);
+        _currentSubstate?.SelectSpell(spell, player);
     }
 }

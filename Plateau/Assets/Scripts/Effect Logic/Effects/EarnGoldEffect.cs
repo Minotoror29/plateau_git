@@ -13,7 +13,7 @@ public class EarnGoldEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.EarnGold(_goldAmount);
+        TableManager.CurrentPlayer.EarnGold(_goldAmount);
 
         ResolveEffect();
     }

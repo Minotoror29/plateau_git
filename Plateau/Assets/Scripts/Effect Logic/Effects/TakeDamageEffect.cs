@@ -13,7 +13,7 @@ public class TakeDamageEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.TakeDamage(_damageAmount);
+        TableManager.CurrentPlayer.TakeDamage(_damageAmount);
         ResolveEffect();
     }
 }

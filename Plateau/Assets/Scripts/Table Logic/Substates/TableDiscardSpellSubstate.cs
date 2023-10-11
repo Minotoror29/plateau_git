@@ -16,14 +16,16 @@ public class TableDiscardSpellSubstate : TableSubstate
     public override void Enter()
     {
         TableManager.DiscardMerchandiseDisplay.gameObject.SetActive(true);
-        TableManager.DiscardMerchandiseDisplay.Initialize("spell");
+        TableManager.DiscardMerchandiseDisplay.Initialize(TableManager.CurrentPlayer.PlayerName, "spell");
     }
 
-    public override void SelectSpell(HandSpellDisplay spell)
+    public override void SelectSpell(HandSpellDisplay spell, Player player)
     {
-        base.SelectSpell(spell);
+        base.SelectSpell(spell, player);
 
-        TableManager.Player.DiscardSpell(spell);
+        if (player != TableManager.CurrentPlayer) return;
+
+        TableManager.CurrentPlayer.DiscardSpell(spell);
         _spellsToDiscard--;
 
         if (_spellsToDiscard == 0)

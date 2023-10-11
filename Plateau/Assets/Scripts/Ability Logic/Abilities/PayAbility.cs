@@ -25,7 +25,7 @@ public class PayAbility : Ability
     public override void Activate()
     {
         TableManager.PayAbilityDisplay.gameObject.SetActive(true);
-        TableManager.PayAbilityDisplay.Initialize(TableManager.Player, this, _goldAmount);
+        TableManager.PayAbilityDisplay.Initialize(TableManager.CurrentPlayer, this, _goldAmount);
     }
 
     public void ActivateEffects()
@@ -35,7 +35,7 @@ public class PayAbility : Ability
             effect.OnResolution += ResolveEffect;
         }
 
-        TableManager.Player.LoseGold(_goldAmount);
+        TableManager.CurrentPlayer.LoseGold(_goldAmount);
         _resolvedEffects = 0;
         ActivateNextEffect();
     }

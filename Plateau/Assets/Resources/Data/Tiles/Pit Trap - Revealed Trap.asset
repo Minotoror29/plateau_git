@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Pit Trap - Revealed Trap
   m_EditorClassIdentifier: 
   frontFace: {fileID: 11400000, guid: c54244a6bba74224885337aa48d65a44, type: 2}
-  backFace: {fileID: 11400000, guid: dfe6641d00f52a744866829691724372, type: 2}
+  backFace: {fileID: 11400000, guid: 6e996a9d3e80f654fb6617a664ae3630, type: 2}

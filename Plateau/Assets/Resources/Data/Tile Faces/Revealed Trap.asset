@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
   m_Name: Revealed Trap
   m_EditorClassIdentifier: 
-  faceColor: {r: 0, g: 0, b: 0, a: 0}
-  abilities: []
+  faceColor: {r: 0.8113208, g: 0.37887147, b: 0.37887147, a: 1}
+  abilities:
+  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}
+  - {fileID: 11400000, guid: 088700fe49f3df947bb28a00da247327, type: 2}

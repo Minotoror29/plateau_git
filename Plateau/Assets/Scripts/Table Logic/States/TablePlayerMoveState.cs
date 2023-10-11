@@ -13,7 +13,7 @@ public class TablePlayerMoveState : TableState
 
     public override void Enter()
     {
-        TableManager.Player.Move(_movement);
+        TableManager.CurrentPlayer.Move(_movement);
 
         TableManager.ChangeState(new TableTileAbilityState(TableManager, CurrentSubstate));
     }

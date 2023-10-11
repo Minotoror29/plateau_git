@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mino;
 using UnityEngine.UI;
+using TMPro;
 
 public class TableManager : MonoBehaviour
 {
     private TableState _currentState;
 
-    [SerializeField] private Player player;
+    [SerializeField] private List<Player> players;
+    private Player _currentPlayer;
+    [SerializeField] private TextMeshProUGUI playerTurnDisplay;
+
     [SerializeField] private Boss boss;
 
     private List<Tile> _tiles;
@@ -34,7 +38,9 @@ public class TableManager : MonoBehaviour
     [SerializeField] private ModalAbilityDisplay modalAbilityDisplay;
 
     public TableState CurrentState { get { return _currentState; } }
-    public Player Player { get { return player; } }
+    public List<Player> Players { get { return players; } }
+    public Player CurrentPlayer { get { return _currentPlayer; } set { _currentPlayer = value; } }
+    public TextMeshProUGUI PlayerTurnDisplay { get { return playerTurnDisplay; } }
     public Boss Boss { get { return boss; } }
     public List<Tile> Tiles { get { return _tiles; } }
     public int InnTileIndex { get { return innTileIndex; } }
@@ -83,7 +89,10 @@ public class TableManager : MonoBehaviour
             }
         }
 
-        player.Initialize(this, _tiles[0]);
+        foreach (Player player in players)
+        {
+            player.Initialize(this, _tiles[innTileIndex]);
+        }
         boss.Initialize();
 
         _artifactDeck = new Deck<ArtifactData>();
@@ -95,7 +104,7 @@ public class TableManager : MonoBehaviour
         buyArtifactsDisplay.Initialize(this);
         buySpellsDisplay.Initialize(this);
 
-        ChangeState(new TableTurnStartState(this, new TableDefaultSubstate(this)));
+        ChangeState(new TableTurnStartState(this, new TableDefaultSubstate(this), players[0]));
     }
 
     public void ChangeState(TableState nextState)

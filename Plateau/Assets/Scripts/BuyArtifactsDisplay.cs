@@ -49,12 +49,12 @@ public class BuyArtifactsDisplay : MonoBehaviour
 
     public void BuyArtifact(ShopArtifactDisplay artifact)
     {
-        if (_tableManager.Player.Gold >= artifact.ArtifactData.goldValue)
+        if (_tableManager.CurrentPlayer.Gold >= artifact.ArtifactData.goldValue)
         {
-            _tableManager.Player.PutArtifactInHand(artifact.ArtifactData);
+            _tableManager.CurrentPlayer.PutArtifactInHand(artifact.ArtifactData);
             _artifacts.Remove(artifact);
             Destroy(artifact.gameObject);
-            _tableManager.Player.LoseGold(artifact.ArtifactData.goldValue);
+            _tableManager.CurrentPlayer.LoseGold(artifact.ArtifactData.goldValue);
             _boughtArtifacts++;
         }
     }

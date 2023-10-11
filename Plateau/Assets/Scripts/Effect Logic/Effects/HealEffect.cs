@@ -13,7 +13,7 @@ public class HealEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.Heal(_healthAmount);
+        TableManager.CurrentPlayer.Heal(_healthAmount);
         ResolveEffect();
     }
 }

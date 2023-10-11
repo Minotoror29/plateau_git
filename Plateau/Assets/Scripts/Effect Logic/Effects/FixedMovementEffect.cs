@@ -13,7 +13,7 @@ public class FixedMovementEffect : Effect
 
     public override void Activate()
     {
-        TableManager.Player.OnTurnStart += ApplyFixedMovement;
+        TableManager.CurrentPlayer.OnTurnStart += ApplyFixedMovement;
 
         ResolveEffect();
     }
@@ -21,7 +21,7 @@ public class FixedMovementEffect : Effect
     private void ApplyFixedMovement(TableTurnStartState state)
     {
         //A revoir
-        state.TableManager.Player.OnTurnStart -= ApplyFixedMovement;
+        state.TableManager.CurrentPlayer.OnTurnStart -= ApplyFixedMovement;
 
         state.TableManager.MoveButton.onClick.RemoveAllListeners();
         state.FixedmovementValue = _movementValue;

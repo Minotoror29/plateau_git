@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class TableTurnStartState : TableState
 {
+    private Player _player;
+
     private int _fixedMovementValue;
 
     public int FixedmovementValue { set { _fixedMovementValue = value; } }
 
-    public TableTurnStartState(TableManager tableManager, TableSubstate subState) : base(tableManager, subState)
+    public TableTurnStartState(TableManager tableManager, TableSubstate subState, Player player) : base(tableManager, subState)
     {
+        _player = player;
     }
 
     public override void Enter()
     {
+        TableManager.CurrentPlayer = _player;
+        TableManager.PlayerTurnDisplay.text = TableManager.CurrentPlayer.PlayerName + "'s turn";
+
         TableManager.MoveButton.gameObject.SetActive(true);
         TableManager.MoveButton.onClick.AddListener(TossDice);
 
-        TableManager.Player.StartTurn(this);
+        TableManager.CurrentPlayer.StartTurn(this);
     }
 
     public override void Exit()

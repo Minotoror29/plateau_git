@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 1 Fixed Movement
   m_EditorClassIdentifier: 
   description: Next turn you don't toss your movement dice, instead you move 1 tile
-    ahead.
+    forward.
   effects:
   - {fileID: 11400000, guid: 8084175c928e67747b5a804a206cf228, type: 2}

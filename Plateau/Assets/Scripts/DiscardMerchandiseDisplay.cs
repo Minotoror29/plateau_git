@@ -7,8 +7,8 @@ public class DiscardMerchandiseDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI title;
 
-    public void Initialize(string merchandiseType)
+    public void Initialize(string player, string merchandiseType)
     {
-        title.text = "Choose a " + merchandiseType + " to discard";
+        title.text = player + " must choose a " + merchandiseType + " to discard";
     }
 }
