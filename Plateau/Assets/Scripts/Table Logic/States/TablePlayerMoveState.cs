@@ -15,7 +15,13 @@ public class TablePlayerMoveState : TableState
     {
         TableManager.CurrentPlayer.Move(_movement);
 
-        TableManager.ChangeState(new TableTileAbilityState(TableManager, CurrentSubstate));
+        if (TableManager.CurrentPlayer.CurrentTile.PlayersOnTheTile.Count > 1)
+        {
+            TableManager.ChangeState(new TableChifumiState(TableManager, CurrentSubstate));
+        } else
+        {
+            TableManager.ChangeState(new TableTileAbilityState(TableManager, CurrentSubstate));
+        }
     }
 
     public override void Exit()

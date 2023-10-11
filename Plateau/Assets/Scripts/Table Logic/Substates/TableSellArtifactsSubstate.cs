@@ -32,6 +32,8 @@ public class TableSellArtifactsSubstate : TableSubstate
     {
         base.SelectArtifact(artifact, player);
 
+        if (player != TableManager.CurrentPlayer) return;
+
         TableManager.CurrentPlayer.EarnGold(artifact.ArtifactData.goldValue);
         TableManager.CurrentPlayer.DiscardArtifact(artifact);
     }

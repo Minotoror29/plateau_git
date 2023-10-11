@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
   m_Name: Test TIle
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 775f2c979a5efc845bc751becff14743, type: 2}
-  backFace: {fileID: 11400000, guid: 775f2c979a5efc845bc751becff14743, type: 2}
+  frontFace: {fileID: 11400000, guid: 49b94d9e91dfba748b03a8a8759df589, type: 2}
+  backFace: {fileID: 11400000, guid: 49b94d9e91dfba748b03a8a8759df589, type: 2}

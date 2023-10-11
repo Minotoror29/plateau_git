@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa686f6ffa61e248b3c06c72301a6e8, type: 3}
   m_Name: Vampiric Dagger
   m_EditorClassIdentifier: 
-  artifactName: 
-  goldValue: 0
+  artifactName: Vampiric Dagger
+  goldValue: 4

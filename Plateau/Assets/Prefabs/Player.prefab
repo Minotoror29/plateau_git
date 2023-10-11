@@ -129,15 +129,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497ef198d5a721b498880084e214aca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
   maxHealth: 10
   startHealth: 10
-  healthDisplay: {fileID: 0}
   maxGold: 20
-  startGold: 20
-  goldDisplay: {fileID: 0}
-  artifactsParent: {fileID: 0}
+  startGold: 5
   handArtifactDisplayPrefab: {fileID: 3450493161161367294, guid: 3095da2070b04ca4aa681e5431df6af1, type: 3}
   maximumArtifacts: 3
-  spellsParent: {fileID: 0}
   handSpellDisplayPrefab: {fileID: 4667283583280328971, guid: 1b11f44ef815aa942854c781326282d6, type: 3}
   maximumSpells: 3
+  playerOverlay: {fileID: 0}

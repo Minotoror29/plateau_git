@@ -17,9 +17,12 @@ namespace Mino
 
         private Tile _nextTile;
 
+        private List<Player> _playersOnTheTile;
+
         public TileState[] States { get { return states; } }
         public SpriteRenderer SpriteRenderer { get { return spriteRenderer; } }
         public Tile NextTile { get { return _nextTile; } }
+        public List<Player> PlayersOnTheTile { get { return _playersOnTheTile;} }
 
         public void Initialize(TableManager tableManager, TileData tileData, Tile nextTile)
         {
@@ -34,6 +37,8 @@ namespace Mino
             _tileData = tileData;
 
             _nextTile = nextTile;
+
+            _playersOnTheTile = new();
         }
 
         public void ChangeState(TileState nextState)

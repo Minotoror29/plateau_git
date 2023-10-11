@@ -36,6 +36,8 @@ public class TableSellSpellsSubstate : TableSubstate
     {
         base.SelectSpell(spell, player);
 
+        if (player != TableManager.CurrentPlayer) return;
+
         TableManager.CurrentPlayer.EarnGold(spell.SpellData.goldValue);
         TableManager.CurrentPlayer.DiscardSpell(spell);
 

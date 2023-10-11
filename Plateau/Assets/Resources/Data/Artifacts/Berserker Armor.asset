@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa686f6ffa61e248b3c06c72301a6e8, type: 3}
   m_Name: Berserker Armor
   m_EditorClassIdentifier: 
-  artifactName: 
-  goldValue: 0
+  artifactName: Berserker Armor
+  goldValue: 9

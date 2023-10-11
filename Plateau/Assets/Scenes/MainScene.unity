@@ -1554,6 +1554,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3644233354629787829, guid: cc53d7c0cddd5ad4b90c637ecadcafa7, type: 3}
+      propertyPath: startGold
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644233354629787829, guid: cc53d7c0cddd5ad4b90c637ecadcafa7, type: 3}
       propertyPath: playerName
       value: Gwenael
       objectReference: {fileID: 0}
@@ -6817,6 +6821,10 @@ PrefabInstance:
     - target: {fileID: 2015025963092848412, guid: cc53d7c0cddd5ad4b90c637ecadcafa7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644233354629787829, guid: cc53d7c0cddd5ad4b90c637ecadcafa7, type: 3}
+      propertyPath: startGold
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3644233354629787829, guid: cc53d7c0cddd5ad4b90c637ecadcafa7, type: 3}
       propertyPath: playerName

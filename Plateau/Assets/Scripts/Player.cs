@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
         _artifacts = new();
         _spells = new();
         _currentTile = startTile;
+        _currentTile.PlayersOnTheTile.Add(this);
 
         ResetStats();
     }
@@ -70,12 +71,15 @@ public class Player : MonoBehaviour
 
     public void Move(int movementValue)
     {
+        _currentTile.PlayersOnTheTile.Remove(this);
+
         for (int i = 0; i < movementValue; i++)
         {
             _currentTile = _currentTile.NextTile;
         }
 
         transform.position = _currentTile.transform.position;
+        _currentTile.PlayersOnTheTile.Add(this);
     }
 
     public void MoveTo(Tile tile)
