@@ -114,6 +114,12 @@ public class Player : MonoBehaviour
         _health -= amount;
         _health = Mathf.Clamp(_health, 0, maxHealth);
         playerOverlay.SetHealthDisplay(_health);
+
+        if (_health == 0)
+        {
+            ResetStats();
+            MoveTo(TableManager.Tiles[_tableManager.InnTileIndex]);
+        }
     }
 
     public void DrawArtifacts(int amount)

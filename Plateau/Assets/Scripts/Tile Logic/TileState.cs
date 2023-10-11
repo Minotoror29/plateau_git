@@ -59,7 +59,7 @@ public class TileState : State
 
         if (_resolvedAbilities == _abilities.Count)
         {
-            _tableManager.ChangeState(new TableCheckState(_tableManager, new TableDefaultSubstate(_tableManager)));
+            _tableManager.ChangeState(new TableTurnStartState(_tableManager, new TableDefaultSubstate(_tableManager), _tableManager.Players[(_tableManager.Players.IndexOf(_tableManager.CurrentPlayer) + 1) % _tableManager.Players.Count]));
         } else
         {
             ActivateNextAbility();

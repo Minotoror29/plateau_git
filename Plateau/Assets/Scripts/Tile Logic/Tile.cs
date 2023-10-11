@@ -52,10 +52,5 @@ namespace Mino
         {
             _currentState.ActivateAbilities();
         }
-
-        public void FlipTile()
-        {
-            _currentState.FlipTile();
-        }
     }
 }
