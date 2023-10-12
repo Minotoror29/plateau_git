@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Wizards Guild - Teleportation Portal
+  m_Script: {fileID: 11500000, guid: 3bf8204bf00155e4a9794a93a5a3fd7c, type: 3}
+  m_Name: Buy 2 1 Artifacts
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: ee23378fcf6bceb44892c2101a4cae80, type: 2}
-  backFace: {fileID: 11400000, guid: b7635142e1debbb429212c0a05580dd0, type: 2}
+  description: Reveal 2 artifacts. If you buy 1, flip the tile.
+  artifactsToReveal: 2
+  artifactsToBuy: 1
