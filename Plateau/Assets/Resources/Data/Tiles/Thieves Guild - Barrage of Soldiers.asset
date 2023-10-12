@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Thieves Guild - Barrage of Soldiers
   m_EditorClassIdentifier: 
   frontFace: {fileID: 11400000, guid: 2cb12da67a95681499df22c94fff3efa, type: 2}
-  backFace: {fileID: 11400000, guid: 2cb12da67a95681499df22c94fff3efa, type: 2}
+  backFace: {fileID: 11400000, guid: 997a218fe817cbe4487db107eeea70d5, type: 2}

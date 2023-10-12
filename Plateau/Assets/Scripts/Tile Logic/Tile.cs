@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Mino
 {
@@ -51,6 +52,11 @@ namespace Mino
         public void ActivateAbilities()
         {
             _currentState.ActivateAbilities();
+        }
+
+        private void OnMouseDown()
+        {
+            _tableManager.CurrentState.SelectTile(this);
         }
     }
 }

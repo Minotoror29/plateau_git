@@ -1,3 +1,4 @@
+using Mino;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +33,11 @@ public abstract class TableSubstate : State
     }
 
     public virtual void SelectQuest(QuestDisplay quest)
+    {
+
+    }
+
+    public virtual void SelectTile(Tile tile)
     {
 
     }

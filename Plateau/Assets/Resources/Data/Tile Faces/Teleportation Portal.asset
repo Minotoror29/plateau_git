@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef09705e96d194a4fb38bbfdbc4c40d0, type: 3}
-  m_Name: Thieves Guild
+  m_Name: Teleportation Portal
   m_EditorClassIdentifier: 
-  faceColor: {r: 0.3490566, g: 0.22886258, b: 0.23356873, a: 1}
+  faceColor: {r: 0.79607844, g: 0.08627449, b: 0.57617974, a: 1}
   abilities:
-  - {fileID: 11400000, guid: 301bdb55cdc06e141b39ddb79be77dc3, type: 2}
-  - {fileID: 11400000, guid: a6be99930cc205f449862c047f372c98, type: 2}
+  - {fileID: 11400000, guid: 373af05de56ccdf4e95d7688f717f436, type: 2}

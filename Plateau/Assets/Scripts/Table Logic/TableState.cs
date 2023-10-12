@@ -1,3 +1,4 @@
+using Mino;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,5 +40,10 @@ public abstract class TableState : State
     public void SelectQuest(QuestDisplay quest)
     {
         _currentSubstate?.SelectQuest(quest);
+    }
+
+    public void SelectTile(Tile tile)
+    {
+        _currentSubstate?.SelectTile(tile);
     }
 }

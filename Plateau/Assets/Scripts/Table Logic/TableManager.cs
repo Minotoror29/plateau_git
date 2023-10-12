@@ -45,6 +45,7 @@ public class TableManager : MonoBehaviour
     [SerializeField] private BuySpellsDisplay buySpellsDisplay;
     [SerializeField] private SellMerchandiseDisplay sellMerchandiseDisplay;
     [SerializeField] private ModalAbilityDisplay modalAbilityDisplay;
+    [SerializeField] private Canvas teleportationDisplay;
 
     public TableState CurrentState { get { return _currentState; } }
     public List<Player> Players { get { return players; } }
@@ -67,6 +68,7 @@ public class TableManager : MonoBehaviour
     public BuySpellsDisplay BuySpellsDisplay { get { return buySpellsDisplay; } }
     public SellMerchandiseDisplay SellMerchandiseDisplay { get { return sellMerchandiseDisplay; } }
     public ModalAbilityDisplay ModalAbilityDisplay { get { return modalAbilityDisplay; } }
+    public Canvas TeleportationDisplay { get { return teleportationDisplay;} }
 
     private void Start()
     {

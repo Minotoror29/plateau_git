@@ -48,19 +48,16 @@ public class TableChifumiState : TableState
                 case 1:
                     chifumi.Add(player, Chifumi.Rock);
                     rock++;
-                    Debug.Log(player.PlayerName + " " + Chifumi.Rock.ToString());
                     break;
 
                 case 2:
                     chifumi.Add(player, Chifumi.Paper);
                     paper++;
-                    Debug.Log(player.PlayerName + " " + Chifumi.Paper.ToString());
                     break;
 
                 case 3:
                     chifumi.Add(player, Chifumi.Scissors);
                     scissors++;
-                    Debug.Log(player.PlayerName + " " + Chifumi.Scissors.ToString());
                     break;
             }
         }

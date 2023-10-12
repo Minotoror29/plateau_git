@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1f65beae273a86448e6c074b253dd81, type: 3}
-  m_Name: Barrage of Soldiers Ability
+  m_Script: {fileID: 11500000, guid: d10e69d307654264fb1d7dc4e4a18ff5, type: 3}
+  m_Name: Teleportation
   m_EditorClassIdentifier: 
-  description: If you have more than 10 gold and 3 artifacts, you die. Else, you
-    move 3 tiles forward.
+  description: Move to any other tile you want.
+  effects:
+  - {fileID: 11400000, guid: 8c166ed675ad09142a168a3796615517, type: 2}
