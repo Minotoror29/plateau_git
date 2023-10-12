@@ -187,7 +187,6 @@ public class TableChifumiState : TableState
                 if (loser.Gold < 3)
                 {
                     goldAmount += loser.Gold;
-                    loser.TakeDamage(3 - loser.Gold);
                     loser.LoseGold(loser.Gold);
                 }
                 else
