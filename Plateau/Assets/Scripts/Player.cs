@@ -122,6 +122,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        TakeDamage(_health);
+    }
+
     public void DrawArtifacts(int amount)
     {
         for (int i = 0; i < amount; i++)
@@ -145,6 +150,17 @@ public class Player : MonoBehaviour
         _tableManager.ArtifactDeck.PutInGraveyard(artifact.ArtifactData);
         _artifacts.Remove(artifact);
         Destroy(artifact.gameObject);
+    }
+
+    public void DiscardAllArtifacts()
+    {
+        foreach (ArtifactDisplay artifact in _artifacts)
+        {
+            _tableManager.ArtifactDeck.PutInGraveyard(artifact.ArtifactData);
+            Destroy(artifact.gameObject);
+        }
+
+        _artifacts.Clear();
     }
 
     public void DrawSpells(int amount)

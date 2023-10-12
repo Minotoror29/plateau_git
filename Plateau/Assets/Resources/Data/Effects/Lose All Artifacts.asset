@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Tavern - Mad Tavern Keeper
+  m_Script: {fileID: 11500000, guid: c47e21336e3a7df4ba1fff96a1355804, type: 3}
+  m_Name: Lose All Artifacts
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 25dde88275bf5ea419bf901fbd963f6d, type: 2}
-  backFace: {fileID: 11400000, guid: 49b94d9e91dfba748b03a8a8759df589, type: 2}
+  description: Lose All Artifacts

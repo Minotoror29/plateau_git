@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e21ac848f652fe45b4dff6f99472793, type: 3}
   m_Name: Draw 3 Quests
   m_EditorClassIdentifier: 
-  description: 
-  questAmount: 0
+  description: Draw 3 Quests
+  questAmount: 3

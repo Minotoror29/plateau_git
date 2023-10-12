@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdda8a7276428f84c85bd341ddce5a13, type: 3}
   m_Name: Chifumi Flip
   m_EditorClassIdentifier: 
-  description: 
-  effect: {fileID: 0}
+  description: If a chifumi happened on the tile, flip it.
+  effect: {fileID: 11400000, guid: a71762c9992d1be4e958fa7e5081e088, type: 2}
