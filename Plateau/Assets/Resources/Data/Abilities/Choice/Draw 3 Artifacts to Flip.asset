@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53fa786ce16cd224ca46da1229d9a1ae, type: 3}
-  m_Name: Draw 1 Artifact
+  m_Script: {fileID: 11500000, guid: 4c57a16afb7afd44e9a52b232bc92dc0, type: 3}
+  m_Name: Draw 3 Artifacts to Flip
   m_EditorClassIdentifier: 
-  description: Draw 1 Artifact
-  artifactAmount: 1
+  description: You can draw 3 artifacts. If you do so, flip the tile.
+  ability: {fileID: 11400000, guid: d37a03957dcbace48a1a1f06d3710fbc, type: 2}

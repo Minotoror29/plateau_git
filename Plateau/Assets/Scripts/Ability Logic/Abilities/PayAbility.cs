@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ public class PayAbility : Ability
     private List<Effect> _effects;
     private int _resolvedEffects;
 
+    private event Action OnAccept;
+    private event Action OnDecline;
+
     public PayAbility(TableManager tableManager, TileState state, string description, PayAbilityData data) : base(tableManager, state, description)
     {
         _resource =  data.resource;
@@ -20,12 +24,32 @@ public class PayAbility : Ability
         {
             _effects.Add(effect.Effect(TableManager, state));
         }
+
+        OnAccept += Accept;
+        OnDecline += Decline;
     }
 
     public override void Activate()
     {
         TableManager.PayAbilityDisplay.gameObject.SetActive(true);
-        TableManager.PayAbilityDisplay.Initialize(TableManager.CurrentPlayer, this, _resource, _amount);
+        TableManager.PayAbilityDisplay.Initialize(this, OnAccept, OnDecline);
+    }
+
+    public void Accept()
+    {
+        if (_resource.PlayerResource(TableManager.CurrentPlayer) >= _amount)
+        {
+            TableManager.PayAbilityDisplay.gameObject.SetActive(false);
+            TableManager.PayAbilityDisplay.UnsubscribeActions(OnAccept, OnDecline);
+            ActivateEffects();
+        }
+    }
+
+    public void Decline()
+    {
+        TableManager.PayAbilityDisplay.gameObject.SetActive(false);
+        TableManager.PayAbilityDisplay.UnsubscribeActions(OnAccept, OnDecline);
+        ResolveAbility();
     }
 
     public void ActivateEffects()
@@ -40,7 +64,7 @@ public class PayAbility : Ability
         ActivateNextEffect();
     }
 
-    public void ActivateNextEffect()
+    private void ActivateNextEffect()
     {
         _effects[_resolvedEffects].Activate();
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,33 +8,30 @@ public class PayAbilityDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI title;
 
-    private Player _player;
-    private PayAbility _ability;
-    private ResourceData _resource;
-    private int _amount;
+    private event Action OnAccept;
+    private event Action OnDecline;
 
-    public void Initialize(Player player, PayAbility ability, ResourceData resource, int amount)
+    public void Initialize(Ability ability, Action acceptAction, Action declineAction)
     {
-        _player = player;
-        _ability = ability;
-        _resource = resource;
-        _amount = amount;
+        title.text = ability.Description;
 
-        title.text = _ability.Description;
+        OnAccept += acceptAction;
+        OnDecline += declineAction;
     }
 
     public void Accept()
     {
-        if (_resource.PlayerResource(_player) >= _amount)
-        {
-            gameObject.SetActive(false);
-            _ability.ActivateEffects();
-        }
+        OnAccept?.Invoke();
     }
 
     public void Decline()
     {
-        gameObject.SetActive(false);
-        _ability.ResolveAbility();
+        OnDecline?.Invoke();
+    }
+
+    public void UnsubscribeActions(Action acceptAction, Action declineAction)
+    {
+        OnAccept -= acceptAction;
+        OnDecline -= declineAction;
     }
 }

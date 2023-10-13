@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Effect/Draw Artifacts")]
 public class DrawArtifactsEffectData : EffectData
 {
-    public int amount;
+    public int artifactAmount;
 
     public override Effect Effect(TableManager tableManager, TileState state)
     {
