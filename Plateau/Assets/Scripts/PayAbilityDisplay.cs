@@ -9,33 +9,22 @@ public class PayAbilityDisplay : MonoBehaviour
 
     private Player _player;
     private PayAbility _ability;
-    private int _goldAmount;
+    private ResourceData _resource;
+    private int _amount;
 
-    public void Initialize(Player player, PayAbility ability, int goldAmount)
+    public void Initialize(Player player, PayAbility ability, ResourceData resource, int amount)
     {
         _player = player;
         _ability = ability;
-        _goldAmount = goldAmount;
+        _resource = resource;
+        _amount = amount;
 
-        string effectsDescriptions = "";
-
-        for (int i = 0; i < _ability.Effects.Count; i++)
-        {
-            if (i == 0)
-            {
-                effectsDescriptions += (" " + _ability.Effects[i].Description);
-            } else
-            {
-                effectsDescriptions += (", " + _ability.Effects[i].Description);
-            }
-        }
-
-        title.text = "PAY " + goldAmount.ToString() + " TO " + effectsDescriptions + " ?";
+        title.text = _ability.Description;
     }
 
     public void Accept()
     {
-        if (_player.Gold >= _goldAmount)
+        if (_resource.PlayerResource(_player) >= _amount)
         {
             gameObject.SetActive(false);
             _ability.ActivateEffects();

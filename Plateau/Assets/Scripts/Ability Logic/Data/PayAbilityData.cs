@@ -5,11 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ability/Pay Ability")]
 public class PayAbilityData : AbilityData
 {
-    public int goldAmount;
+    public ResourceData resource;
+    public int amount;
     public List<EffectData> effects;
 
     public override Ability Ability(TableManager tableManager, TileState state)
     {
-        return new PayAbility(tableManager, state, description, goldAmount, effects);
+        return new PayAbility(tableManager, state, description, this);
     }
 }

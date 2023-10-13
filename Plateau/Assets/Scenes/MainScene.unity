@@ -4467,7 +4467,7 @@ MonoBehaviour:
   - {fileID: 375833335}
   playerTurnDisplay: {fileID: 1086929211}
   boss: {fileID: 1047524408}
-  tileData: {fileID: 11400000, guid: 22a875f9e233b42408b09c6f74fe505f, type: 2}
+  tileData: {fileID: 11400000, guid: 72e7ceca8d46fe44592afd71b3bdcc1b, type: 2}
   innTileData: {fileID: 11400000, guid: 6a7104ca27329b14bb90af8f33887aba, type: 2}
   innTileIndex: 0
   bossTileData: {fileID: 11400000, guid: 93eefe3c961dba5439ebe394cc2d4334, type: 2}
@@ -10023,7 +10023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAY X GOLD ?
+  m_text: Ability description
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

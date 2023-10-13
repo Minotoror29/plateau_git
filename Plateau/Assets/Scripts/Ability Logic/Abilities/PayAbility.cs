@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class PayAbility : Ability
 {
-    private int _goldAmount;
+    private ResourceData _resource;
+    private int _amount;
 
     private List<Effect> _effects;
     private int _resolvedEffects;
 
-    public List<Effect> Effects { get { return _effects; } }
-
-    public PayAbility(TableManager tableManager, TileState state, string description, int goldAmount, List<EffectData> effects) : base(tableManager, state, description)
+    public PayAbility(TableManager tableManager, TileState state, string description, PayAbilityData data) : base(tableManager, state, description)
     {
-        _goldAmount = goldAmount;
+        _resource =  data.resource;
+        _amount = data.amount;
 
         _effects = new();
-        foreach (EffectData effect in effects)
+        foreach (EffectData effect in data.effects)
         {
             _effects.Add(effect.Effect(TableManager, state));
         }
@@ -25,7 +25,7 @@ public class PayAbility : Ability
     public override void Activate()
     {
         TableManager.PayAbilityDisplay.gameObject.SetActive(true);
-        TableManager.PayAbilityDisplay.Initialize(TableManager.CurrentPlayer, this, _goldAmount);
+        TableManager.PayAbilityDisplay.Initialize(TableManager.CurrentPlayer, this, _resource, _amount);
     }
 
     public void ActivateEffects()
@@ -35,7 +35,7 @@ public class PayAbility : Ability
             effect.OnResolution += ResolveEffect;
         }
 
-        TableManager.CurrentPlayer.LoseGold(_goldAmount);
+        _resource.LoseResource(TableManager.CurrentPlayer, _amount);
         _resolvedEffects = 0;
         ActivateNextEffect();
     }
