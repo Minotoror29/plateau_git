@@ -118,6 +118,7 @@ public class Player : MonoBehaviour
         if (_health == 0)
         {
             ResetStats();
+            DiscardAllArtifacts();
             MoveTo(TableManager.Tiles[_tableManager.InnTileIndex]);
         }
     }
