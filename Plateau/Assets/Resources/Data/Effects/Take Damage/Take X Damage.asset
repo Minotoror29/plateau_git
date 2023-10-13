@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216a9bd98a59e2e45b318283d960c5ed, type: 3}
   m_Name: Take X Damage
   m_EditorClassIdentifier: 
-  description: 
-  unit: 
+  description: Take
+  unit: Damage

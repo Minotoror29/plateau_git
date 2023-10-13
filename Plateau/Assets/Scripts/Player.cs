@@ -84,6 +84,7 @@ public class Player : MonoBehaviour
 
     public void MoveTo(Tile tile)
     {
+        _currentTile.PlayersOnTheTile.Remove(this);
         _currentTile = tile;
         transform.position = _currentTile.transform.position;
     }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b6967c3ee2e5644bbcc3beadaa51ae, type: 3}
-  m_Name: Offerings Altar - God of Death
+  m_Name: Rune of Fire - Rune of Death
   m_EditorClassIdentifier: 
-  frontFace: {fileID: 11400000, guid: 09e1c45be58d45546a4b11135df12545, type: 2}
-  backFace: {fileID: 11400000, guid: 29b4617a5cbfe6648a1f013b0cadd056, type: 2}
+  frontFace: {fileID: 11400000, guid: 0d05a6856285a094f9d1da324188f2cb, type: 2}
+  backFace: {fileID: 11400000, guid: b65239a4ec48d3941b6b23be19e32250, type: 2}

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b44bbb94887b3b47857871192e5d8bc, type: 3}
   m_Name: Take 1d6 Damage
   m_EditorClassIdentifier: 
-  description: 
-  effects: []
+  description: Tos a dice. You lose life equal to the result.
+  effects:
+  - {fileID: 11400000, guid: 3d1db199f6e0d464facf78d066920f9f, type: 2}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04fe184eadc379d4ab310d7b95c3fcf7, type: 3}
   m_Name: All Players Die
   m_EditorClassIdentifier: 
-  description: 
-  playerApplication: {fileID: 0}
+  description: All Players Die
+  playerApplication: {fileID: 11400000, guid: d35d6e39e56ab1a41859163fe7c461af, type: 2}
