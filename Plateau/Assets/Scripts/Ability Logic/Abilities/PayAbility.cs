@@ -32,7 +32,7 @@ public class PayAbility : Ability
     public override void Activate()
     {
         TableManager.PayAbilityDisplay.gameObject.SetActive(true);
-        TableManager.PayAbilityDisplay.Initialize(this, OnAccept, OnDecline);
+        TableManager.PayAbilityDisplay.Initialize(Description, OnAccept, OnDecline);
     }
 
     public void Accept()

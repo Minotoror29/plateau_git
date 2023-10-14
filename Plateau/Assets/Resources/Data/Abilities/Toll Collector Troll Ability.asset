@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b04e8805a44d3af4594ef141f664f00e, type: 3}
+  m_Name: Toll Collector Troll Ability
+  m_EditorClassIdentifier: 
+  description: Toss a dice. If you don't pay an amount of gold equal to the result,
+    flip the tile and fight the Angry Troll.

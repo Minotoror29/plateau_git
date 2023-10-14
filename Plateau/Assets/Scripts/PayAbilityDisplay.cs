@@ -11,9 +11,9 @@ public class PayAbilityDisplay : MonoBehaviour
     private event Action OnAccept;
     private event Action OnDecline;
 
-    public void Initialize(Ability ability, Action acceptAction, Action declineAction)
+    public void Initialize(string abilityDescription, Action acceptAction, Action declineAction)
     {
-        title.text = ability.Description;
+        title.text = abilityDescription;
 
         OnAccept += acceptAction;
         OnDecline += declineAction;
